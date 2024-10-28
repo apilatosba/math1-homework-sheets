@@ -1,0 +1,222 @@
+\documentclass{article}
+\usepackage{amsmath, amsthm}
+\usepackage{array}
+
+\begin{document}
+
+\section*{\huge Mathematics Homework Sheet 1}
+
+\begin{flushleft}
+   \textbf{Problem 1}
+\end{flushleft}
+
+\begin{table}[h!]
+   a)
+   \centering
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+
+      \hline
+      A & B & $A \implies B$ & $\neg B$ & $A \land \neg B$ & $\neg (A \land \neg B)$ & (a) \\
+      \hline
+      1 & 1 & 1              & 0        & 0                & 1                       & 1   \\
+      1 & 0 & 0              & 1        & 1                & 0                       & 1   \\
+      0 & 1 & 1              & 0        & 0                & 1                       & 1   \\
+      0 & 0 & 1              & 1        & 0                & 1                       & 1   \\
+      \hline
+   \end{tabular}
+   \[
+      \text{(a) is all true}
+   \]
+\end{table}
+
+\begin{table}[h!]
+   b)
+   \centering
+   \begin{tabular}{|c|c|c|c|c|c|c|}
+
+      \hline
+      A & B & $A \land B$ & $\neg (A \land B)$ & $\neg A$ & $\neg A \lor \neg B$ & (b) \\
+      \hline
+      1 & 1 & 1           & 0                  & 0        & 0                    & 1   \\
+      1 & 0 & 0           & 1                  & 0        & 1                    & 1   \\
+      0 & 1 & 0           & 1                  & 1        & 1                    & 1   \\
+      0 & 0 & 0           & 1                  & 1        & 1                    & 1   \\
+      \hline
+   \end{tabular}
+   \[
+      \text{(b) is all true}
+   \]
+\end{table}
+
+
+\begin{table}[h!]
+   c)
+   \centering
+   \begin{tabular}{|c|c|c|c|c|c|}
+
+      \hline
+      A & B & $A \lor B$ & $\neg (A \lor B)$ & $\neg A \land \neg B$ & (c) \\
+      \hline
+      1 & 1 & 1          & 0                 & 0                     & 1   \\
+      1 & 0 & 1          & 0                 & 0                     & 1   \\
+      0 & 1 & 1          & 0                 & 0                     & 1   \\
+      0 & 0 & 0          & 1                 & 1                     & 1   \\
+      \hline
+   \end{tabular}
+   \[
+      \text{(c) is all true}
+   \]
+\end{table}
+
+\begin{flushleft}
+   \textbf{Problem 2}
+\end{flushleft}
+
+\begin{flushleft}
+   (a)
+\end{flushleft}
+
+Let P be set of all people.
+\[
+   P := \{p: person(p)\}
+\]
+
+Let D be set of all decisions.
+\[
+   D := \{d: decision(d)\}
+\]
+
+\begin{align*}
+   (i)  & \qquad (\exists d \in D) \quad (\forall p \in P) \quad content(p, d) \\
+   & \qquad \text{Negation (i):} \quad (\forall d \in D) \quad (\exists p \in P) \quad \neg content(p, d)\\
+   (ii) & \qquad (\forall p \in P) \quad (\forall d \in D) \quad content(p, d) \\
+   & \qquad \text{Negation (ii):} \quad (\exists p \in P) \quad (\exists d \in D) \quad \neg content(p, d)\\
+\end{align*}
+
+
+\begin{flushleft}
+   (b)
+\end{flushleft}
+
+Every decision results in discontent people
+\[
+   (\forall d \in D) \quad (\exists p \in P) \quad \neg content(p, d)
+\]
+
+and if we negate this, we get
+\begin{flalign}
+   \neg & ((\forall d \in D) \quad (\exists p \in P) \quad \neg content(p, d))    \\
+        & (\exists d \in D) \quad (\forall p \in P) \quad \neg \neg content(p, d) \\
+        & (\exists d \in D) \quad (\forall p \in P) \quad content(p, d)
+\end{flalign}
+\\
+and this is the same as (i). When we negate a statement, $\forall$ turns into $\exists$ and vice versa.
+
+\begin{flushleft}
+   \textbf{Problem 3}
+\end{flushleft}
+
+A $\subseteq$ $\Omega$, B $\subseteq$ $\Omega$
+
+\section*{(a)}
+\begin{align*}
+    & A \setminus B := \{a: (a \in A) \land (a \notin B)\} \\
+    & A \cap B^C := \{a: (a \in A) \land (a \in B^C)\}
+\end{align*}
+To show that $A \setminus B = A \cap B^C$, we need to show that $A \setminus B \subseteq A \cap B^C$ and $A \cap B^C \subseteq A \setminus B$.
+Let's start with $A \setminus B \subseteq A \cap B^C$ \\
+\\
+Pick an element from $A \setminus B$ and call it $x$ which means that 
+\begin{align}
+   & x \in A \land x \notin B
+\end{align}
+
+We want to show that such x also exists
+in $A \cap B^C$. \\
+An element in $A \cap B^C$, let's call it y,  needs to satisfy this condition:
+\begin{align}
+   & y \in A \land y \in B^C
+\end{align}
+\\
+From condition (5) and from the definition, if $y \in B^C$ then $y \notin B$, we can get the following:
+\begin{align}
+   & y \in A \land y \in B^C \tag*{(5)} \\
+   & y \in A \land y \notin B \tag*{(6)}
+\end{align}
+\\
+(6) is exactly what the element $x$ satisfies. So, any element in $A \setminus B$ is also in $A \cap B^C$. $A \setminus B \subseteq A \cap B^C$ 
+\\
+\\
+Now the second part $A \cap B^C \subseteq A \setminus B$ \\
+Pick an element from $A \cap B^C$ and call it $x$ which means that
+\begin{align}
+    & x \in A \land x \in B^C
+\end{align}
+
+We want to show that such x also exists
+in $A \setminus B$. \\
+An element in $A \setminus B$, let's call it y,  needs to satisfy this condition:
+\begin{align}
+    & y \in A \land y \notin B
+\end{align}
+\\
+From condition (7) and from the definition, if $y \in B^C$ then $y \notin B$, we can get the following:
+\begin{align}
+   & y \in A \land y \notin B \tag*{(7)} \\
+   & y \in A \land y \in B^C \tag*{(8)}
+\end{align}
+\\
+(8) is exactly what the element $x$ satisfies. So, any element in $A \cap B^C$ is also in $A \setminus B$. $A \cap B^C \subseteq A \setminus B$
+\\
+
+\section*{(b)}
+To show
+\[
+   P(A \cap B) = P(A) \cap P(B)
+\]
+\\
+We need to show
+\[
+   P(A \cap B) \subseteq P(A) \cap P(B) \quad \land \quad P(A) \cap P(B) \subseteq P(A \cap B)
+\]
+
+\begin{align}
+    & P(A \cap B)    = \{X: X \subseteq A \cap B\}                  \\
+    & P(A) \cap P(B) = \{X: X \subseteq A\} \cap \{X: X \subseteq B\}
+\end{align}
+\\
+Lets start with the first one $P(A \cap B) \subseteq P(A) \cap P(B)$
+\\
+Lets pick an element $X$ from (8). Is this arbitrary element $X$ also in the set (9)? \\
+Yes, because $A \cap B \subseteq A$ and $A \cap B \subseteq B$. So, $P(A \cap B) \subseteq P(A) \cap P(B)$.
+\\
+\\
+Now the second one $P(A) \cap P(B) \subseteq P(A \cap B)$ \\
+Lets pick an element $X$ from (9). Is this arbitrary element $X$ also in the set (8)? \\
+Yes, $X$ is subset of $A$ which means $X$ only contains elements that are in $A$.
+And $X$ is subset of $B$ which means $X$ only contains elements that are in $B$.
+When we consider above two statements, $X$ only contains elements from $A$ and $B$ which corresponds to $A \cap B$.
+
+\section*{(c)}
+$A \subseteq B$ means that
+\[
+   \forall x \in A \quad x \in B \tag{c1}
+\]
+\\
+Now, lets take a look at this $B^C \subseteq A^C$
+\[
+   \forall x \in B^C \quad x \in A^C \tag{c2}
+\]
+\\
+We try to show $(c1) \implies (c2)$. Lets try to prove it using proof by contradiction.
+Assume $(c1) \land \neg (c2)$ is true. Lets write down $\neg (c2)$.
+\begin{align*}
+   \neg & (\forall x \in B^C \quad x \in A^C)       \\
+        & \exists x \in B^C \quad x \notin A^C      \\
+        & \exists x \in B^C \quad x \in A  \tag{c3}
+\end{align*}
+\\
+(c3) states that there is at least one element that is not in $B$ but in $A$.
+This contradicts with (c1) because (c1) states that all elements in $A$ are also in $B$.
+
+\end{document}

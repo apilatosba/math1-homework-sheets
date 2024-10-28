@@ -1,0 +1,201 @@
+\documentclass{article}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{array}
+
+\begin{document}
+\section*{\huge Mathematics Homework Sheet 2}
+\begin{flushright}
+   \textbf{Author: Abdullah Oguz Topcuoglu}
+\end{flushright}
+
+\begin{flushleft}
+   \textbf{\Large Problem 2}
+\end{flushleft}
+
+\[
+   \sum_{k=0}^{n} k^2 = \frac{n(n+1)(2n+1)}{6}
+\]
+\\
+is what we want to prove using mathematical induction \\
+We need to do two things: \\
+\begin{itemize}
+   \item Prove the base case
+   \item Prove the inductive step
+\end{itemize}
+Let's start with the base case: \\
+Insert n = 0 into the equation:
+\[
+   \sum_{k=0}^{0} k^2 = 0^2 = 0 = \frac{0(0+1)(2*0+1)}{6} = 0
+\]
+Now the inductive step: \\
+Assume that the equation holds for n = m, that is:
+\[
+   \sum_{k=0}^{m} k^2 = \frac{m(m+1)(2m+1)}{6}
+\]
+Now we need to prove that the equation holds for n = m + 1:
+\[
+   \sum_{k=0}^{m+1} k^2 = \frac{(m+1)(m+2)(2m+3)}{6}
+\]
+\\
+\begin{align*}
+   \sum_{k=0}^{m+1} k^2 & = \sum_{k=0}^{m} k^2 + (m+1)^2     \\
+                        & = \frac{m(m+1)(2m+1)}{6} + (m+1)^2 & (\text{This step uses the induction assumption}) \\
+                        &= \frac{m(m+1)(2m+1) + 6 (m+1)^2}{6} \\
+                        &= \frac{(m+1)(m(2m+1)+6(m+1))}{6} \\
+                        &= \frac{(m+1)(2m^2+m+6m+6)}{6} \\
+                        &= \frac{(m+1)(2m^2+7m+6)}{6} \\
+                        &= \frac{(m+1)((m+2)(2m+3))}{6}
+\end{align*}
+
+\begin{flushleft}
+   \textbf{\Large Problem 3}
+\end{flushleft}
+
+
+\begin{flushleft}
+   \textbf{\large Problem 3 (a)}
+\end{flushleft}
+
+Symmetric relation means that
+\[
+   \forall x, y \in X, xRy \iff yRx
+\]
+
+$R_1$ and $R_2$ are symmetric. \\
+\[
+   \forall x, y \in X, xR_1y \iff yR_1x
+\]
+\[ 
+   \forall x, y \in X, xR_2y \iff yR_2x
+\]
+Let's pick an element from $R_1 \cup R_2$. $(x, y) \in R_1 \cup R_2$ \\
+Which means that $(x, y) \in R_1$ or $(x, y) \in R_2$ \\
+If it is in $R_1$, then $(y, x) \in R_1$ \\
+If it is in $R_2$, then $(y, x) \in R_2$ \\
+In both cases $(y, x) \in R_1 \cup R_2$ \\
+Which means that $R_1 \cup R_2$ is symmetric. \\
+
+\begin{flushleft}
+   \textbf{\large Problem 3 (b)}
+\end{flushleft}
+
+Reflexive relation means that
+\[
+   \forall x \in X, xRx
+\]
+$R_1$ is reflexive.
+\[
+   \forall x \in X, xR_1x
+\]
+$R_2$ is arbitrary. \\
+Let $R_3$ be $R_1 \cup R_2$. \\
+Let $x \in X$ \\
+Is $xR_3x$? \\
+If $xR_3x$, then $(x, x) \in R_3$ \\
+Which means that $(x, x) \in R_1$ or $(x, x) \in R_2$ \\
+And we know that $xR_1x$ is true because $R_1$ is reflexive. \\
+Thus $xR_3x$ is true which means $R_3$ is reflexive \\
+
+
+\begin{flushleft}
+   \textbf{\large Problem 3 (c)}
+\end{flushleft}
+
+Antisymmetric relation means that
+\[
+   \forall x, y \in X, xRy \land yRx \implies x = y
+\]
+
+$R_1$ and $R_2$ is antisymmetric. \\
+Let's take a look at this example: \\
+\[
+   X = \{1, 2\}
+\]
+\[
+   R_1 = \{(1, 2)\}
+\]
+\[
+   R_2 = \{(2, 1)\}
+\]
+$R_1$ and $R_2$ are antisymmetric. But $R_1 \cup R_2$ is not antisymmetric because it contains $(1, 2)$ and $(2, 1)$ and $1 \not= 2$. \\
+
+
+\begin{flushleft}
+   \textbf{\Large Problem 4}
+\end{flushleft}
+
+\[X = Z \times N\]
+\[
+   (a, b) \sim (c, d) \iff ad = bc
+\]
+
+\begin{flushleft}
+   \textbf{\large Problem 4 (a)}
+\end{flushleft}
+
+
+Relation $\sim$ being an equivalence relation means that it is reflexive, symmetric and transitive. \\
+Let's start with reflexivity: \\
+\[
+   (a, b) \sim (a, b) \implies ab = ba
+\]
+Above statement is true for all $a \in Z$, $b \in N$. \\
+Thus $\sim$ is reflexive. \\
+\\
+Now let's check symmetry: \\
+\[
+   \forall a,c \in Z \;\; \forall b,d \in N \;\; (a, b) \sim (c, d) \iff ad = bc \iff cb = da \iff (c, d) \sim (a, b)
+\]
+Thus $\sim$ is symmetric. \\
+\\
+Now let's check transitivity: \\
+\[
+   \forall a,b,c,d,e,f \in Z \;\; \forall x,y,z \in N \;\; (a, b) \sim (c, d) \land (c, d) \sim (e, f) \implies (a, b) \sim (e, f)
+\]
+\[
+   (a, b) \sim (c, d) \iff ad = bc
+\]
+\[
+   (c, d) \sim (e, f) \iff cf = de
+\]
+Multiply these two equations together, we get:
+\[
+   adcf = bcde
+\]
+\[
+   af = be
+\]
+\[
+   af = be \iff (a, b) \sim (e, f)
+\]
+Thus $\sim$ is transitive.
+
+
+\begin{flushleft}
+   \textbf{\large Problem 4 (b)}
+\end{flushleft}
+
+\((a, b) \sim (a', b') \land (c, d) \sim (c', d')\) means that
+\[
+   ab' = a'b \land cd' = c'd
+\]
+We want prove \((ad+cb,bd) \sim (a'd'+c'b',b'd')\) \\
+\((ad+cb,bd) \sim (a'd'+c'b',b'd')\) means that
+\[
+   (ad+cb)b'd' = (a'd'+c'b')bd
+\]
+\[
+   adb'd' + cbb'd' = a'd'bd + c'b'bd
+\]
+\[
+   adb'd' - a'd'bd = c'b'bd - cbb'd'
+\]
+\[
+   dd'(ab' - a'b) = bb'(c'd - cd')
+\]
+\[
+   dd'(0) = bb'(0) \quad (\text{Since} \quad ab' = a'b \; and \; cd' = c'd)
+\]
+\(0 = 0\) which is true for every a b c d a' b' c' d'. Thus \((ad+cb,bd) \sim (a'd'+c'b',b'd')\)
+
+\end{document}
