@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.10.19)  27 OCT 2024 12:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2024.10.19)  29 OCT 2024 16:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"/home/apila/Desktop/math1 homework sheets/homework sheet 2/main.tex"
-(/home/apila/Desktop/math1 homework sheets/homework sheet 2/main.tex
+**"/home/apila/Desktop/math1-homework-sheets/homework sheet 2/main.tex"
+(/home/apila/Desktop/math1-homework-sheets/homework sheet 2/main.tex
 LaTeX2e <2022-11-01> patch level 1
 L3 programming layer <2023-01-16> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2022/07/02 v1.4n Standard LaTeX document class
@@ -144,83 +144,98 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 15.
  (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 10000) in paragraph at lines 17--21
+Underfull \hbox (badness 10000) in paragraph at lines 23--26
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--40
+Underfull \hbox (badness 10000) in paragraph at lines 31--42
 
  []
 
 
-Overfull \hbox (33.9709pt too wide) detected at line 48
-[]
+Underfull \hbox (badness 10000) in paragraph at lines 31--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 49--53
+
  []
 
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
+Underfull \hbox (badness 10000) in paragraph at lines 70--72
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--77
+Overfull \hbox (33.9709pt too wide) detected at line 80
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--97
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--98
+Underfull \hbox (badness 10000) in paragraph at lines 102--109
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 109--111
+Underfull \hbox (badness 10000) in paragraph at lines 121--130
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 119--121
+Underfull \hbox (badness 10000) in paragraph at lines 141--143
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 137--139
+Underfull \hbox (badness 10000) in paragraph at lines 151--153
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--146
+Underfull \hbox (badness 10000) in paragraph at lines 169--171
+
+ []
+
+[3]
+Underfull \hbox (badness 10000) in paragraph at lines 173--178
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 141--146
+Underfull \hbox (badness 10000) in paragraph at lines 173--178
 
  []
 
 
-Overfull \hbox (13.32599pt too wide) detected at line 148
+Overfull \hbox (13.32599pt too wide) detected at line 180
 \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 a; c \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 Z  \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 b; d \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 N  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^X \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 c; d\OT1/cmr/m/n/10 )  \OMS/cmsy/m/n/10 ([])  \OML/cmm/m/it/10 ad \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 bc  \OMS/cmsy/m/n/10 ([])  \OML/cmm/m/it/10 cb \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 da  \OMS/cmsy/m/n/10 ([])  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 c; d\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^X \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 )
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--152
+Underfull \hbox (badness 10000) in paragraph at lines 180--184
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 148--152
+Underfull \hbox (badness 10000) in paragraph at lines 180--184
 
  []
 
 
-Overfull \hbox (1.94804pt too wide) detected at line 154
+Overfull \hbox (1.94804pt too wide) detected at line 186
 \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 a; b; c; d; e; f \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 Z  \OMS/cmsy/m/n/10 8\OML/cmm/m/it/10 x; y; z \OMS/cmsy/m/n/10 2 \OML/cmm/m/it/10 N  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^X \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 c; d\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^ \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 c; d\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^X \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 e; f\OT1/cmr/m/n/10 )  =[]\OMS/cmsy/m/n/10 )  \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 a; b\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^X \OT1/cmr/m/n/10 (\OML/cmm/m/it/10 e; f\OT1/cmr/m/n/10 )
  []
 
-[3] [4] (./main.aux) ) 
+[4] [5] (./main.aux) ) 
 Here is how much of TeX's memory you used:
  1844 strings out of 478051
  26673 string characters out of 5840942
@@ -230,10 +245,10 @@ Here is how much of TeX's memory you used:
  14 hyphenation exceptions out of 8191
  56i,10n,62p,279b,149s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/apila/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on main.pdf (4 pages, 107954 bytes).
+Output written on main.pdf (5 pages, 111774 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
- 41 compressed objects within 1 object stream
+ 70 PDF objects out of 1000 (max. 8388607)
+ 43 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

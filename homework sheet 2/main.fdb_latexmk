@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1730027979 "/home/apila/Desktop/math1 homework sheets/homework sheet 2/main.tex" "main.pdf" "main" 1730027979 0
+["pdflatex"] 1730216437 "/home/apila/Desktop/math1-homework-sheets/homework sheet 2/main.tex" "main.pdf" "main" 1730216437 0
   "/etc/texmf/web2c/texmf.cnf" 1720091334 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/home/apila/.texlive2022/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1000.600pk" 1729970638 11524 3c381879be845d68083ba67067d7ce46 ""
-  "/home/apila/Desktop/math1 homework sheets/homework sheet 2/main.tex" 1730027979 4676 c580edd10c0d1cc509556234a3d11560 ""
+  "/home/apila/Desktop/math1-homework-sheets/homework sheet 2/main.tex" 1730216436 5599 487fb8cf1dfb8e1c4366126d3a9a698b ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -42,8 +42,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1681034085 39561 34c98e380bf7c7201ee6a7909aff625a ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1720091341 128028 f533b797fba58d231669ea19e894e23e ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1729359749 6475479 e0ffec70fbc98249be9f7953d872aa53 ""
-  "main.aux" 1730027979 32 c81c40425fbb5e93b90fba65da0b5e61 "pdflatex"
-  "main.tex" 1730027979 4676 c580edd10c0d1cc509556234a3d11560 ""
+  "main.aux" 1730216437 32 2d1df76398b3c48c6419a45a7331db2d "pdflatex"
+  "main.tex" 1730216436 5599 487fb8cf1dfb8e1c4366126d3a9a698b ""
   (generated)
   "main.aux"
   "main.log"

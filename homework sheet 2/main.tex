@@ -9,6 +9,38 @@
 \end{flushright}
 
 \begin{flushleft}
+   \textbf{\Large Problem 1}
+\end{flushleft}
+
+Inductive set \(M \subseteq R\) means that
+\[
+   1 \in M
+\]
+\[
+   \forall n \in M \implies n+1 \in M
+\]
+
+We want to show that the set \( \bigcap_{i \in I} M_i \) is inductive.
+We know that \(\forall i \in I, M_i\) is inductive. \\
+We need to show two things: \\
+\begin{itemize}
+   \item \(1 \in \bigcap_{i \in I} M_i\)
+   \item If \(n \in \bigcap_{i \in I} M_i\), then \(n+1 \in \bigcap_{i \in I} M_i\)
+\end{itemize}
+
+Let's start with the first one: \\
+Is \(1 \in \bigcap_{i \in I} M_i\)? \\
+Yes because \(\forall i \in I, 1 \in M_i\). \\
+\\
+Now let's move on to the second one: \\
+Pick an element \(n \in \bigcap_{i \in I} M_i\). \\
+This means that \(\forall i \in I, n \in M_i\). \\
+By definition of inductive set, \(\forall i \in I, n+1 \in M_i\). \\
+Which means that \(n+1 \in \bigcap_{i \in I} M_i\). \\
+\\
+Thus, \(\bigcap_{i \in I} M_i\) is inductive.
+
+\begin{flushleft}
    \textbf{\Large Problem 2}
 \end{flushleft}
 

@@ -1,9 +1,9 @@
-PWD /home/apila/Desktop/math1 homework sheets/homework sheet 2
+PWD /home/apila/Desktop/math1-homework-sheets/homework sheet 2
 INPUT /etc/texmf/web2c/texmf.cnf
 INPUT /usr/share/texmf/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/apila/Desktop/math1 homework sheets/homework sheet 2/main.tex
+INPUT /home/apila/Desktop/math1-homework-sheets/homework sheet 2/main.tex
 OUTPUT main.log
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/article.cls
