@@ -90,5 +90,40 @@ These are the only values we can get -1, 0, 1. Meaning that:
    \textbf{\Large Problem 1 (b)}
 \end{flushleft}
 
+Lets start with \(f_1\): \\
+\(f_1\) is not injective because it maps 0 and 1 to the same value, that is:
+\[
+   f_1(0) = f_1(1) = 0
+\]
+\\
+\(f_1\) is surjective because it maps to all the values in the codomain. \\
+Lets take an element from the codomain \(z \in Z\). \\
+If \(z \leq 0\) then we can find an element in the domain of \(f_3\), \(x \in Z\) that maps to \(z\). Simply \(x = z\) works. \\
+If \(z > 0\) then we can find an element in the domain of \(f_3\), \(x \in Z\) that maps to \(z\). Simply \(x = z + 1\) works. \\
+\\
+Now, lets take a look at \(f_2\): \\
+\(f_2\) is injective because it maps each element in the domain to a unique element in the codomain, that is:
+\begin{align*}
+    & f_2(x) = f_2(y) \Rightarrow x = y \\
+    & \\
+    & f_2(x) = x - 3,\quad f_2(y) = y - 3    \\
+    & x - 3 = y - 3 \Rightarrow x = y \\
+\end{align*}
+\\
+\(f_2\) is surjective because it maps to all the values in the codomain. \\
+Lets take an element from the codomain of \(f_2\), \(z \in Z\). \\
+We cand find an element in the domain of \(f_2\), \(x \in Z\) that maps to \(z\). Simply \(x = z + 3\) works. \\
+\\
+Now, lets take a look at \(f_3\): \\
+\(f_3\) is injective because it maps each element in the domain to a unique element in the codomain, that is:
+\begin{align*}
+    & f_3(x) = f_3(y) \Rightarrow x = y \\
+    & \\
+    & f_3(x) = 2x,\quad f_3(y) = 2y    \\
+    & 2x = 2y \Rightarrow x = y \\
+\end{align*}
+\\
+\(f_3\) is not surjective because it does not map to all the values in the codomain. \\
+For example there is no element in the domain of \(f_3\) that maps to 1. Generally all the odd numbers are not in the range of \(f_3\). \\
 
 \end{document}
