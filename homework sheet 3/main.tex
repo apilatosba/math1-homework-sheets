@@ -143,5 +143,65 @@ Inverse of \(f_2\):
 \end{align*}
 \\
 
+\begin{flushleft}
+   \textbf{\Large Problem 2}
+\end{flushleft}
+
+
+\begin{flushleft}
+   \textbf{\Large Problem 2 (b)}
+\end{flushleft}
+
+\[
+   (f_i \circ g = f_i \circ h) \implies g = h
+\]
+\\
+
+
+\begin{flushleft}
+   \textbf{\Large Problem 3}
+\end{flushleft}
+
+
+\begin{flushleft}
+   \textbf{\Large Problem 3 (a)}
+\end{flushleft}
+
+Lets assume that opposite of the statement is true, that is there are more than one identity element. We are going to try to find a contradiction. \\
+Lets name them \(e_1\) and \(e_2\). \\
+We know that both identity elements are in the set:
+\begin{align*}
+   & e_1 \in F \\
+   & e_2 \in F \\
+\end{align*}
+\begin{align}
+   e_1 & = e_1 \cdot e_2 & (\text{By definition of identity element \(e_2\)}) \\
+       & = e_2 \cdot e_1 & (\text{By commutative property of multiplication}) \\
+       & = e_2           & (\text{By definition of identity element \(e_1\)})
+\end{align}
+\\
+So, this is a contradiction, we assumed there are two different identity elements but they turned out to be the same element. Thus, there can be only one identity element in a field. \\
+
+
+\begin{flushleft}
+   \textbf{\Large Problem 3 (b)}
+\end{flushleft}
+
+\[
+   \forall a,b,c \in F \quad a + c = b + c \implies a = b
+\]
+
+Lets go step by step: \\
+\begin{align}
+   a &= a + 0 &\text{Identity element of addtiion} \\
+     &= a + (c - c) &\text{Inverse element of addition} \\
+     &= (a + c) - c &\text{Associative property of addition} \\
+     &= (b + c) - c &\text{Given (a+c = b+c)} \\
+     &= b + (c - c) &\text{Associative property of addition} \\
+     &= b + 0 &\text{Inverse element of addition} \\
+     &= b &\text{Identity element of addition}
+\end{align}
+\\
+So, we have proven that if \(a + c = b + c\) then \(a = b\). \\
 
 \end{document}
