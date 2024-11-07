@@ -147,6 +147,26 @@ Inverse of \(f_2\):
    \textbf{\Large Problem 2}
 \end{flushleft}
 
+\begin{flushleft}
+   \textbf{Proof of Problem 2(a)}\\
+   
+   We are given that \( f_s : A \to B \) is a surjective function, and we want to show that if \( g \circ f_s = h \circ f_s \), then \( g = h \).
+
+   \begin{enumerate}
+      \item \textbf{Assume} \( g \circ f_s = h \circ f_s \), such that for every \( x \in A \) we have:
+      \[
+      g(f_s(x)) = h(f_s(x)).
+      \]
+      \item Since \( f_s \) is surjective, for every \( y \in B \), there exists some \( x \in A \) such that \( f_s(x) = y \).
+      \item By substituting \( f_s(x) = y \) into the equation \( g(f_s(x)) = h(f_s(x)) \), we get:
+      \[
+      g(y) = h(y).
+      \]
+      This equality is true for all \( y \in B \), since \( f_s \) is surjective and thus covers all elements of \( B \).
+   \end{enumerate}
+   
+   Thus, the implication \( (g \circ f_s = h \circ f_s) \Rightarrow g = h \) holds true when \( f_s \) is surjective.
+\end{flushleft}
 
 \begin{flushleft}
    \textbf{\Large Problem 2 (b)}
