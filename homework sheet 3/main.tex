@@ -148,6 +148,7 @@ Inverse of \(f_2\):
 \end{flushleft}
 
 \begin{flushleft}
+
    \textbf{Proof of Problem 2(a)}\\
    
    We are given that \( f_s : A \to B \) is a surjective function, and we want to show that if \( g \circ f_s = h \circ f_s \), then \( g = h \).
@@ -169,13 +170,21 @@ Inverse of \(f_2\):
 \end{flushleft}
 
 \begin{flushleft}
-   \textbf{\Large Problem 2 (b)}
+   \textbf{\Large Problem 2 (b)}\\
+   We are given that \( f_i : C \to D \) is an injective function, and we want to show that if \( f_i \circ g = f_i \circ h \), then \( g = h \).
+   \begin{enumerate}
+      \item \textbf{Assume \( f_i \circ g = f_i \circ h \)} such that for every \(x \in B\) we have:\\
+      \[ 
+      f_i(g(x)) =f_i(h(x))
+      \]
+      \item Since \(f_i\) is injective thus for each \(y1,y2 \in C\), \(f_i(y1)=f_i(y2) \Rightarrow\ y1=y2\)
+      \item By substituting \( g(x) ,h(x)\) into 2 we get 
+      \[f_i(g(x))=f_i(h(x)) \Rightarrow\ g(x)=h(x)\]
+      from 1 and 2 we get that \(g=h\) for all \(x \in B\)
+   \end{enumerate}
 \end{flushleft}
 
-\[
-   (f_i \circ g = f_i \circ h) \implies g = h
-\]
-\\
+
 
 
 \begin{flushleft}
