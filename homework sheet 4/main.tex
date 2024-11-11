@@ -42,6 +42,28 @@ for every \(x \in [-1, \infty]\).\\
 And this completes the proof.
 \\
 \\
+\textbf{Inductive step alternative solution:} \\
+We assume that the statement is true for \(n = k\), i.e.
+\[
+   (1 + x)^k \geq 1 + kx
+\]
+Multiply both sides by \(1 + x\), since \(1 + x > 0\) because \(x \in [-1, \infty]\), we have
+\[
+   (1 + x)^{k} (1 + x) \geq (1 + kx)(1 + x)
+\]
+\[
+   (1 + x)^{k + 1} \geq 1 + kx + x + kx^2
+\]
+\[
+   0 \geq -kx^2
+\]
+Add these two together, we get
+\[
+   (1 + x)^{k + 1} \geq 1 + (k + 1)x
+\]
+And this completes the proof.\\
+\\
+\\
 \textbf{Give a counterexample to show that the condition x \(\geq\) -1 is necessary:}\\
 Let's take \(x = -2\) and \(n = 2\). Then we have
 
