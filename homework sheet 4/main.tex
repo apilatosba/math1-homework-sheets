@@ -97,5 +97,36 @@ In this case \(X_1\) is bounded from below and above.\\
 \end{align*}
 And \(sup X_1 \in X_1\) which means \(sup X_1\) is also the maximum value.\\
 \(inf X_1 \in X_1\) which means \(inf X_1\) is also the minimum value.\\
+\\
+\section*{Problem 2 (b)}
+\[
+   X_2 := \{x \in R \setminus \{0\}: 5 - x^2 > \frac{4}{x^2}\}
+\]
+What x values satisfy this condition? \\
+\begin{align*}
+   5 - x^2 &> \frac{4}{x^2} \\
+   5 - x^2 - \frac{4}{x^2} &> 0 \\
+   \frac{5x^2 - x^4 - 4}{x^2} &> 0 \\
+\end{align*}
+Since \(x^2\) is always positive, we can multiply both sides by \(x^2\).\\
+\begin{align*}
+   5x^2 - x^4 - 4 &> 0 \\
+   x^4 - 5x^2 + 4 &< 0 \\
+   (x^2 - 4)(x^2 - 1) &< 0 \\
+   (x - 2)(x + 2)(x - 1)(x + 1) &< 0
+\end{align*}
+So, this inequality is satisfied when \(-2 < x < -1 \quad \lor \quad 1 < x < 2\).\\
+So this means:
+\[
+   X_2 = (-2, -1) \cup (1, 2)
+\]
+In this case \(X_2\) is bounded from below and above.\\
+\begin{align*}
+   sup X_2 &= 2 \\
+   inf X_2 &= -2
+\end{align*}
+And \(sup X_2 \notin X_2\) which means \(sup X_2\) is not the maximum value.\\
+\(inf X_2 \notin X_2\) which means \(inf X_2\) is not the minimum value.\\
+Maximum and minimum values are not in the set.\\
 
 \end{document}
