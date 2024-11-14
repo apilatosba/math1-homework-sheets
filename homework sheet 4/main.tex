@@ -20,29 +20,7 @@ by using mathematical induction.\\
 \]
 Which is true for every \(x \in R\) so it means it is also true for \(x \in [-1, \infty]\)\\
 \\
-\textbf{Inductive Step:} Assume that the statement is true for \(n = k\), i.e.
-\[
-   (1 + x)^k \geq 1 + kx
-\]
-is true for every \(x \in [-1, \infty]\).\\
-We want to prove that the statement is also true for \(n = k + 1\), i.e.
-\[
-   (1 + x)^{k + 1} \geq 1 + (k + 1)x
-\]
-for every \(x \in [-1, \infty]\).\\
-
-\begin{align}
-   (1 + x)^{k + 1} & = (1 + x)^k \cdot (1 + x)                                                                                  \\
-                   & \geq (1 + kx) \cdot (1 + x) & (\text{Using inductive step}) \label{eg:step2}                                                 \\
-                   & = 1 + kx + x + kx^2                                                                                        \\
-                   & = 1 + (k + 1)x + kx^2                                                                                      \\
-                   & \geq 1 + (k + 1)x            &\text{(Since \(kx^2 \geq 0\))}
-\end{align}
-\\
-And this completes the proof.
-\\
-\\
-\textbf{Inductive step alternative solution:} \\
+\textbf{Inductive step:} \\
 We assume that the statement is true for \(n = k\), i.e.
 \[
    (1 + x)^k \geq 1 + kx
