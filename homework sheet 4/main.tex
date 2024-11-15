@@ -151,4 +151,37 @@ So, we have
 And this completes the proof.\\
 
 
+\section*{Problem 4 (b)}
+Let us consider the following 4 cases: \\
+Assume \(x \geq y\):\\
+When \(y\) is positive, the following is true:
+\[
+|x| - |y| = x - y \tag{1}
+\]
+When \(y\) is negative, the following is true:
+\[
+|x| - |-y| = x - y \quad \land \quad x - (-y) = x + y
+\]
+From above, we can conclude:
+\[
+|x| - |-y| \leq x - (-y)
+\]
+\begin{align}
+&\text{and both sides of the inequality are} \quad \geq 0 \quad \text{due to the assumption } x \geq y \tag{2} \\
+&|x| - |-y| \leq x - (-y) \geq 0 \tag{2}
+\end{align}
+Now let us assume that \(x < y\):\\
+when x is positive the following is true:\\
+\[
+|x| - |y| = x - y \tag{3}
+\]
+when x is negative the following is true:\\
+\[
+   |-x| - |y| = x - y \; \land \; -x-y = -(x+y) \; \land \; |-(x+y)| \geq |-x| - |y| \tag{4}
+\]
+from 1, 2, 3, 4 we can conclude that 
+\[
+||x| - |y|| \leq |x - y| \quad \text{for all } x, y \in \mathbb{R}.
+\] 
+
 \end{document}
