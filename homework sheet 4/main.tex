@@ -107,6 +107,30 @@ And \(sup X_2 \notin X_2\) which means \(sup X_2\) is not the maximum value.\\
 \(inf X_2 \notin X_2\) which means \(inf X_2\) is not the minimum value.\\
 Maximum and minimum values are not in the set.\\
 
+\section*{Problem 3}
+We say that \(x'\) is an supremum of \(Y\) if \(\forall x \in Y, x' > x \)\\
+so given that \(sup Y\) exists for set \(Y\) we can take an element \(x \in Y\) such that we know 
+that the following relation holds true for \(\forall y \in Y\) because of the existence of a supremum
+\[
+\forall y \in Y (supY > y)  \tag{1}
+\]
+Now according to the second property of ordered fields\\ \[
+\forall a,b,c \in F: (a \leq b) 
+\land(c \leq 0) \implies a.c \geq b.c \tag{2}
+\] \\let a = y, c = -1, b = supY
+from \(1\) we know that \(a < b \) and we know that \(-1 < 0 \)
+thus using \(2\) we can conclude 
+\[
+   -1.y > -1.supY
+\] from the 9th property of fields we can conclude
+\[
+   -y > -supY \tag{3}
+\]
+from 1 we know that 3 holds true for all y \(\in\) Y
+and thus by the defintion of the infimum, the infimum of the set -Y exists and it is equal to -supY
+
+
+
 \section*{Problem 4}
 \section*{Problem 4 (a)}
 We want to prove
