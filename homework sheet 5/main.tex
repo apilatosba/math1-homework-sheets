@@ -10,6 +10,42 @@
 
 \section*{Problem 1}
 
+\section*{Problem 1(a)}
+We want to prove
+\[
+   X \setminus \bigcap_{i \in I} Y_i = \bigcup_{i \in I} (X \setminus Y_i), \qquad \forall i \in I \quad Y_i \subseteq X
+\]
+and
+\[
+   X \setminus \bigcup_{i \in I} Y_i = \bigcap_{i \in I} (X \setminus Y_i), \qquad \forall i \in I \quad Y_i \subseteq X
+\]
+\\
+Let's start with the first one. \\
+\[
+   X \setminus \bigcap_{i \in I} Y_i = \bigcup_{i \in I} (X \setminus Y_i)
+\]
+We are going to prove this by proving both sides are subsets of each other.\\
+\\
+First, \(X \setminus \bigcap_{i \in I} Y_i \subseteq \bigcup_{i \in I} (X \setminus Y_i)\): \\
+Let \(x \in X \setminus \bigcap_{i \in I} Y_i\). This means that \(x \in X\) and \(x \notin \bigcap_{i \in I} Y_i\). This means that there is at least one \(Y_i\) such that \(x \notin Y_i\). So, \(x \in X \setminus Y_i\) for that \(Y_i\). Thus, \(x \in \bigcup_{i \in I} (X \setminus Y_i)\).\\
+\\
+Second, \(\bigcup_{i \in I} (X \setminus Y_i) \subseteq X \setminus \bigcap_{i \in I} Y_i\): \\
+Let \(x \in \bigcup_{i \in I} (X \setminus Y_i)\). This means that there is at least one \(Y_i\) such that \(x \in X \setminus Y_i\). This means that \(x \in X\) and \(x \notin Y_i\). This means that \(x \notin \bigcap_{i \in I} Y_i\). Thus, \(x \in X \setminus \bigcap_{i \in I} Y_i\).\\
+And this completes the proof for the first one.\\
+\\
+Now, let's prove the second one.\\
+\[
+   X \setminus \bigcup_{i \in I} Y_i = \bigcap_{i \in I} (X \setminus Y_i)
+\]
+We are going to prove this by proving both sides are subsets of each other.\\
+\\
+First, \(X \setminus \bigcup_{i \in I} Y_i \subseteq \bigcap_{i \in I} (X \setminus Y_i)\): \\
+Let \(x \in X \setminus \bigcup_{i \in I} Y_i\). This means that \(x \in X\) and \(x \notin \bigcup_{i \in I} Y_i\). This means that \(x \notin Y_i\) for all \(i \in I\). This means that \(x \in X \setminus Y_i\) for all \(i \in I\). Thus, \(x \in \bigcap_{i \in I} (X \setminus Y_i)\).\\
+\\
+Second, \(\bigcap_{i \in I} (X \setminus Y_i) \subseteq X \setminus \bigcup_{i \in I} Y_i\): \\
+Let \(x \in \bigcap_{i \in I} (X \setminus Y_i)\). This means that \(x \in X \setminus Y_i\) for all \(i \in I\). This means that \(x \in X\) and \(x \notin Y_i\) for all \(i \in I\). This means that \(x \notin \bigcup_{i \in I} Y_i\). Thus, \(x \in X \setminus \bigcup_{i \in I} Y_i\).\\
+And this completes the proof for the second one.\\
+
 \section*{Problem 1(b)}
 \section*{Problem 1(b)(i)}
 We want to prove \(\bigcap_{i \in I} U_i\) is closed.\\
