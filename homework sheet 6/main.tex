@@ -8,4 +8,40 @@
    \textbf{Author: Abdullah Oguz Topcuoglu \& Yousef Farag}
 \end{flushright}
 
+\section*{Problem 1}
+\section*{Problem 1 (a)}
+We want to compute the following limit:
+\[
+   \lim_{n \rightarrow \infty} \frac{(n+1)^4(1 - 4n^3)^2}{(1+2n^2)^5}
+\]
+\\
+The top part look somethin like this:
+\[
+   (n+1)^4(1 - 4n^3)^2 = 16n^{10} + \sum_{i = 0}^{i = 9} k_in^i
+\]
+And the bottom part look like this:
+\[
+   (1+2n^2)^5 = 32n^{10} + \sum_{i = 0}^{i = 9} k_in^i
+\]
+When we substitute these into the limit, we get:
+\[
+   \lim_{n \rightarrow \infty} \frac{16n^{10} + \sum_{i = 0}^{i = 9} k_in^i}{32n^{10} + \sum_{i = 0}^{i = 9} k_in^i}
+\]
+Divide the top and bottom by $n^{10}$:
+\[
+   \lim_{n \rightarrow \infty} \frac{16 + \sum_{i = 0}^{i = 9} k_in^{i-10}}{32 + \sum_{i = 0}^{i = 9} k_in^{i-10}}
+\]
+\[
+   \frac{\lim_{n \rightarrow \infty}(16 + \sum_{i = 0}^{i = 9} k_in^{i-10})}{\lim_{n \rightarrow \infty}(32 + \sum_{i = 0}^{i = 9} k_in^{i-10})}
+\]
+\[
+   \frac{16 + \sum_{i = 0}^{i = 9} k_i\lim_{n \rightarrow \infty}n^{i-10}}{32 + \sum_{i = 0}^{i = 9} k_i\lim_{n \rightarrow \infty}n^{i-10}}
+\]
+And we know that \(\lim_{n \rightarrow \infty} 1/n^i\) is zero for all \(i > 0\). Therefore, the limit is:
+\[
+   \frac{16}{32} = \frac{1}{2}
+\]
+
+
+
 \end{document}
