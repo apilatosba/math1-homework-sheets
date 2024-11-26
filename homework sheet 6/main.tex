@@ -42,6 +42,37 @@ And we know that \(\lim_{n \rightarrow \infty} 1/n^i\) is zero for all \(i > 0\)
    \frac{16}{32} = \frac{1}{2}
 \]
 
-
+\section*{Problem 1 (b)}
+We want to compute the following limit:
+\[
+   \lim_{n \rightarrow \infty} \sqrt{n+1} - \sqrt{n}
+\]
+Multiply and divide by the conjugate:
+\[
+   \lim_{n \rightarrow \infty} \sqrt{n+1} - \sqrt{n} \cdot \frac{\sqrt{n+1} + \sqrt{n}}{\sqrt{n+1} + \sqrt{n}}
+\]
+\[
+   \lim_{n \rightarrow \infty} \frac{n+1 - n}{\sqrt{n+1} + \sqrt{n}}
+\]
+\[
+   \lim_{n \rightarrow \infty} \frac{1}{\sqrt{n+1} + \sqrt{n}}
+\]
+And observe that
+\[
+   \frac{1}{n^2} < \frac{1}{\sqrt{n+1} + \sqrt{n}} < \frac{1}{\sqrt{n}}
+\]
+when \(n > 10\) (10 is not a magic number, it is just a number that is big enough) 
+and we only care about the tail of the sequences not the head.\\
+And we know that:
+\[
+   \lim_{n \rightarrow \infty} \frac{1}{n^2} = 0
+\]
+\[
+   \lim_{n \rightarrow \infty} \frac{1}{\sqrt{n}} = 0
+\]
+From the sandwich teorem, we can conclude that:
+\[
+   \lim_{n \rightarrow \infty} \frac{1}{\sqrt{n+1} + \sqrt{n}} = 0
+\]
 
 \end{document}
