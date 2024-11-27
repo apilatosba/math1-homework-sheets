@@ -207,5 +207,26 @@ We consider the limit of \(\lim_{n \rightarrow \infty}\frac{a_n}{b_n}\).
 \end{align*}
 That's what we wanted to show.
 
+\section*{Problem 3}
+\section*{Problem 3(a)}
+\begin{align*}
+   a_1 &= 1 \\
+   a_{n+1} &= \frac{1}{1 + a_n} \quad \forall n \in N \\
+\end{align*}
+The limit:
+Whatever the limit of \(a_n\) is, it is also the limit of \(a_{n+1}\). Let's call the limit \(l\).
+\[
+   l = \lim_{n \rightarrow \infty} a_n = \lim_{n \rightarrow \infty} a_{n+1}
+\]
+Using the recursion definition, we have
+\begin{align*}
+   \lim_{n \rightarrow \infty} a_{n+1} &= \lim_{n \rightarrow \infty} \frac{1}{1 + a_n} \\
+   \lim_{n \rightarrow \infty} a_{n+1} &= \frac{1}{1 + \lim_{n \rightarrow \infty} a_n} \\
+   l &= \frac{1}{1 + l} \\
+   l + l^2 &= 1 \\
+   l_1 &= \frac{1+\sqrt{5}}{2}, \quad l_2 = \frac{1-\sqrt{5}}{2}
+\end{align*}
+And we know that \(\forall n \in N \quad a_n > 0\) so the limit is \(l = l_1 = \frac{1+\sqrt{5}}{2}\)
+
 
 \end{document}
