@@ -175,4 +175,37 @@ We can rewrite this by substituting \(n\) with \(n+2\):
 \end{align*}
 And we showed that \(b_{n+1} \leq b_n \quad \forall n \in N\).
 
+\section*{Problem 2 (c)}
+We want to show
+\[
+   a_n \leq b_n \quad \forall n \in N
+\]
+Let's start
+\[
+   a_n \leq b_n \quad \forall n \in N \Rightarrow \frac{a_n}{b_n} \leq 1
+\]
+From definiton of \(a_n\) and \(b_n\), we have
+\[
+   \frac{a_n}{b_n} = \frac{(1 + \frac{1}{n})^n}{(1 + \frac{1}{n})^{n+1}} = \frac{1}{1 + \frac{1}{n}} = \frac{n}{n+1} \leq 1
+\]
+And we showed that \(a_n \leq b_n \quad \forall n \in N\).\\
+\\
+Now we want to show why \(a_n\) and \(b_n\) are convergent.\\
+We know that \(b_n\) is monotonically decreasing. This means that \(\sup b_n\) exists.
+And we also know that \(a_n \leq b_n \quad \forall n \in N\). This means that \(a_n \leq \sup b_n\).
+And we also know that \(a_n\) is monotonically increasing. This means that \(a_n\) is convergent 
+because it is monotonically increasing and bounded above.\\
+We know that \(a_n\) is monotonically increasing that means that \(\inf a_n\) exists. And we also know that
+\(a_n \leq b_n \quad \forall n \in N\). This means that \(b_n \geq \inf a_n\).
+And we also know that \(b_n\) is monotonically decreasing. This means that \(b_n\) is convergent.\\
+We consider the limit of \(\lim_{n \rightarrow \infty}\frac{a_n}{b_n}\).
+\begin{align*}
+   & \frac{a_n}{b_n} = \frac{(1 + \frac{1}{n})^n}{(1 + \frac{1}{n})^{n+1}} = \frac{1}{1 + \frac{1}{n}} = \frac{n}{n+1} \\
+   & \lim_{n \rightarrow \infty} \frac{a_n}{b_n} = \lim_{n \rightarrow \infty} \frac{n}{n+1} = 1 \\
+   &=\lim_{n \rightarrow \infty} \frac{a_n}{b_n} = \frac{\lim_{n \rightarrow \infty} a_n}{\lim_{n \rightarrow \infty} b_n} \\
+   &\lim_{n \rightarrow \infty} a_n = \lim_{n \rightarrow \infty} b_n
+\end{align*}
+That's what we wanted to show.
+
+
 \end{document}
