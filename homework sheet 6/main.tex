@@ -70,9 +70,54 @@ And we know that:
 \[
    \lim_{n \rightarrow \infty} \frac{1}{\sqrt{n}} = 0
 \]
-From the sandwich teorem, we can conclude that:
+From the sandwich theorem, we can conclude that:
 \[
    \lim_{n \rightarrow \infty} \frac{1}{\sqrt{n+1} + \sqrt{n}} = 0
 \]
+
+\section*{Problem 2}
+\[
+   a_n = (1 + \frac{1}{n})^n
+\]
+\[
+   b_n = (1 + \frac{1}{n})^{n+1}
+\]
+
+\section*{Problem 2 (a)}
+We want to prove that
+\[
+   \frac{a_{n + 1}}{a_n} = \left(1 - \frac{1}{(n+1)^2} \right)^{n+1} \frac{n+1}{n}
+\]
+Let's start
+\begin{align*}
+   \frac{a_{n+1}}{a_n} & = \frac{(1 + \frac{1}{n+1})^{n+1}}{(1 + \frac{1}{n})^n}                               \\
+                        &= \frac{(n+2)^{n+1}n^n}{(n+1)^{2n+1}} \\
+                        &= \frac{(n+2)^{n+1}n^{n+1}}{(n+1)^{2n+2}} \frac{n+1}{n} \\
+                        &= \frac{(n+2)^{n+1}n^{n+1}}{((n+1)^2)^{n+1}} \frac{n+1}{n} \\
+                        &= (\frac{(n+2)n}{(n+1)^2})^{n+1} \frac{n+1}{n} \\
+                        &= (\frac{n^2+2n}{(n+1)^2})^{n+1} \frac{n+1}{n} \\
+                        &= (\frac{n^2+2n+1 -1}{(n+1)^2})^{n+1} \frac{n+1}{n} \\
+                        &= (\frac{n^2+2n+1}{(n+1)^2} - \frac{1}{((n+1)^2)})^{n+1} \frac{n+1}{n} \\
+                        &= (1 - \frac{1}{(n+1)^2})^{n+1} \frac{n+1}{n} \\
+\end{align*}
+That's what we wanted to show. \\
+\\
+Now \(b_n\). We want to prove
+\[
+   \frac{b_n}{b_{n+1}} = \left(1 + \frac{1}{n(n+2)} \right)^{n+2} \frac{n}{n+1}
+\]
+Let's start
+\begin{align*}
+   \frac{b_n}{b_{n+1}} & = \frac{(1 + \frac{1}{n})^{n+1}}{(1 + \frac{1}{n+1})^{n+2}}                               \\
+                        &= \frac{(n+1)^{2n+3}}{n^{n+1}(n+2)^{n+2}} \\
+                        &= \frac{(n+1)^{2n+4}}{n^{n+2}(n+2)^{n+2}} \frac{n}{n+1} \\
+                        &= \frac{((n+1)^2)^{n+2}}{n^{n+2}(n+2)^{n+2}} \frac{n}{n+1} \\
+                        &= (\frac{(n+1)^2}{n(n+2)})^{n+2} \frac{n}{n+1} \\
+                        &= (\frac{n^2 +2n + 1}{n(n+2)})^{n+2} \frac{n}{n+1} \\
+                        &= (\frac{n(n+2) + 1}{n(n+2)})^{n+2} \frac{n}{n+1} \\
+                        &= (1 + \frac{1}{n(n+2)})^{n+2} \frac{n}{n+1} \\
+\end{align*}
+That's what we wanted to show.
+
 
 \end{document}
