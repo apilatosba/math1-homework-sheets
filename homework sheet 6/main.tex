@@ -119,5 +119,60 @@ Let's start
 \end{align*}
 That's what we wanted to show.
 
+\section*{Problem 2 (b)}
+We want to show that
+\[
+   a_{n+1} \geq a_n \quad \forall n \in N
+\]
+Let's start
+\(a_{n+1} \geq a_n\) means that \(\frac{a_{n+1}}{a_n} \geq 1\). Because \(a_n > 0 \quad \forall n \in N\).
+And we computed what \(\frac{a_{n+1}}{a_n}\) is in the previous part. It is \(\left(1 - \frac{1}{(n+1)^2} \right)^{n+1} \frac{n+1}{n}\).
+So we want to show \(\left(1 - \frac{1}{(n+1)^2} \right)^{n+1} \frac{n+1}{n} \geq 1\) \\
+From Bernoulli's inequality we have
+\[
+   (1 + x)^n \geq 1 + nx
+\]
+Choose \(x = - \frac{1}{n^2}\). Then we have
+\[
+   \left(1 - \frac{1}{n^2} \right)^{n} \geq 1 - \frac{n}{n^2} = 1 - \frac{1}{n}
+\]
+We can rewrite this by substituting \(n\) with \(n+1\):
+\[
+   \left(1 - \frac{1}{(n+1)^2} \right)^{n+1} \geq 1 - \frac{1}{n+1}
+\]
+
+\begin{align*}
+   \left(1 - \frac{1}{(n+1)^2} \right)^{n+1} \frac{n+1}{n} &= \left(1 - \frac{1}{(n+1)^2} \right)^{n+1} \frac{n+1}{n} \\
+      &=  \left(1 - \frac{1}{(n+1)^2} \right)^{n+1} \frac{n+1}{n} \geq (1 - \frac{1}{n+1}) \frac{n+1}{n} \\
+      &= \frac{n}{n+1} \frac{n+1}{n} = 1
+\end{align*}
+And we showed that \(a_{n+1} \geq a_n \quad \forall n \in N\).\\
+\\
+We want to show that \(b_n\) is monotonically decreasing.
+\[
+   b_{n+1} \leq b_n \quad \forall n \in N
+\]
+Let's start
+\(b_{n+1} \leq b_n\) means that \(\frac{b_n}{b_{n+1}} \geq 1\). Because \(b_{n+1} > 0 \quad \forall n \in N\).
+And we know what \(\frac{b_n}{b_{n+1}}\) is from previous part. It is \(\left(1 + \frac{1}{n(n+2)} \right)^{n+2} \frac{n}{n+1}\).
+So we want to show that
+\[
+   \left(1 + \frac{1}{n(n+2)} \right)^{n+2} \frac{n}{n+1} \geq 1
+\]
+In the Berboulli's ineqaulity choose \(x = \frac{1}{n(n-2)}\). Then we have
+\[
+   \left(1 + \frac{1}{n(n-2)} \right)^{n} \geq 1 + \frac{n}{n(n-2)} = 1 + \frac{1}{n-2}
+\]
+We can rewrite this by substituting \(n\) with \(n+2\):
+\[
+   \left(1 + \frac{1}{(n+2)n} \right)^{n+2} \geq 1 + \frac{1}{n}
+\]
+
+\begin{align*}
+   \left(1 + \frac{1}{n(n+2)} \right)^{n+2} \frac{n}{n+1} &= \left(1 + \frac{1}{n(n+2)} \right)^{n+2} \frac{n}{n+1} \\
+      &=  \left(1 + \frac{1}{n(n+2)} \right)^{n+2} \frac{n}{n+1} \geq (1 + \frac{1}{n}) \frac{n}{n+1} \\
+      &= \frac{n+1}{n} \frac{n}{n+1} = 1
+\end{align*}
+And we showed that \(b_{n+1} \leq b_n \quad \forall n \in N\).
 
 \end{document}
