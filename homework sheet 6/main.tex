@@ -227,6 +227,28 @@ Using the recursion definition, we have
    l_1 &= \frac{1+\sqrt{5}}{2}, \quad l_2 = \frac{1-\sqrt{5}}{2}
 \end{align*}
 And we know that \(\forall n \in N \quad a_n > 0\) so the limit is \(l = l_1 = \frac{1+\sqrt{5}}{2}\)
-
-
+\section*{Problem 3(b)}
+We know that \(f_{n+2} = f_{n+1} + f_{n} \) if we then divide both sides by \(f_{n+1}\) then we get
+\( \frac{f_{n+2}}{f_{n+1}}  = 1 + \frac{f_{n}}{f_{n+1}} \)\\
+ we let \(x_{n}\) = \(\frac{f_{n+1}}{f_{n}}\) if we substitute in the statment above then we get:
+ \[
+   x_{n+1} = 1 + \frac{1}{x_{n}}
+ \]
+ Let the limit of \(x_{n} = L\) by the properties of limits we know that the limit of \(x_(n+1)\) is also equal to \(L\)
+ By substituting in the statment above we get :
+ \[
+   L = 1 + \frac{1}{L}
+ \]
+ Multiply both sides by \( L \):
+\[
+L^2 = L + 1
+\]
+\[L^2 - L - 1 = 0\]
+By solving this equation we get two numbers:
+\[
+   \frac{1}{2} + \frac{\sqrt{5}}{2}, \frac{1}{2} - \frac{\sqrt{5}}{2}
+\]
+Since this sequence doesn't produce any negative numbers then we can say that 
+this sequence converges to \(\frac{1}{2} + \frac{\sqrt{5}}{2}\) because it is monotonically increasing and bounded from below by 1 (\(x_{1} = 1\)) and bounded from above by
+\(\frac{1}{2} + \frac{\sqrt{5}}{2}\)
 \end{document}
