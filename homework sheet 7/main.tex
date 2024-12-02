@@ -29,6 +29,26 @@ Combining these two inequalities we get
    \limsup_{n \rightarrow \infty} (a_n + b_n) = \limsup_{n \rightarrow \infty} a_n + \lim_{n \rightarrow \infty} b_n
 \]
 
+\section*{Problem 2}
+We want to show that
+\[
+   \sum_{n=1}^{\infty} \frac{1}{n(n+1)} \quad \text{converges}
+\]
+\\
+\\
+\[
+   \frac{1}{n(n+1)} = \frac{1}{n} - \frac{1}{n+1}
+\]
+\begin{align*}
+   \sum_{n=1}^{\infty} \frac{1}{n(n+1)} &= \sum_{n=1}^{\infty} \frac{1}{n} - \frac{1}{n+1} \\
+   s_n &= \sum_{k=1}^n \frac{1}{k} - \frac{1}{k+1} \\
+   % write the general formula for s_n
+   s_n &= 1 - \frac{1}{2} + \frac{1}{2} - \frac{1}{3} + \frac{1}{3} - \ldots + \frac{1}{n} - \frac{1}{n+1} \\
+   s_n &= 1 - \frac{1}{n+1} \\
+   \sum_{n=1}^{\infty} \frac{1}{n(n+1)} &= \lim_{n \rightarrow \infty} s_n = 1 - \lim_{n \rightarrow \infty} \frac{1}{n+1} = 1 - 0 = 1
+\end{align*}
+Therefore, \(\sum_{n=1}^{\infty} \frac{1}{n(n+1)}\) converges and its value is 1. \\
+
 \section*{Problem 3}
 \(a_n\) is monotonically decreasing and \(\forall n \in N, a_n \geq 0\) and \(\lim_{n \rightarrow \infty} a_n = 0\). \\
 We want to show that \(\sum_{n=1}^{\infty} (-1)^n a_n\) converges. \\
