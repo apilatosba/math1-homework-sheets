@@ -85,5 +85,44 @@ the limit of \(lim_{n \rightarrow \infty} \frac{\frac{1}{2n}}{a_n} = \frac{2}{3}
 which means for almost all \(n \in N\) \(\frac{1}{2n} \leq a_n\). And from the therom 3.44(ii) in the lecture notes,
 \(a_n\) is divergent. because \(\sum_{n=1}^{\infty}\frac{1}{2n}\) is divergent and \(a_n \geq \frac{1}{2n} \geq 0\) for almost all \(n \in N\).
 
+\section*{Problem 2(b)}
+\section*{Problem 2(b)(i)}
+\[
+   \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}x^n
+\]
+We notice that the series is alternating series. Let's check for Leibniz criterion. \\
+When is \(x^n/n\) a monotonous null sequence? The answer is when x is in \([-1, 1]\). \\
+So we know the series converges for \(x \in [-1, 1]\). \\
+For absolute convergence we consider the series
+\[
+   \sum_{n=1}^{\infty} \frac{x^n}{n}
+\]
+Let's do ratio test
+\begin{align*}
+   \lim_{n \rightarrow \infty} \frac{a_{n+1}}{a_n} &= \lim_{n \rightarrow \infty} \frac{x^{n+1}}{n+1} \cdot \frac{n}{x^n} \\
+               &= \lim_{n \rightarrow \infty} \frac{x n}{n+1} \\
+               &= x \lim_{n \rightarrow \infty} \frac{n}{n+1} \\
+               &= x
+\end{align*}
+By the ratio test we see that if \(x \in (-1, 1)\) then the series converges absolutely. \\
+And if \(x > 1, x < -1\) then the series diverges. \\
+
+
+\section*{Problem 2(b)(ii)}
+\[
+   \sum_{n=0}^{\infty} \frac{(-1)^n}{(2n+1)!}x^{2n+1}
+\]
+We notice that the series is alternating series. Let's check for Leibniz criterion. \\
+When is \(x^{2n+1}/(2n+1)!\) a monotonous null sequence? The answer is for all x.
+Because in the lecture we learnt that factorial grows faster than exponential. \\
+For absolute convergence we consider the series
+\[
+   \sum_{n=0}^{\infty} \frac{x^{2n+1}}{(2n+1)!}
+\]
+Let's do ratio test
+\[
+   \lim_{n \rightarrow \infty} \frac{a_{n+1}}{a_n} = \lim_{n \rightarrow \infty} \frac{x^{2n+3}}{(2n+3)!} \cdot \frac{(2n+1)!}{x^{2n+1}} = \lim_{n \rightarrow \infty} \frac{x^2}{(2n+2)(2n+3)} = 0 \quad \forall x \in R
+\]
+Therefore, the series converges absolutely for all x.
 
 \end{document}
