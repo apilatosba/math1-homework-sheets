@@ -8,4 +8,57 @@
    \textbf{Author: Abdullah Oguz Topcuoglu \& Yousef Farag}
 \end{flushright}
 
+\section*{Problem 1}
+\[
+   a_n := \root n \of {n} - 1
+\]
+We want to prove
+\[
+   a_n \leq \root \of {\frac{2}{n}} \qquad \forall n \geq 2
+\]
+and we want to prove
+\[
+   \lim_{n \rightarrow \infty} \root n \of {n} = 1
+\]
+\\
+Apply the binomial formula to \((1 + a_n)^n\)
+\begin{align*}
+   (1 + a_n)^n &= n \\
+               &= \sum_{k=0}^{n} \binom{n}{k} a_n^k \\
+               &= \sum_{k=0}^{n} \binom{n}{k} (\root n \of {n} - 1)^k \\
+               &= 1 + \binom{n}{1}(\root n \of {n} - 1) + \binom{n}{2} (\root n \of {n} - 1)^2 + \ldots + (\root n \of {n} - 1)^n \\
+\end{align*}
+% TODO: idk what to do next
+\\
+\\
+\\
+Using the fact that \(a_n \leq \root \of {\frac{2}{n}}\), we want to show
+\[
+   \lim_{n \rightarrow \infty} \root n \of {n} = 1
+\]
+We know that
+\[
+   1 - \frac{1}{n} \leq \root n \of {n}
+\]
+because \(1 - \frac{1}{n}\) is less than 1 and \(\root n \of {n}\) is greater or equal to 1 for all \(n \geq 1\). \\
+Also from the previous inequality we have
+\begin{align*}
+   \root n \of {n} - 1 &\leq \root \of {\frac{2}{n}} \\
+   \root n \of {n} &\leq 1 + \root \of {\frac{2}{n}}
+\end{align*}
+When combined we have
+\[
+   1 - \frac{1}{n} \leq \root n \of {n} \leq 1 + \root \of {\frac{2}{n}}
+\]
+\[
+   \lim_{n \rightarrow \infty} 1 - \frac{1}{n} = 1
+\]
+\[
+   \lim_{n \rightarrow \infty} 1 + \root \of {\frac{2}{n}} = 1
+\]
+Therefore, by the sandwich theorem, we have
+\[
+   \lim_{n \rightarrow \infty} \root n \of {n} = 1
+\]
+
 \end{document}
