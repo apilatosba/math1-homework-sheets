@@ -61,4 +61,29 @@ Therefore, by the sandwich theorem, we have
    \lim_{n \rightarrow \infty} \root n \of {n} = 1
 \]
 
+\section*{Problem 2}
+\section*{Problem 2(a)}
+\[
+   a_n := \frac{4 + 3n^2}{n(2n+1)^2}
+\]
+We want to prove
+\[
+   (\frac{1}{n})_{n \in N} \in O((a_n)_{n \in N})
+\]
+Which means \(\frac{\frac{1}{n}}{a_n}\) is bounded. \\
+Let's start
+\begin{align*}
+   \frac{1}{na_n} &= \frac{n(2n+1)^2}{n(4 + 3n^2)} \\
+                  &= \frac{(2n+1)^2}{4 + 3n^2} \\
+                  &= \frac{4n^2 + 4n + 1}{4 + 3n^2} \\
+                  &= \frac{4 + \frac{4}{n} + \frac{1}{n^2}}{3 + \frac{4}{n^2}} \\
+   lim_{n \rightarrow \infty} & \frac{4 + \frac{4}{n} + \frac{1}{n^2}}{3 + \frac{4}{n^2}} = \frac{4}{3}
+\end{align*}
+Existence of limit implies that \(\frac{1}{na_n}\) is bounded. Therefore, \((\frac{1}{n})_{n \in N} \in O((a_n)_{n \in N})\) \\
+The series \(\sum_{n=1}^{\infty} a_n\) is divergent. Since \(lim_{n \rightarrow \infty} \frac{\frac{1}{n}}{a_n} = \frac{4}{3}\), 
+the limit of \(lim_{n \rightarrow \infty} \frac{\frac{1}{2n}}{a_n} = \frac{2}{3} \leq 1\) 
+which means for almost all \(n \in N\) \(\frac{1}{2n} \leq a_n\). And from the therom 3.44(ii) in the lecture notes,
+\(a_n\) is divergent. because \(\sum_{n=1}^{\infty}\frac{1}{2n}\) is divergent and \(a_n \geq \frac{1}{2n} \geq 0\) for almost all \(n \in N\).
+
+
 \end{document}
