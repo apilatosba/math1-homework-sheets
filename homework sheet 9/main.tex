@@ -11,5 +11,37 @@
 \section*{Problem 1}
 \section*{Problem 1(a)}
 
+\[
+   f: [0,\infty) \rightarrow R, \quad x \mapsto \sqrt{x}
+\]
+We want to prove that f is continous on \((0,\infty)\). \\
+So we want to show that \(\forall x_0 \in (0,\infty), \; \lim_{x \rightarrow x_0} f(x) = f(x_0)\) \\
+So we want to show
+\[
+   \lim_{x \rightarrow x_0} \sqrt{x} = \sqrt{x_0}, \quad \forall x_0 \in (0,\infty)
+\]
+Let \(x_0 \in (0,\infty)\) be given. \\
+Let \(\epsilon > 0\) be given. \\
+We want to find \(\delta > 0\) such that
+\[
+   0 < |x - x_0| < \delta \implies |\sqrt{x} - \sqrt{x_0}| < \epsilon
+\]
+\begin{align*}
+   |\sqrt{x} - \sqrt{x_0}| &= \frac{|x - x_0|}{|\sqrt{x} + \sqrt{x_0}|} < \epsilon \\
+\end{align*}
+And since \(|\sqrt{x} - \sqrt{x_0}| < \epsilon\) the minimum value of \(\sqrt{x}\) can be \(\sqrt{x_0} - \epsilon\).
+Inserting this information into the above inequality we get
+\begin{align*}
+   \frac{|x - x_0|}{|\sqrt{x} + \sqrt{x_0}|} &< \frac{|x - x_0|}{|2 \sqrt{x_0} - \epsilon|} < \epsilon \\
+   |x - x_0| &< |2 \sqrt{x_0} - \epsilon| \epsilon \\
+\end{align*}
+So, if I choose \(\delta = |2 \sqrt{x_0} - \epsilon| \epsilon\), then the condition is satisfied.
+
+\section*{Problem 1(b)}
+Yes, the function f is also continous at the point 0. Because the the proof at 1(a) is also valid for \(x_0 = 0\).
+That is
+\[
+   \lim_{x \rightarrow 0} \sqrt{x} = \sqrt{0}
+\]
 
 \end{document}
