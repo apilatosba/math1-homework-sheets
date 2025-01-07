@@ -10,6 +10,27 @@
 
 \section*{Problem 1}
 
+We want to compute the following using the power series of sin
+\[
+   \lim_{x \rightarrow 0} \frac{sin(x) - x}{x^3}
+\]
+
+Power series of sin is given as
+\[
+   sin(x) = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{(2n+1)!}
+\]
+
+Let's insert this into the limit
+\begin{align*}
+   &\lim_{x \rightarrow 0} \frac{\sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{(2n+1)!} - x}{x^3} \\
+   &= \lim_{x \rightarrow 0} \frac{\sum_{n=1}^{\infty} (-1)^n \frac{x^{2n+1}}{(2n+1)!} - x + x}{x^3} \\
+   &= \lim_{x \rightarrow 0} \frac{\sum_{n=1}^{\infty} (-1)^n \frac{x^{2n+1}}{(2n+1)!}}{x^3} \\
+   &= \lim_{x \rightarrow 0} \sum_{n=1}^{\infty} (-1)^n \frac{x^{2n-2}}{(2n+1)!} \\
+   &= \lim_{x \rightarrow 0} \sum_{n=2}^{\infty} (-1)^n \frac{x^{2n-2}}{(2n+1)!} - \frac{1}{3!} \\
+   &= \sum_{n=2}^{\infty} (-1)^n \frac{\lim_{x \rightarrow 0} x^{2n-2}}{(2n+1)!} - \frac{1}{3!} \\
+   &= 0 - \frac{1}{3!} \\
+   &= - \frac{1}{6} \\
+\end{align*}
 
 
 \end{document}
