@@ -121,5 +121,123 @@ We are given \((X, .)\) is a group. We are also given that \\
 
 We want to show \(x.e = x\) and \(x.x^{-1} = e\) for all \(x \in X\) \\
 
+Proof of \(x.x^{-1} = e\):
+\begin{align*}
+   x^{-1}.x &= e & \text{given by (ii), multiply by e from right} \\
+   (x^{-1}.x).e &= e.e & \text{associativity} \\
+   x^{-1}.(x.e) &= e.e & \text{use (i)} \\
+   x^{-1}.(x.e) &= e & \text{multiply by x from left} \\
+   x.(x^{-1}.(x.e)) &= x.e & \text{associativity} \\
+   (x.x^{-1}).(x.e) &= x.e & \text{associativity} \\
+   e.(x.e) &= x.e \implies x.x^{-1} = e & \text{use (i)} \\
+\end{align*}
+
+\section*{Problem 4}
+% Define the binary operations ‘subtraction’ and ‘division’ on a field (K, +, .). Let a, b, c,
+% d be Elements of K with b, d 6= 0. Show that
+% a
+% b
+% −
+% c
+% d
+% =
+% a.d − b.c
+% b.d ,
+% a
+% b
+% ,
+% d
+% c
+% =
+% a.c
+% b.d,
+% using only the axioms of arithmetic and your definitions
+
+Definiton of subtraction:
+\[
+   a - b = a + (-b) \qquad \forall a,b \in K
+\]
+Thus
+\[
+   \frac{a}{b} - \frac{c}{d} = \frac{a}{b} + \left(-\frac{c}{d}\right)
+\]
+
+Definition of division:
+\[
+   \frac{a}{b} = a \cdot b^{-1} \qquad \forall a,b \in K
+\]
+
+\[
+   \frac{a}{b} = \frac{a \cdot d}{b \cdot d}, \quad \frac{c}{d} = \frac{c \cdot b}{d \cdot b}
+\]
+Multiplying by a value and its inverse does not change the value of the fraction.
+\[
+   \frac{a}{b} - \frac{c}{d} = \frac{a \cdot d}{b \cdot d} + \left(-\frac{c \cdot b}{d \cdot b}\right) \qquad \text{(defition of subtraction)}
+\]
+\[
+   = \frac{a \cdot d - c \cdot b}{b \cdot d}
+\]
+\\
+\\
+\\
+We want to show that
+\[
+   \frac{\frac{a}{b}}{\frac{d}{c}} = \frac{a.c}{b.d}
+\]
+
+\begin{align*}
+   \frac{\frac{a}{b}}{\frac{d}{c}} &= \frac{a}{b} \cdot \left(\frac{d}{c}\right)^{-1} & \text{(definition of division)} \\
+                                   &= a.b^{-1}.(d.c^{-1})^{-1} & \text{(defitiniton of division)} \\
+                                   &= a.b^{-1}.c.d^{-1} & \text{(inverse of . operation from field axioms)} \\
+                                   &= a.c.b^{-1}.d^{-1} & \text{(commutativity)} \\
+                                   &= (a.c).(b^{-1}.d^{-1}) & \text{(associativity)} \\
+                                   &= \frac{ac}{b.d} & \text{(definition of division)} \\
+\end{align*}
+
+Thus, we have shown that
+\[
+   \frac{a}{b} - \frac{c}{d} = \frac{a.d - b.c}{b.d}
+\]
+\[
+   \frac{\frac{a}{b}}{\frac{d}{c}} = \frac{a.c}{b.d}
+\]
+
+\section*{Problem 5}
+% Show that {a + b
+% √
+% 2 : a, b ∈ Q} is a subfield of (R, +, .).
+
+We want to show that
+\[
+   S := \{a + b\sqrt{2} : a, b \in \mathbb{Q}\}
+\]
+is a subfield of \((\mathbb{R}, +, \cdot)\). \\
+\\
+S is closed with respect to + and .:
+\begin{align*}
+   (a + b\sqrt{2}) + (c + d\sqrt{2}) &= (a + c) + (b + d)\sqrt{2} \\
+   (a + b\sqrt{2})(c + d\sqrt{2}) &= ac + ad\sqrt{2} + bc\sqrt{2} + bd(2) \\
+                                   &= (ac + 2bd) + (ad + bc)\sqrt{2}
+\end{align*}
+\\
+\\
+S contains the identity elements of + and .:
+\begin{align*}
+   0 &= 0 + 0\sqrt{2} \\
+   1 &= 1 + 0\sqrt{2}
+\end{align*}
+\\
+\\
+S contains the inverses of + and .:
+\begin{align*}
+   -(a + b\sqrt{2}) &= -a - b\sqrt{2} \\
+   (a + b\sqrt{2})^{-1} &= \frac{1}{a + b\sqrt{2}} \cdot \frac{a - b\sqrt{2}}{a - b\sqrt{2}} \\
+                        &= \frac{a - b\sqrt{2}}{a^2 - 2b^2} \\
+                        &= \frac{a}{a^2 - 2b^2} - \frac{b}{a^2 - 2b^2}\sqrt{2}
+\end{align*}
+
+We have shown that \(S\) is closed with respect to + and ., contains the identity elements of + and ., and contains the inverses of + and .. \\
+Therefore, \((S, +, .)\) is a subfield of \((\mathbb{R}, +, \cdot)\).
+
 
 \end{document}
