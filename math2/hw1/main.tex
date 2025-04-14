@@ -56,5 +56,65 @@ So, when combined, \(S\) can be identified with this subset of \(S_4\):
    \{ (), (1, 2, 3, 4), (1,3)(2,4), (1,4,3,2), (1,2)(3,4), (1,4)(2,3), (1,3), (2,4) \}
 \]
 
+\section*{Problem 2}
+\section*{Problem 2(i)}
+\[
+   f_{a,b}(x) = ax + b
+\]
+
+\[
+   (G, \diamond) = \{ f_{a,b}: a \in \mathbb{R} \setminus \{0\}, b \in \mathbb{R} \},
+   f_{a,b} \diamond f_{c,d} = f_{ac, ad + b}
+\]
+
+We want to show \((G, \diamond)\) is a group. To do that, we need to show that \((G, \diamond)\) satisfies the properties of group.
+\\
+Associativity:
+\[
+   f_{a,b} \diamond (f_{c,d} \diamond f_{e,f}) = f_{a,b} \diamond f_{ce, cf + d} = f_{ace, acf + ad + b}
+\]
+\[
+   (f_{a,b} \diamond f_{c,d}) \diamond f_{e,f} = f_{ac, ad + b} \diamond f_{e,f} = f_{ace, acf + ad + b}
+\]
+Thus \(f_{a,b} \diamond (f_{c,d} \diamond f_{e,f}) = (f_{a,b} \diamond f_{c,d}) \diamond f_{e,f}\).
+\\
+Existence of a neutral elemenet:
+\[
+   f_{1,0} \diamond f_{a,b} = f_{1,0} \diamond f_{a,b} = f_{a, b}
+\]
+\(f_{1,0}\) is the neutral element.
+\\
+Existence of inverses:
+\[
+   f_{a,b} \diamond f_{1/a, -b/a} = f_{a * (1/a), (-ab/a) + b} = f_{1, 0}
+\]
+Thus, \(f_{1/a, -b/a}\) is the inverse of \(f_{a,b}\).
+\\
+Therefore, \((G, \diamond)\) is a group.
+
+\section*{Problem 2(ii)}
+\[
+   H = {f_{1,b} : b \in \mathbb{R}}
+\]
+We want to show \((H, \diamond)\) is a subgroup of \((G, \diamond)\) which is isomorphic to \((\mathbb{R}, +)\). \\
+We need to show identity element of \((G, \diamond)\) is in \(H\):
+\[
+   f_{1,0} \in H
+\]
+We need to show \(H\) is closed under \(\diamond\) that is \(x_1,x_2 \in H \implies x_1 .x_2 \in H\):
+\[
+   f_{1,b_1} \diamond f_{1,b_2} = f_{1, b_1 + b_2}
+\]
+Thus, \(f_{1,b_1} \diamond f_{1,b_2} \in H\).
+\\
+We need to show \(H\) is closed under inverses that is \(x \in H \implies x^{-1} \in H\):
+\[
+   f_{1,b} \diamond f_{1,-b} = f_{1, 0}
+\]
+Thus, \(f_{1,-b} \in H\).
+\\
+
+
+
 
 \end{document}
