@@ -228,5 +228,86 @@ Thus, \(f\) is a bijection.
    (0)(124)(365)
 \)
 
+\section*{Problem 4}
+
+% 4. Two sets M1, M2 have the same cardinality if there is a bijection M1 → M2. Let I be
+% an arbitrary interval. Prove that I and R have the same cardinality.
+% [Hint: Consider (half-)open and (half-)closed intervals, and likewise finite and infinite
+% intervals separately.]
+
+Let \(I\) be an arbitrary interval. We will show that \(I\) and \(\mathbb{R}\) have the same cardinality by constructing a bijection between them.
+
+
+\section*{Problem 5}
+
+% 5. Define a relation ∼ on N0 × N0 by
+% (p, n) ∼ (q, m) ⇔ p + m = q + n.
+% (a) Show that ∼ is an equivalence relation on N0 × N0.
+% (b) Show that
+% (p, n) ∼ (k + p, k + n)
+% for all k ∈ N0.
+% (c) Denote the equivalence class [(k, 0)] by k and define the ‘sum’ of two equivalence
+% classes by the formula
+% [(p, n)] + [(q, m)] = [(p + q, n + m)].
+% Determine the equivalence class −k with the property that
+% −k + k = 0.
+% [You may assume that ‘+’ is well defined.]
+
+\subsection*{(a)}
+Let \((p, n), (q, m) \in N_0 \times N_0\). We want to show that \(\sim\) is an equivalence relation on \(N_0 \times N_0\):
+\begin{itemize}
+   \item \textbf{Reflexive:} We want to show that \((p, n) \sim (p, n)\):
+   \[
+      p + n = p + n
+   \]
+   Thus, \(\sim\) is reflexive.
+   \item \textbf{Symmetric:} We want to show that if \((p, n) \sim (q, m)\), then \((q, m) \sim (p, n)\):
+   \[
+      p + m = q + n
+   \]
+   Thus,
+   \[
+      q + n = p + m
+   \]
+   Thus, \(\sim\) is symmetric.
+   \item \textbf{Transitive:} We want to show that if \((p, n) \sim (q, m)\) and \((q, m) \sim (r, s)\), then \((p, n) \sim (r, s)\):
+   \[
+      p + m = q + n
+   \]
+   and
+   \[
+      q + s = r + m
+   \]
+   Thus,
+   \[
+      p + s = r + n
+   \]
+   Thus, \(\sim\) is transitive.
+\end{itemize}
+Thus, \(\sim\) is an equivalence relation on \(N_0 \times N_0\).
+
+\subsection*{(b)}
+Let \(k \in N_0\). We want to show that \((p, n) \sim (k + p, k + n)\):
+\[
+   p + (k + n) = (k + p) + n
+\]
+Thus,
+\((p, n) \sim (k + p, k + n)\).
+\subsection*{(c)}
+Let \([(k, 0)]\) be the equivalence class of \((k, 0)\). We want to find an equivalence class \(-[(k, 0)]\) such that
+\[
+   -[(k, 0)] + [(k, 0)] = [(0, 0)]
+\]
+Define \(-[(k, 0)]\) as \([(0, k)]\). Then,
+\[
+   [(0, k)] + [(k, 0)] = [(0 + k, k + 0)] = [(k, k)] = [(0, 0)]
+\]
+Thus, we have
+\[
+   -[(k, 0)] + [(k, 0)] = [(0, 0)]
+\]
+Thus, \(-[(k, 0)]\) is the equivalence class with the property that
+\(-[(k, 0)] + [(k, 0)] = [(0, 0)]\).
+
 
 \end{document}
