@@ -9,9 +9,8 @@
    \textbf{Authors: Abdullah Oguz Topcuoglu \& Ahmed Waleed Ahmed Badawy Shora}
 \end{flushright}
 
-\section*{Problem 1}
 
-% The following tables show the results of the arithmetical operations in Z3 (where ⊕ and
+% 1. The following tables show the results of the arithmetical operations in Z3 (where ⊕ and
 %  denote addition and multiplication modulo 3).
 % ⊕ [0] [1] [2]
 % [0] [0] [1] [2]
@@ -24,6 +23,35 @@
 % (a) Compute the corresponding tables for Z5 and Z7.
 % (b) Compute the corresponding tables for Z4 and deduce that (Z4, ⊕, ) is not a field
 % (where ⊕ and  denote addition and multiplication modulo 4).
+% 2. Let n be a natural number.
+% (a) Suppose that [m] ∈ Zn. Show that [i] 7→ [i] + [m] is a bijection Zn 7→ Zn (i.e. a
+% permutation of Zn).
+% (b) Write the permutations [i] 7→ [i] + [1], [i] 7→ [i] + [2], [i] 7→ [i] + [3] and [i] 7→ [i] + [4]
+% von Z8 in cyclic notation.
+% 3. Let p be a prime number.
+% (a) Suppose that [m] ∈ Zp \ {[0]}. Show that [i] 7→ [m].[i] is a bijection
+% Zp \ {[0]} 7→ Zp \ {[0]} (i.e. a permutation of Zp \ {[0]}).
+% (b) Write the permutations [i] 7→ [6].[i] and [i] 7→ [2].[i] von Z7 \ {[0]} in cyclic
+% notation.
+% 4. Two sets M1, M2 have the same cardinality if there is a bijection M1 → M2. Let I be
+% an arbitrary interval. Prove that I and R have the same cardinality.
+% [Hint: Consider (half-)open and (half-)closed intervals, and likewise finite and infinite
+% intervals separately.]
+% 5. Define a relation ∼ on N0 × N0 by
+% (p, n) ∼ (q, m) ⇔ p + m = q + n.
+% (a) Show that ∼ is an equivalence relation on N0 × N0.
+% (b) Show that
+% (p, n) ∼ (k + p, k + n)
+% for all k ∈ N0.
+% (c) Denote the equivalence class [(k, 0)] by k and define the ‘sum’ of two equivalence
+% classes by the formula
+% [(p, n)] + [(q, m)] = [(p + q, n + m)].
+% Determine the equivalence class −k with the property that
+% −k + k = 0.
+% [You may assume that ‘+’ is well defined.]
+
+
+\section*{Problem 1}
 
 \subsection*{(a)}
 
@@ -100,6 +128,61 @@
 \]
 
 \((Z_4, \oplus, \times)\) is not a field because \([2]\) does not have a multiplicative inverse. \\
+
+\section*{Problem 2}
+
+% Let n be a natural number.
+% (a) Suppose that [m] ∈ Zn. Show that [i] 7→ [i] + [m] is a bijection Zn 7→ Zn (i.e. a
+% permutation of Zn).
+% (b) Write the permutations [i] 7→ [i] + [1], [i] 7→ [i] + [2], [i] 7→ [i] + [3] and [i] 7→ [i] + [4]
+% von Z8 in cyclic notation.
+
+\subsection*{(a)}
+
+Let \(f: Z_n \to Z_n\) be:
+\[
+   f([i]) = [i] + [m], \qquad [m] \in Z_n
+\]
+
+We want to show that \(f\) is a bijection.
+\begin{itemize}
+   \item \textbf{Injective:} Suppose \(f([i_1]) = f([i_2])\):
+   \[
+      [i_1] + [m] = [i_2] + [m]
+   \]
+   Thus,
+   \[
+      [i_1] = [i_2]
+   \]
+   Thus, \(f\) is injective.
+   \item \textbf{Surjective:} Let \([j] \in Z_n\). We want to show that there exists an \([x]\) such that \(f([x]) = [j]\):
+   \[
+      f([j - m]) = [j - m] + [m] = [j]
+   \]
+   Thus, \(f\) is surjective.
+\end{itemize}
+Thus, \(f\) is a bijection.
+
+\subsection*{(b)}
+\([i] \rightarrow [i] + [1]\):
+\(
+   (01234567)
+\)
+\\
+\([i] \rightarrow [i] + [2]\):
+\(
+   (0246)(1357)
+\)
+\\
+\([i] \rightarrow [i] + [3]\):
+\(
+   (03614725)
+\)
+\\
+\([i] \rightarrow [i] + [4]\):
+\(
+   (04)(15)(26)(37)
+\)
 
 
 \end{document}
