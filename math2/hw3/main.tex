@@ -3,6 +3,7 @@
 \usepackage{tikz}
 \usepackage{array}
 \usepackage{graphicx} % Added for including the PDF file as an image
+\usepackage{float}
 
 \begin{document}
 \section*{\huge Mathematics Homework Sheet 3}
@@ -394,11 +395,57 @@ Insert this in the first equation
 % Sketch the sets A, B and A ∩ B.
 
 % Include the PDF file for Problem 2
-\begin{figure}[h!]
+\begin{figure}[H]
     \centering
     \includegraphics[width=\textwidth]{2025-04-28-Note-13-03.pdf}
     \caption{Visualization for Problem 2}
     \label{fig:problem2}
 \end{figure}
+
+
+\section*{Problem 3}
+\subsection*{(a)}
+\[
+   (4\sqrt{3} - 4i)^{88}
+\]
+Let's convert this to polar form
+\[
+   r = \sqrt{(4\sqrt{3})^2 + (-4)^2} = \sqrt{48 + 16} = \sqrt{64} = 8
+\]
+\[
+   \theta = tan^{-1}(\frac{-4}{4\sqrt{3}}) = tan^{-1}(-\frac{1}{\sqrt{3}}) = -\frac{\pi}{6}
+\]
+So we want to compute
+\[
+   (8e^{-\frac{\pi}{6}i})^{88}
+\]
+\[
+   (8e^{-\frac{\pi}{6}i})^{88} = 8^{88}e^{-\frac{88\pi}{6}i} = 8^{88}e^{-\frac{44\pi}{3}i}
+\]
+
+\subsection*{(b)}
+
+\[
+   z = \left(1 + i \tan\left(\frac{(4m + 1)\pi}{4n}\right)\right)^n
+\]
+\[
+   z = \left(1 + i \frac{\sin\left(\frac{(4m + 1)\pi}{4n}\right)}{\cos\left(\frac{(4m + 1)\pi}{4n}\right)}\right)^n
+\]
+\[
+   z = \left(\frac{ \cos\left(\frac{(4m + 1)\pi}{4n}\right)  + i\sin\left(\frac{(4m + 1)\pi}{4n}\right)  }{\cos\left(\frac{(4m + 1)\pi}{4n}\right)}\right)^n
+\]
+\[
+   z = \left(\frac{1}{\cos\left(\frac{(4m + 1)\pi}{4n}\right)}\right)^n \left(\cos\left(\frac{(4m + 1)\pi}{4n}\right) + i\sin\left(\frac{(4m + 1)\pi}{4n}\right)\right)^n
+\]
+Using de Moivre's theorem
+\[
+   z = \frac{1}{\cos\left(\frac{(4m + 1)\pi}{4n}\right)^n} \left(\cos\left(\frac{(4m + 1)\pi}{4}\right) + i\sin\left(\frac{(4m + 1)\pi}{4}\right)\right)
+\]
+\[
+   Re(z) = \frac{1}{\cos\left(\frac{(4m + 1)\pi}{4n}\right)^n} \cos\left(\frac{(4m + 1)\pi}{4}\right)
+\]
+\[
+   Im(z) = \frac{1}{\cos\left(\frac{(4m + 1)\pi}{4n}\right)^n} \sin\left(\frac{(4m + 1)\pi}{4}\right)
+\]
 
 \end{document}
