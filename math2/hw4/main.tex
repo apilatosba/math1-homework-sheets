@@ -203,5 +203,49 @@ We can solve this system of equations using the same method:
    x &= 173 \mod 231 \\
 \end{align*}
 
+\section*{Problem 4}
+
+\subsection*{(a)}
+
+% (a) Show using Fermat’s little theorem that 63 and 341 are not prime numbers.
+% [Hint: 62 = 6.10 + 2, 340 = 3.113 + 1 and
+% 1 ≡ 2
+% 6
+% (mod 63), 1 ≡ 563
+% (mod 341).]
+
+Fermat's little theorem states that if \(p\) is a prime number and \(a\) is an integer not divisible by \(p\), then:
+\[
+   a^{p-1} \equiv 1 \mod p
+\]
+\\
+63 is not a prime number: \\
+We are gonna try to prove this by showing a contradiction. Let's take \(a = 2\) and \(p = 63\).
+Then according to Fermat's little theorem we have:
+\[
+   2^{62} \equiv 1 \mod 63
+\]
+
+We are given the hint that \(2^6 \equiv 1 \mod 63\).
+\begin{align*}
+   2^{62} = (2^6)^{10} \cdot 2^2 &\equiv 2^2 \mod 63 \\
+                                 &\equiv 4 \mod 63
+\end{align*}
+
+This result contradicts the Fermat's little theorem, which proves that \(63\) is not a prime number.
+\\
+341 is not a prime number: \\
+We are gonna try to prove this by showing a contradiction. Let's take \(a = 56\) and \(p = 341\).
+Then according to Fermat's little theorem we have:
+\[
+   56^{340} \equiv 1 \mod 341
+\]
+
+We are given the hint that \(56^3 \equiv 1 \mod 341\).
+\begin{align*}
+   56^{340} = (56^3)^{113} \cdot 56^1 &\equiv 56^1 \mod 341 \\
+                                       &\equiv 56 \mod 341
+\end{align*}
+This result contradicts the Fermat's little theorem, which proves that \(341\) is not a prime number.
 
 \end{document}
