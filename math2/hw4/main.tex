@@ -289,4 +289,22 @@ Thus we have shown that:
    (a + b)^p \equiv a^p + b^p \equiv a + b \mod p
 \]
 
+\subsection*{(d)}
+
+We want to compute:
+\[
+   (3743^{3709} + 7420^{11127})^{3709} \mod 3709
+\]
+\begin{align*}
+   (3743^{3709} + 7420^{11127})^{3709} &\equiv (3743^{3709} + 7420^{11127}) \mod 3709 & \text{(Fermat's little theorem)} \\
+   &\equiv 3743 + 7420^{11127} \mod 3709 \\
+   &\equiv 34 + 7420^{11127} \mod 3709 \\
+   &\equiv 34 + (7420^{3709})^3 \mod 3709 \\
+   &\equiv 34 + 7420^3 \mod 3709 \\
+   &\equiv 34 + (2 \cdot 3709 + 2)^3 \mod 3709 \\
+   &\equiv 34 + 2^3 \mod 3709 \\
+   &\equiv 34 + 8 \mod 3709 \\
+   &\equiv 42 \mod 3709 \\
+\end{align*}
+
 \end{document}
