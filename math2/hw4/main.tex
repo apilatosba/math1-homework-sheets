@@ -248,4 +248,45 @@ We are given the hint that \(56^3 \equiv 1 \mod 341\).
 \end{align*}
 This result contradicts the Fermat's little theorem, which proves that \(341\) is not a prime number.
 
+\subsection*{(c)}
+
+% (c) Let p be a prime number. Show using Fermat’s little theorem that
+% (a + b)
+% p ≡ (a
+% p + b
+% p
+% ) (mod p)
+
+We want to show that:
+\[
+   (a + b)^p \equiv a^p + b^p \mod p
+\]
+
+Fermat's little theorem says that
+\[
+   a^{p-1} \equiv 1 \mod p \qquad if \quad (a,p) = 1
+\]
+Multiplying both sides by \(a\) we get:
+\[
+   a^p \equiv a \mod p \qquad (1)
+\]
+We have the same thing for b too:
+\[
+   b^p \equiv b \mod p \qquad (2)
+\]
+And we have the same thing for \(a + b\):
+\[
+   (a + b)^p \equiv a + b \mod p
+\]
+Adding equations (1) and (2) we get:
+\[
+   a^p + b^p \equiv a + b \mod p
+\]
+
+Which happens to be equal to \((a + b)^p\) in mod \(p\).
+Thus we have shown that:
+\[
+   (a + b)^p \equiv a^p + b^p \equiv a + b \mod p
+\]
+
 \end{document}
