@@ -13,4 +13,75 @@
    \textbf{Authors: Abdullah Oguz Topcuoglu \& Ahmed Waleed Ahmed Badawy Shora}
 \end{flushright}
 
+% 1. Calculate (1552303, 233927) and find integers m and n such that
+% (1552303, 233927) = 1552303m + 233927n.
+% 2. Compute 1062
+% , 1064
+% , 1068 and 10611 (mod 143). You should give all the steps in your
+% calculations and not write down any numbers with more than 5 digits.
+% 3. (a) Compute the solution set of the simultaneous equations
+% x ≡ 2 (mod 3),
+% x ≡ 5 (mod 7),
+% x ≡ 8 (mod 11)
+% by applying the Chinese remainder theorem twice.
+% (b) What are the last two digits of the number 4919? [Hint: We want to compute
+% the number 4919 (mod 100). Note that 100 = 25 × 4.]
+% 4. (a) Show using Fermat’s little theorem that 63 and 341 are not prime numbers.
+% [Hint: 62 = 6.10 + 2, 340 = 3.113 + 1 and
+% 1 ≡ 2
+% 6
+% (mod 63), 1 ≡ 563
+% (mod 341).]
+% (b) Show using Fermat’s little theorem that 32769 is not a prime number.
+% (c) Let p be a prime number. Show using Fermat’s little theorem that
+% (a + b)
+% p ≡ (a
+% p + b
+% p
+% ) (mod p).
+% (d) Compute
+% (37433709 + 742011127)
+% 3709 (mod 3709).
+% [Hint: 3709 is a prime number.]
+% 5. A commutative ring is a nonempty set equipped with two binary operations + (‘addition’)
+% and · (‘multiplication’) which satisfy the field axioms with the exception of the existence of
+% multiplicative inverses.
+% Suppose that (R, +, ·) is a commutative ring. Show that
+% Z × R = {(m, r) : m ∈ Z, r ∈ R}
+% is a commutative ring with respect to addition and multiplication defined by
+% (m1, r1) ⊕ (m2, r2) := (m1 + m2, r1 + r2),
+% (m1, r1) ⊙ (m2, r2) := (m1m2, m1r2 + m2r1 + r1r2).
+% (Here
+% mr = r + · · · + r
+% | {z }
+% m times
+% , nr = −r + · · · + (−r)
+% | {z }
+% −n times
+% for m ≥ 0 and n ≤ 0.)
+
+\section*{Problem 1}
+
+% 1. Calculate (1552303, 233927) and find integers m and n such that
+% (1552303, 233927) = 1552303m + 233927n.
+
+Question is asking to find Bezout coefficients.
+
+\begin{align*}
+   1552303 &= 6 \cdot 233927 + 148741, & u_2 = u_0 - 6u_1 = 1, \quad & v_2 = v_0 - 6v_1 = -6 \\
+   233927 &= 1 \cdot 148741 + 85186, & u_3 = u_1 - u_2 = -1, \quad & v_3 = v_1 - v_2 = 7 \\
+   148741 &= 1 \cdot 85186 + 63555, & u_4 = u_2 - u_3 = 2, \quad & v_4 = v_2 - v_3 = -13 \\
+   85186 &= 1 \cdot 63555 + 21631, & u_5 = u_3 - u_4 = -3, \quad & v_5 = v_3 - v_4 = 20 \\
+   63555 &= 2 \cdot 21631 + 20293, & u_6 = u_4 - 2u_5 = 8, \quad & v_6 = v_4 - 2v_5 = -53 \\
+   21631 &= 1 \cdot 20293 + 1338, & u_7 = u_5 - u_6 = -11, \quad & v_7 = v_5 - v_6 = 73 \\
+   20293 &= 15 \cdot 1338 + 223, & u_8 = u_6 - 15u_7 = 173, \quad & v_8 = v_6 - 15v_7 = -1148 \\
+   1338 &= 6 \cdot 223 + 0, & &
+\end{align*}
+
+Which means that \((1552303, 233927) = 223\). And we have the Bezout coefficients \(u_8 = 173, v_8 = -1148\)
+\[
+   1552303 \cdot 173 + 233927 \cdot (-1148) = 223
+\]
+Thus \(m = 173, n = -1148\).
+
 \end{document}
