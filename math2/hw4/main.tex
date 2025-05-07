@@ -84,4 +84,55 @@ Which means that \((1552303, 233927) = 223\). And we have the Bezout coefficient
 \]
 Thus \(m = 173, n = -1148\).
 
+\section*{Problem 2}
+
+% 2. Compute 106^2
+% , 106^4
+% , 106^8 and 106^11 (mod 143). You should give all the steps in your
+% calculations and not write down any numbers with more than 5 digits.
+
+% From Euler's theorem we know that \(a^{\phi(n)} \equiv 1 \mod n\) for \((a,n) = 1\)
+% \[
+%    \phi(143) = \phi(11) \cdot \phi(13) = 10 \cdot 12 = 120
+% \]
+% We know that (106, 143) = 1, so we can use Euler's theorem.
+% \[
+%    106^{120} \equiv 1 \mod 143
+% \]
+
+Start with the fact that \(106 \equiv 106 \mod 143\).
+\begin{align*}
+   106 &\equiv 106 \mod 143 \qquad \text{(Square both sides)} \\
+   106^2 = 11236 &\equiv 82 \mod 143 \qquad \text{(Square both sides)} \\
+   106^4 &\equiv 82^2 \equiv 3 \mod 143 \qquad \text{(Square both sides)} \\
+   106^8 &\equiv 3^2 \equiv 9 \mod 143 \\
+\end{align*}
+
+And note these:
+\begin{align*}
+   106^2 &= 11236 = 78 \cdot 143 + 82 \\
+   82^2 &= 6724 = 46 \cdot 143 + 3 \\
+   3^2 &= 9 = 0 \cdot 143 + 9 \\
+\end{align*}
+
+Now we can compute \(106^{11}\):
+\begin{align*}
+   106^{11} &= 106^8 \cdot 106^2 \cdot 106 \\
+   &\equiv 9 \cdot 82 \cdot 106 \mod 143 \\
+   &\equiv 738 \cdot 106 \mod 143 \\
+   &\equiv (5 \cdot 143 + 23) \cdot 106 \mod 143 \\
+   &\equiv 23 \cdot 106 \mod 143 \\
+   &\equiv 2428 \mod 143 \\
+   &\equiv (16 \cdot 143 + 140) \mod 143 \\
+   &\equiv 140 \mod 143 \\
+\end{align*}
+
+So, these are the results:
+\begin{align*}
+   106^2 &\equiv 82 \mod 143 \\
+   106^4 &\equiv 3 \mod 143 \\
+   106^8 &\equiv 9 \mod 143 \\
+   106^{11} &\equiv 140 \mod 143 \\
+\end{align*}
+
 \end{document}
