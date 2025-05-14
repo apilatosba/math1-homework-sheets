@@ -478,4 +478,23 @@ Thus we can get rid of the vector \(
 \]
 \(S_4\) still spans the same space as \(S\).
 
+\section*{Problem 4}
+\subsection*{(a)}
+We can use Steinitz theorem recursively to show that \(\langle v_1, ..., v_n\rangle = \langle v_1-v_2, ..., v_n \rangle\).
+We can replace \(v_1\) with \(v_1 - v_2\) and get:
+\[
+   \langle v_1 - v_2, v_2 - v_3, ..., v_n \rangle = \langle v_1, v_2 -v_3, ..., v_n \rangle
+\]
+by choosing every coefficient to be 1. \\
+We can repeat this for \(v_2\). Replace \(v_2 - v_3\) with \(v_2\) to get:
+\[
+   \langle v_1, v_2 -v_3, ..., v_n \rangle = \langle v_1, v_2, ..., v_n \rangle
+\]
+Again by choosing every coefficient to be 1. \\
+We can repeat this for every \(v_i\). And at the end we will have:
+\[
+   \langle v_1 - v_2, v_2 - v_3, ..., v_n \rangle = \langle v_1, v_2, ..., v_n \rangle
+\]
+
+
 \end{document}
