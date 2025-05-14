@@ -13,4 +13,191 @@
    \textbf{Authors: Abdullah Oguz Topcuoglu \& Ahmed Waleed Ahmed Badawy Shora}
 \end{flushright}
 
+% 1. Prove that the following rules of arithmetic hold in a commutative ring (R, +, ·).
+% 1. −(x + y) = (−x) + (−y),
+% 2. −(x − y) = (−x) + y,
+% 3. x · 0 = 0 · x = 0,
+% 4. (−x) · y = −(x · y),
+% 5. x · (−y) = −(x · y),
+% 6. (−x) · (−y) = x · y,
+% 7. x + y = z if and only if x = z − y.
+% 2. Demonstrate the rule (x + y) + z = x + (y + z) for all vectors x, y, z in R
+% 2 and R
+% 3
+% geometrically by depicting them as arrows.
+% 3. Show that
+% T =
+% 
+% 
+% 
+% 
+% 
+% 1
+% i
+% 1 + i
+% 
+%  ,
+% 
+% 
+% 0
+% 1
+% i
+% 
+% 
+% 
+% 
+% 
+% is a linearly independent subset of C
+% 3 and
+% S =
+% 
+% 
+% 
+% 
+% 
+% i
+% 0
+% 0
+% 
+%  ,
+% 
+% 
+% 0
+% 1
+% 0
+% 
+%  ,
+% 
+% 
+% 0
+% i
+% 1
+% 
+% 
+% 
+% 
+% 
+% is a spanning set for C
+% 3
+% . Use the algorithm in the Steinitz exchange theorem to replace two
+% elements of S with elements of T.
+% 4. Let V be be a vector space and v1, v2, . . . , vn ∈ V . Prove the following assertions.
+% (a) If ⟨v1, . . . , vn⟩ = V , then ⟨v1 − v2, v2 − v3, . . . , vn−1 − vn, vn⟩ = V .
+% (b) If v1, v2, . . . , vn are linearly independent, then v1 − v2, v2 − v3, . . . , vn−1 − vn, vn are
+% also linearly independent.
+% 5. (a) Show that the set C
+% 2
+% is a complex vector space with respect to the vector addition
+% and scalar multiplication defined by
+% 
+% x1
+% x2
+% 
+% +
+% 
+% y1
+% y2
+% 
+% := 
+% x1 + y1 + 1
+% x2 + y2 + 1
+% , α 
+% x1
+% x2
+% 
+% := 
+% αx1 + α − 1
+% αx2 + α − 1
+% 
+% .
+% Are the vectors 
+% 0
+% 2
+% 
+% und 
+% 2
+% 8
+% 
+% linearly independent in this vector space?
+% (b) Let X be an arbitrary set. Show that the power set P(X) is a vector space over the
+% trivial field {0, 1} with respect to the vector addition and scalar multiplication defined by
+% Y1 + Y2 := Y1∆Y2
+% and
+% 0Y := ∅, 1Y := Y.
+% [Note: The power set P(X) is the set of all subsets of X. The symmetric difference of two
+% sets A and B is A∆B := (A ∪ B) \ (A ∩ B).]
+
+\section*{Problem 1}
+\begin{enumerate}
+    \item $-(x + y) = (-x) + (-y)$: \\
+    By the definition of the additive inverse, we have:
+    \[
+    -(x + y) + (x + y) = 0
+    \]
+   Use distributivity property:
+   \begin{align*}
+      (-x) + (-y) + (x + y) &= 0 \\
+      ((-x) + (-y)) + (x + y) &= 0 \\
+   \end{align*}
+   So, since adding \(((-x) + (-y))\) to \((x + y)\) gives \(0\), we can conclude that it is the additive inverse of \((x + y)\).
+   And that's what we are trying to prove.
+
+    \item $-(x - y) = (-x) + y$: \\
+    Apply the rule above.
+    \begin{align*}
+      -(x + (-y)) &= (-x) + (-(-y)) \\
+      &= (-x) + y \\
+    \end{align*}
+
+    \item $x \cdot 0 = 0 \cdot x = 0$: \\
+    \[
+      x \cdot 0 + x\cdot 0 = x \cdot (0 + 0) = x \cdot 0
+    \]
+    \begin{align*}
+      x \cdot 0 + x\cdot 0 &= x \cdot 0 \qquad \text{(add additive inverse of \(x\cdot 0\))} \\
+      x \cdot 0 + (x\cdot 0 + -(x \cdot 0)) &= x \cdot 0 + -(x \cdot 0) \\
+      x \cdot 0 + 0 &= 0 \\
+      x \cdot 0 &= 0 \\
+   \end{align*}
+
+   And by commutativity we have \(0 \cdot x = 0\).
+
+    \item $(-x) \cdot y = -(x \cdot y)$: \\
+   %  (x⋅y)+((−x)⋅y)=(x+(−x))⋅y=0⋅y=0,
+   \[
+      (x \cdot y) + ((-x) \cdot y) = (x + (-x)) \cdot y = 0 \cdot y = 0
+   \]
+   So, \((-x) \cdot y\) is additive inverse of \((x \cdot y)\).
+
+    \item $x \cdot (-y) = -(x \cdot y)$: \\
+    \begin{align*}
+      x \cdot (-y) &= x \cdot (-y) \qquad \text{(commutativity)} \\
+      &= (-y) \cdot x  \qquad \text{(insert this into original equation)}\\
+      (-y) \cdot x &= -(x.y) \qquad \text{(true by the previous rule)} \\
+    \end{align*}
+
+    \item $(-x) \cdot (-y) = x \cdot y$: \\
+    Use rule (4) to get:
+    \[
+      (-x) \cdot (-y) = -(x \cdot (-y))
+    \]
+    Now use rule (5) to get:
+    \[
+      -(x \cdot (-y)) = -(-(x \cdot y))
+    \]
+      And by the definition of additive inverse, we have:
+      \[
+         -(-(x \cdot y)) = x \cdot y
+      \]
+    \item $x + y = z$ if and only if $x = z - y$: \\
+    By the definition of addition, we have:
+    \[
+    x + y = z \implies x = z - y
+    \]
+    and
+    \[
+    x = z - y \implies x + y = z
+    \]
+\end{enumerate}
+
 \end{document}
