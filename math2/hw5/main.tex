@@ -200,4 +200,282 @@
     \]
 \end{enumerate}
 
+\section*{Problem 3}
+
+We want to show that only solution to the equation
+\[
+   a_1 \begin{pmatrix}
+      1 \\
+      i \\
+      1 + i
+   \end{pmatrix} + a_2 \begin{pmatrix}
+      0 \\
+      1 \\
+      i
+   \end{pmatrix} = 0
+\]
+is \(a_1 = 0\) and \(a_2 = 0\) where \(a_1, a_2 \in \mathbb{C}\).
+We can write this as a system of equations:
+\begin{align*}
+   a_1 + 0 \cdot a_2 &= 0 \\
+   a_1 i + a_2 &= 0 \\
+   a_1 (1 + i) + a_2 i &= 0
+\end{align*}
+The first equation gives us \(a_1 = 0\). Substituting this into the second equation gives us \(a_2 = 0\). Thus, the only solution is \(a_1 = 0\) and \(a_2 = 0\).
+
+Now we want to show that the set
+\[
+   S = \left\{
+      \begin{pmatrix}
+         i \\
+         0 \\
+         0
+      \end{pmatrix},
+      \begin{pmatrix}
+         0 \\
+         1 \\
+         0
+      \end{pmatrix},
+      \begin{pmatrix}
+         0 \\
+         i \\
+         1
+      \end{pmatrix}
+   \right\}
+\]
+is a spanning set for \(\mathbb{C}^3\). This means that any vector in \(\mathbb{C}^3\) can be written as a linear combination of the vectors in \(S\). We can write this as:
+\[
+   \begin{pmatrix}
+      x_1 \\
+      x_2 \\
+      x_3
+   \end{pmatrix} = a_1 \begin{pmatrix}
+      i \\
+      0 \\
+      0
+   \end{pmatrix} + a_2 \begin{pmatrix}
+      0 \\
+      1 \\
+      0
+   \end{pmatrix} + a_3 \begin{pmatrix}
+      0 \\
+      i \\
+      1
+   \end{pmatrix}
+\]
+This gives us the system of equations:
+\begin{align*}
+   x_1 &= a_1 i \\
+   x_2 &= a_2 + a_3 i \\
+   x_3 &= a_3
+\end{align*}
+We can solve this system of equations for \(a_1, a_2, a_3\) in terms of \(x_1, x_2, x_3\):
+\begin{align*}
+   a_1 &= \frac{x_1}{i} \\
+   a_3 &= x_3 \\
+   a_2 &= x_2 - a_3 i = x_2 - x_3 i
+\end{align*}
+Thus, any vector in \(\mathbb{C}^3\) can be written as a linear combination of the vectors in \(S\), so \(S\) is a spanning set for \(\mathbb{C}^3\).
+
+\[
+   S = \left\{
+      \begin{pmatrix}
+         i \\
+         0 \\
+         0
+      \end{pmatrix},
+      \begin{pmatrix}
+         0 \\
+         1 \\
+         0
+      \end{pmatrix},
+      \begin{pmatrix}
+         0 \\
+         i \\
+         1
+      \end{pmatrix}
+   \right\}
+\]
+
+Create a ne set by adding a vector from \(T\) to \(S\):
+\[
+   S_1 = \left\{
+      \begin{pmatrix}
+         i \\
+         0 \\
+         0
+      \end{pmatrix},
+      \begin{pmatrix}
+         0 \\
+         1 \\
+         0
+      \end{pmatrix},
+      \begin{pmatrix}
+         0 \\
+         i \\
+         1
+      \end{pmatrix},
+      \begin{pmatrix}
+         1 \\
+         i \\
+         1 + i
+      \end{pmatrix}
+   \right\}
+\]
+
+We can write the vector \(
+   \begin{pmatrix}
+      i \\
+      0 \\
+      0
+   \end{pmatrix},
+\) as a linear combination of the vectors in \(S_1\):
+\[
+   \begin{pmatrix}
+      i \\
+      0 \\
+      0
+   \end{pmatrix} = a_1 \begin{pmatrix}
+      0 \\
+      1 \\
+      0
+   \end{pmatrix} + a_2 \begin{pmatrix}
+      0 \\
+      i \\
+      1
+   \end{pmatrix} + a_3 \begin{pmatrix}
+      1 \\
+      i \\
+      1 + i
+   \end{pmatrix}
+\]
+With the coeeficients:
+\begin{align*}
+   a_1 &= -i \\
+   a_2 &= 1-i \\
+   a_3 &= i
+\end{align*}
+Thus we can get rid of the vector \(
+   \begin{pmatrix}
+      i \\
+      0 \\
+      0
+   \end{pmatrix}
+\) and replace it with the vector \(
+   \begin{pmatrix}
+      1 \\
+      i \\
+      1 + i
+   \end{pmatrix}
+\) from \(T\).
+\[
+   S_2 = \left\{
+      \begin{pmatrix}
+         1 \\
+         i \\
+         1 + i
+      \end{pmatrix},
+      \begin{pmatrix}
+         0 \\
+         1 \\
+         0
+      \end{pmatrix},
+      \begin{pmatrix}
+         0 \\
+         i \\
+         1
+      \end{pmatrix}
+   \right\}
+\]
+Let's add the other vector from \(T\):
+\[
+   S_3 = \left\{
+      \begin{pmatrix}
+         1 \\
+         i \\
+         1 + i
+      \end{pmatrix},
+      \begin{pmatrix}
+         0 \\
+         1 \\
+         0
+      \end{pmatrix},
+      \begin{pmatrix}
+         0 \\
+         i \\
+         1
+      \end{pmatrix},
+      \begin{pmatrix}
+         0 \\
+         1 \\
+         i
+      \end{pmatrix}
+   \right\}
+\]
+We can write the vector \(
+   \begin{pmatrix}
+      0 \\
+      1 \\
+      0
+   \end{pmatrix},
+\) as a linear combination of the vectors in \(S_3\):
+\[
+   \begin{pmatrix}
+      0 \\
+      1 \\
+      0
+   \end{pmatrix} = a_1 \begin{pmatrix}
+      1 \\
+      i \\
+      1 + i
+   \end{pmatrix} + a_2 \begin{pmatrix}
+      0 \\
+      i \\
+      1
+   \end{pmatrix} + a_3 \begin{pmatrix}
+      0 \\
+      1 \\
+      i
+   \end{pmatrix}
+\]
+With the coeeficients:
+\begin{align*}
+   a_1 &= 0 \\
+   a_2 &= -i/2 \\
+   a_3 &= 1/2
+\end{align*}
+Thus we can get rid of the vector \(
+   \begin{pmatrix}
+      0 \\
+      1 \\
+      0
+   \end{pmatrix}
+\) and replace it with the vector \(
+   \begin{pmatrix}
+      0 \\
+      1 \\
+      i
+   \end{pmatrix}
+\) from \(T\).
+\[
+   S_4 = \left\{
+      \begin{pmatrix}
+         1 \\
+         i \\
+         1 + i
+      \end{pmatrix},
+      \begin{pmatrix}
+         0 \\
+         1 \\
+         i
+      \end{pmatrix},
+      \begin{pmatrix}
+         0 \\
+         i \\
+         1
+      \end{pmatrix}
+   \right\}
+\]
+\(S_4\) still spans the same space as \(S\).
+
 \end{document}
