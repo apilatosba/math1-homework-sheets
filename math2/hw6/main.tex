@@ -242,4 +242,27 @@ Intiutively we want to be able to control the lower part of the matrix. Followin
 
 Thus, a basis for \(R^{3 \times 3}\) is \(\{A_1, A_2, A_3\} \cup S_3\).
 
+\section*{Problem 5}
+\subsection*{(a)}
+Let \(U_1, U_2\) be subspaces of a vector space \(V\). \\
+We need to show that \(U_1 \cup U_2\) is a subspace of \(V\) if and only if \(U_1 \subseteq U_2\) or \(U_2 \subseteq U_1\). \\
+\\
+\textbf{If direction (right to left):} \\
+Assume that \(U_1 \subseteq U_2\) or \(U_2 \subseteq U_1\). \\
+If \(U_1 \subseteq U_2\) then \(U_1 \cup U_2 = U_2\) and \(U_2\) is a subspace of \(V\). \\
+If \(U_2 \subseteq U_1\) then \(U_1 \cup U_2 = U_1\) and \(U_1\) is a subspace of \(V\). \\
+\\
+\textbf{Only if direction (left to right):} \\
+Assume that \(U_1 \cup U_2\) is a subspace of \(V\). \\
+We want to prove that one of the sets contains the other. \\
+Now suppose neither is contained in the other. Then there exists \(u \in U_1 \setminus U_2\) and \(v \in U_2 \setminus U_1\). \\
+Then, \(u + v \in U_1 \cup U_2\) because \(U_1 \cup U_2\) is a subspace of \(V\). \\
+Which means \(u+v \in U_1\) or \(u+v \in U_2\). \\
+If \(u + v \in U_1\), since \(u \in U_1\) and \(U_1\) is a subspace \((u+v)-u=v \in U_1\) which contradicts the fact that \(v \in U_2 \setminus U_1\). \\
+If \(u + v \in U_2\), since \(v \in U_2\) and \(U_2\) is a subspace \((u+v)-v=u \in U_2\) which contradicts the fact that \(u \in U_1 \setminus U_2\). \\
+Thus, we have a contradiction. \\
+Thus, one of the sets must contain the other. \\
+
+
+
 \end{document}
