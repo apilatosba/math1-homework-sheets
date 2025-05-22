@@ -128,4 +128,31 @@ Let \(p(x), q(x) \in U_6\). Then \(p'(0)p''(0) = 0\) and \(q'(0)q''(0) = 0\). \\
 Then, \((p + q)'(0)(p + q)''(0) = (p'(0) + q'(0)) (p''(0) + q''(0)) = p'(0)p''(0) + p'(0)q''(0) + q'(0)p''(0) + q'(0)q''(0) = p'(0)q''(0) + q'(0)p''(0)\) \\
 Which is not necessarily equal to 0. Thus \(U_6\) is not closed under addition. \\
 
+\subsection*{(b)}
+\(S_1\): \\
+\(S_1\) is a subspace of \(R^{2 \times 2}\). \\
+\textbf{Not empty:} \\
+\(S_1\) is not empty because \(0 \in S_1\) (2 by 2 zero matrix). \\
+\textbf{Closed under addition:} \\
+Let \(A, B \in S_1\). Then \(A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}\) and \(B = \begin{pmatrix} e & f \\ g & h \end{pmatrix}\) where \(a = b\) and \(e = f\). \\
+Then, \(A + B = \begin{pmatrix} a + e & b + f \\ c + g & d + h \end{pmatrix}\) where \(a + e = b + f\). \\
+\textbf{Closed under scalar multiplication:} \\
+Let \(A \in S_1\) and \(c \in R\). Then, \(A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}\) where \(a = b\). \\
+Then, \(cA = \begin{pmatrix} ca & cb \\ cc & cd \end{pmatrix}\) where \(ca = cb\). \\
+\\
+\(S_2\): \\
+\(S_2\) is not a subspace of \(R^{2 \times 2}\). Because \(S_2\) doesn't contain the zero matrix. (every vector space has to contain the zero vector which is the zero matrix in this case) \\
+\\
+\(S_3\): \\
+\(S_3\) is not a subspace of \(R^{2 \times 2}\). Because \(S_3\) is not closed under addition. \\
+Let \(A, B \in S_3\). Then \(A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}\) and \(B = \begin{pmatrix} e & f \\ g & h \end{pmatrix}\) where \(a^2 = b^2\) and \(e^2 = f^2\). \\
+Then, \(A + B = \begin{pmatrix} a + e & b + f \\ c + g & d + h \end{pmatrix}\) where \((a + e)^2 = (b + f)^2\) is not necessarily true. \\
+\begin{align*}
+   (a + e)^2 &= (b + f)^2 \\
+   a^2 + 2ae + e^2 &= b^2 + 2bf + f^2  \qquad \text{use \(a^2 = b^2\) and \(e^2 = f^2\)} \\
+   2ae &= 2bf \\
+   ae &= bf \\
+\end{align*}
+Which is not always true. Thus \(S_3\) is not closed under addition. \\
+
 \end{document}
