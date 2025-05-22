@@ -155,4 +155,28 @@ Then, \(A + B = \begin{pmatrix} a + e & b + f \\ c + g & d + h \end{pmatrix}\) w
 \end{align*}
 Which is not always true. Thus \(S_3\) is not closed under addition. \\
 
+\section*{Problem 3}
+We need to show two things: vectors are linearly independent and they span the subspace \(W\). \\
+\textbf{Vectors are linearly independent:} \\
+Let \(c_1(x^3 - x^2) + c_2(x^3 - x) = 0\). \\
+Then, \(c_1x^3 - c_1x^2 + c_2x^3 - c_2x = 0\). \\
+Then, \((c_1 + c_2)x^3 - c_1x^2 - c_2x = 0\). \\
+The coefficients of \(x^3\), \(x^2\) and \(x\) must be equal to 0. \\
+Thus, \(c_1\) and \(c_2\) must be equal to 0. \\
+\textbf{Vectors span the subspace \(W\):} \\
+Let \(p(x) \in W\). Then, \(p(0) = 0\) and \(p(1) = 0\). \\
+Then, \(p(x) = a_3x^3 + a_2x^2 + a_1x + a_0\). \\
+Then, \(p(0) = a_0 = 0\). \\
+Then, \(p(1) = a_3 + a_2 + a_1 = 0\). \\
+Thus, \(p(x) = a_3x^3 + a_2x^2 + (-a_3 - a_2)x\). \\
+Then, \(p(x) = a_3(x^3 - x^2) + a_2(x^3 - x)\). \\
+Thus, \(p(x)\) can be written as a linear combination of the vectors \(x^3 - x^2\) and \(x^3 - x\). \\
+\\
+\textbf{Extend the basis to a basis for \(R^3[x]\):} \\
+We want to be able write any polynomial in \(R^3[x]\) as a linear combination of the basis vectors. We know that \(dim R^3[x] = 4\). So we need 2 more linearly independent vectors. \\
+From the basis extension theorem we know that if  we add two more linearly independent vectors to our original set of vectors, we will have a basis for \(R^3[x]\). \\
+So let's peak two vectors outside of the subspace \(W\) which are linearly independent. \\
+\(q_1(x) = 1\) and \(q_2(x) = x\) are linearly independent and not in the subspace \(W\). They are not in the subspace \(W\) because \(q_1(1) \neq 0\) and \(q_2(1) \neq 0\). \\
+Thus, a basis for \(R^3[x]\) is \(\{x^3 - x^2, x^3 - x, 1, x\}\). \\
+
 \end{document}
