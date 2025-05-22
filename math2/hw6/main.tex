@@ -179,4 +179,67 @@ So let's peak two vectors outside of the subspace \(W\) which are linearly indep
 \(q_1(x) = 1\) and \(q_2(x) = x\) are linearly independent and not in the subspace \(W\). They are not in the subspace \(W\) because \(q_1(1) \neq 0\) and \(q_2(1) \neq 0\). \\
 Thus, a basis for \(R^3[x]\) is \(\{x^3 - x^2, x^3 - x, 1, x\}\). \\
 
+
+\section*{Problem 4}
+We are interested in the matrices in the folowing form:
+\begin{align*}
+   A = \begin{pmatrix}
+      a & b & c \\
+      b & d & e \\
+      c & e & f
+   \end{pmatrix}
+\end{align*}
+So, if we determine the upper part (or lower part) of the matrix we can determine the whole matrix. \\
+We can write the matrix \(A\) as a linear combination of the following matrices:
+\begin{align*}
+   A = a \begin{pmatrix}
+      1 & 0 & 0 \\
+      0 & 0 & 0 \\
+      0 & 0 & 0
+   \end{pmatrix} + b \begin{pmatrix}
+      0 & 1 & 0 \\
+      1 & 0 & 0 \\
+      0 & 0 & 0
+   \end{pmatrix} + c \begin{pmatrix}
+      0 & 0 & 1 \\
+      0 & 0 & 0 \\
+      1 & 0 & 0
+   \end{pmatrix} + d \begin{pmatrix}
+      0 & 0 & 0 \\
+      0 & 1 & 0 \\
+      0 & 0 & 0
+   \end{pmatrix} + e \begin{pmatrix}
+      0 & 0 & 0 \\
+      0 & 0 & 1 \\
+      0 & 1 & 0
+   \end{pmatrix} + f \begin{pmatrix}
+      0 & 0 & 0 \\
+      0 & 0 & 0 \\
+      0 & 0 & 1
+   \end{pmatrix}
+\end{align*}
+These matrices are trivially linearly independent. \\
+Since there are 6 linearly independent matrices, the dimension of \(S_3\) is 6. \\
+\\
+\textbf{Extend this basis to a basis for \(R^{3 \times 3}\):} \\
+We want to be able write any matrix in \(R^{3 \times 3}\) as a linear combination of the basis vectors. We know that \(dim R^{3 \times 3} = 9\). So we need 3 more linearly independent vectors. \\
+Intiutively we want to be able to control the lower part of the matrix. Following matrices are linearly independent and not in the subspace \(S_3\):
+\begin{align*}
+   A_1 = \begin{pmatrix}
+      0 & 0 & 0 \\
+      0 & 0 & 0 \\
+      1 & 0 & 0
+   \end{pmatrix}, A_2 = \begin{pmatrix}
+      0 & 0 & 0 \\
+      0 & 0 & 0 \\
+      0 & 1 & 0
+   \end{pmatrix}, A_3 = \begin{pmatrix}
+      0 & 0 & 0 \\
+      1 & 0 & 0 \\
+      0 & 0 & 0
+   \end{pmatrix}
+\end{align*}
+
+Thus, a basis for \(R^{3 \times 3}\) is \(\{A_1, A_2, A_3\} \cup S_3\).
+
 \end{document}
