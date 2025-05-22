@@ -13,5 +13,119 @@
    \textbf{Authors: Abdullah Oguz Topcuoglu \& Ahmed Waleed Ahmed Badawy Shora}
 \end{flushright}
 
+% 1. Show that (R, +) forms a finite-dimensional vector space over (R, +, .) but an infinitedimensional vector space over (Q, +, .)
+% 2. (a) Which of the subsets
+% U1 = {p ∈ R[x] : p(0) = 0} ,
+% U2 = {p ∈ R[x] : p(0) = 1} ,
+% U3 = {p ∈ R[x] : p(1) = 0} ,
+% U4 =
+% 
+% p ∈ R[x] : Z 1
+% 0
+% p(x) dx = 0
+% ,
+% U5 = {p ∈ R[x] : p
+% 0
+% (0) + p
+% 00(0) = 0} ,
+% U6 = {p ∈ R[x] : p
+% 0
+% (0)p
+% 00(0) = 0}
+% of R[x] are subspaces of R[x]?
+% (b) Which of the subsets
+% S1 =
+%  a b
+% c d 
+% : a = b
+% 
+% , S2 =
+%  a b
+% c d 
+% : a + b = 1
+% , S3 =
+%  a b
+% c d 
+% : a
+% 2 = b
+% 2
+% 
+% of R
+% 2×2 are subspaces of R
+% 2×2?
+% 3. Show that {x
+% 3 − x
+% 2
+% , x3 − x} is a basis for the subspace
+% W = {p ∈ R3[x] : p(0) = p(1) = 0}
+% of R3[x]. Extend this basis to a basis for R3[x] and hence find a complement of W in R3[x].
+% 4. Let S3 be the set of all real, symmetric 3 × 3 matrices. Find a basis for the subspace S3
+% of R
+% 3×3 and hence determine dim S3. Extend this basis to a basis for R
+% 3×3 and hence find
+% a complement of S3 in R
+% 3×3
+% .
+% [Note: An n×n matrix A = (aij )i,j=1,...,n is called symmetric if aij = aji for all i, j = 1, . . . n.]
+% 5. (a) Let U1, U2 be subspaces of a vector space V . Show that U1 ∪ U2 is a subspace of V
+% if and only if U1 ⊆ U2 or U2 ⊆ U1.
+% (b) Let U1, U2 be subspaces of a vector space V . Show that U1 + U2 is a subspace of V .
+
+\section*{Problem 2}
+
+\subsection*{(a)}
+
+\(U_1\): \\
+\(U_1\) is subspace of \(R[x]\). \\
+\textbf{Not empty:} \\
+\(U_1\) is not empty because \(0 \in U_1\) (zero polynomial). \\
+\textbf{Closed under addition:} \\
+Let \(p(x), q(x) \in U_1\). Then \(p(0) = 0\) and \(q(0) = 0\). \\
+Then, \((p + q)(0) = p(0) + q(0) = 0 + 0 = 0\). \\
+\textbf{Closed under scalar multiplication:} \\
+Let \(p(x) \in U_1\) and \(c \in R\). Then, \((cp)(0) = c(p(0)) = c(0) = 0\). \\
+Thus, \(U_1\) is closed under scalar multiplication. \\
+\\
+\(U_2\): \\
+\(U_2\) is not a subspace of \(R[x]\). Because \(U_2\) doesn't contain the zero polynomial. (every vector space has to contain the zero vector which is the zero polynomial in this case) \\
+\\
+\(U_3\): \\
+\(U_3\) is subspace of \(R[x]\). \\
+\textbf{Not empty:} \\
+\(U_3\) is not empty because \(0 \in U_3\) (zero polynomial). \\
+\textbf{Closed under addition:} \\
+Let \(p(x), q(x) \in U_3\). Then \(p(1) = 0\) and \(q(1) = 0\). \\
+Then, \((p + q)(1) = p(1) + q(1) = 0 + 0 = 0\). \\
+\textbf{Closed under scalar multiplication:} \\
+Let \(p(x) \in U_3\) and \(c \in R\). Then, \((cp)(1) = c(p(1)) = c(0) = 0\). \\
+Thus, \(U_3\) is closed under scalar multiplication. \\
+\\
+\(U_4\): \\
+\(U_4\) is subspace of \(R[x]\). \\
+\textbf{Not empty:} \\
+\(U_4\) is not empty because \(0 \in U_4\) (zero polynomial). \\
+\textbf{Closed under addition:} \\
+Let \(p(x), q(x) \in U_4\). Then \(\int_0^1 p(x) dx = 0\) and \(\int_0^1 q(x) dx = 0\). \\
+Then, \(\int_0^1 (p + q)(x) dx = \int_0^1 p(x) dx + \int_0^1 q(x) dx = 0 + 0 = 0\). \\
+\textbf{Closed under scalar multiplication:} \\
+Let \(p(x) \in U_4\) and \(c \in R\). Then, \(\int_0^1 (cp)(x) dx = c\int_0^1 p(x) dx = c(0) = 0\). \\
+Thus, \(U_4\) is closed under scalar multiplication. \\
+\\
+\(U_5\): \\
+\(U_5\) is subspace of \(R[x]\). \\
+\textbf{Not empty:} \\
+\(U_5\) is not empty because \(0 \in U_5\) (zero polynomial). \\
+\textbf{Closed under addition:} \\
+Let \(p(x), q(x) \in U_5\). Then \(p'(0) + p''(0) = 0\) and \(q'(0) + q''(0) = 0\). \\
+Then, \((p + q)'(0) + (p + q)''(0) = p'(0) + q'(0) + p''(0) + q''(0) = 0 + 0 = 0\). \\
+\textbf{Closed under scalar multiplication:} \\
+Let \(p(x) \in U_5\) and \(c \in R\). Then, \((cp)'(0) + (cp)''(0) = c(p'(0)) + c(p''(0)) = c(p'(0) + p''(0)) = c(0) = 0\). \\
+Thus, \(U_5\) is closed under scalar multiplication. \\
+\\
+\(U_6\): \\
+\(U_6\) is not a subspace of \(R[x]\). Becuase it is not closed under addition \\
+Let \(p(x), q(x) \in U_6\). Then \(p'(0)p''(0) = 0\) and \(q'(0)q''(0) = 0\). \\
+Then, \((p + q)'(0)(p + q)''(0) = (p'(0) + q'(0)) (p''(0) + q''(0)) = p'(0)p''(0) + p'(0)q''(0) + q'(0)p''(0) + q'(0)q''(0) = p'(0)q''(0) + q'(0)p''(0)\) \\
+Which is not necessarily equal to 0. Thus \(U_6\) is not closed under addition. \\
 
 \end{document}
