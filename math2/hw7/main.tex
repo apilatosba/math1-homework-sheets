@@ -13,5 +13,81 @@
    \textbf{Authors: Abdullah Oguz Topcuoglu \& Ahmed Waleed Ahmed Badawy Shora}
 \end{flushright}
 
+\section*{Problem 1}
+
+% 1. Which of the following transformations are linear?
+% (i) R
+% 2 → R,
+% 
+% x
+% y
+% 
+% 7→ x + 2y
+% (ii) R
+% 2 → R,
+% 
+% x
+% y
+% 
+% 7→ x + y
+% 2
+% (iii) R
+% 2 → R,
+% 
+% x
+% y
+% 
+% 7→ xy
+% (iv) C → C, z 7→ z
+% (v) R
+% 2 → R
+% 2
+% ,
+% 
+% x
+% y
+% 
+% 7→
+% 
+% x + 1
+% y − 1
+% 
+% (vi) R
+% 2 → R
+% 2
+% ,
+% 
+% x
+% y
+% 
+% 7→
+% 
+% x − y
+% x + 2y
+% 
+% (vii) Rn[x] → R, p(x) 7→ p(1)
+% (viii) Rn[x] → Rn+2[x], p(x) 7→ x
+% 2p(x)
+
+A transformation T is linear if and only if it satisfies the following two properties for all vectors \( u, v \) and scalar \( c \):
+\begin{enumerate}
+    \item \( T(u + v) = T(u) + T(v) \)
+    \item \( T(cu) = cT(u) \)
+\end{enumerate}
+
+\begin{enumerate}
+    \item \( T: \mathbb{R}^2 \to \mathbb{R}, \quad \begin{pmatrix} x \\ y \end{pmatrix} \mapsto x + 2y \) is linear.
+    \item \( T: \mathbb{R}^2 \to \mathbb{R}, \quad \begin{pmatrix} x \\ y \end{pmatrix} \mapsto x + y^2 \) is not linear. \\
+    Because rule (1) is not satisfied.
+    \item \( T: \mathbb{R}^2 \to \mathbb{R}, \quad \begin{pmatrix} x \\ y \end{pmatrix} \mapsto xy \) is not linear. \\
+    Because rule (2) is not satisfied.
+    \item \( T: \mathbb{C} \to \mathbb{C}, z \mapsto \overline{z} \) is linear.
+    \item \( T: \mathbb{R}^2 \to \mathbb{R}^2, \quad \begin{pmatrix} x \\ y \end{pmatrix} \mapsto \begin{pmatrix} x + 1 \\ y - 1 \end{pmatrix} \) is not linear. \\
+      Because rule (1) is not satisfied.
+    \item \( T: \mathbb{R}^2 \to \mathbb{R}^2, \quad \begin{pmatrix} x \\ y \end{pmatrix} \mapsto \begin{pmatrix} x - y \\ x + 2y\end{pmatrix}  )\) is linear.
+    \item \( T: \mathbb{R}^n[x] \to \mathbb{R}, p(x) \mapsto p(1) \) is linear.
+    \item \( T: \mathbb{R}^n[x] \to \mathbb{R}^{n+2}[x], p(x) \mapsto x^2p(x) \) is linear.
+\end{enumerate}
+
 
 \end{document}
