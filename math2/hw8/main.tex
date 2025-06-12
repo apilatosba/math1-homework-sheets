@@ -13,8 +13,182 @@
    \textbf{Authors: Abdullah Oguz Topcuoglu \& Ahmed Waleed Ahmed Badawy Shora}
 \end{flushright}
 
-\section*{Problem 1}
+% 1. Let K be a field, A ∈ Km×n and B ∈ Kn×p
+% .
+% (a) Prove that (AB)
+% T = BTAT.
+% [Hint: Using the remark on page 86 of the lecture notes, one can write down formulae
+% for c
+% AB
+% j
+% and r
+% BTAT
+% j
+% .]
+% (b) Show that
+% column rank AB ≤ column rank A row rank AB ≤ row rank B
+% and deduce that
+% rank AB ≤ min(rank A,rank B).
+% [Hint: Read the remark on page 86 of the lecture notes.]
+% 2. Determine for which values of λ ∈ R the real matrix
+% Aλ =
+% 
+% 
+% 1 λ 0 0
+% λ 1 0 0
+% 0 λ 1 0
+% 0 0 λ 1
+% 
+% 
+% is invertible, and compute the inverse matrix A
+% −1
+% λ
+% for these values of λ.
+% 3. Let p be a prime number. Determine whether the matrix
+% C =
+% 
+% 
+% 13 7 6
+% −7 1 1
+% 3 8 7
+% 
+%  ∈ Z
+% 3×3
+% p
+% is invertible in the cases p = 2, p = 3 and p = 5, and compute C
+% −1
+% if it exists.
+% 4. Let
+% B =
+% 
+% 
+% 2 1 1 1 2
+% 3 2 1 1 2
+% 4 2 2 3 5
+% 2 1 1 2 3
+% 
+% 
+% ∈ R
+% 4×5
+% and r = Rang B. Find matrices T ∈ GL(4, R) and S ∈ GL(5, R) such that
+% T
+% −1BS =
+% 
+% Ir 0
+% 0 0
+% . (?)
+% [Hint: First convert B into echelon form using elementary row operations, then convert
+% the resulting matrix into the form (?) using elemenary column operations. The matrix S is
+% obtained by applying the column operations to I5 in the same order, while the matrix T is
+% obtained by applying the inverse row operations to I4 in reverse order.]
+% 5. For which values of λ and µ do the following real systems of linear equations have no
+% solution, a unique solution, infinitely many solutions?
+% (a) 2x + 3y + z = 5,
+% 3x − y + λz = 2,
+% x + 7y − 6z = µ
+% (b) x + y − 4z = 0,
+% 2x + 3y + z = 1,
+% 4x + 7y + λz = µ
 
+\section*{Problem 2}
+Let's do elementary row operations.
 
+% the way we are gonna write it is like this: (A_lambda | identity) and to the right of the matrix write the operations we are doing
+\begin{align*}
+    A_\lambda &= \begin{pmatrix}
+    1 & \lambda & 0 & 0 \\
+    \lambda & 1 & 0 & 0 \\
+    0 & \lambda & 1 & 0 \\
+    0 & 0 & \lambda & 1
+\end{pmatrix} \\
+&= \left(
+    \begin{array}{cccc|cccc}
+        1 & \lambda & 0 & 0 & 1 & 0 & 0 & 0 \\
+        \lambda & 1 & 0 & 0 & 0 & 1 & 0 & 0 \\
+        0 & \lambda & 1 & 0 & 0 & 0 & 1 & 0 \\
+        0 & 0 & \lambda & 1 & 0 & 0 & 0 & 1
+    \end{array}
+\right) \\
+&\left(
+    \begin{array}{cccc|cccc}
+        1 & \lambda & 0 & 0 & 1 & 0 & 0 & 0 \\
+        0 & 1 - \lambda^2 & 0 & 0 & -\lambda & 1 & 0 & 0 \\
+        0 & \lambda & 1 & 0 & 0 & 0 & 1 & 0 \\
+        0 & 0 & \lambda & 1 & 0 & 0 & 0 & 1
+    \end{array}
+\right) & r_2 = r_2 - \lambda r_1 \\
+\end{align*}
+
+if $\lambda^2 \neq 1$, then we can divide by $1 - \lambda^2$ and get the following:
+\begin{align*}
+    A_\lambda &= \left(
+    \begin{array}{cccc|cccc}
+        1 & \lambda & 0 & 0 & 1 & 0 & 0 & 0 \\
+        0 & 1 & 0 & 0 & -\frac{\lambda}{1 - \lambda^2} & \frac{1}{1 - \lambda^2} & 0 & 0 \\
+        0 & \lambda & 1 & 0 & 0 & 0 & 1 & 0 \\
+        0 & 0 & \lambda & 1 & 0 & 0 & 0 & 1
+    \end{array}
+\right) & r_2 = r_2 / (1 - \lambda^2)\\
+&\left(
+    \begin{array}{cccc|cccc}
+        1 & \lambda & 0       & 0 & 1                                & 0                             & 0 & 0 \\
+        0 & 1       & 0       & 0 & -\frac{\lambda}{1 - \lambda^2}   & \frac{1}{1 - \lambda^2}       & 0 & 0 \\
+        0 & 0       & 1       & 0 & \frac{\lambda^2}{1 - \lambda^2} & -\frac{\lambda}{1 - \lambda^2} & 0 & 0 \\
+        0 & 0       & \lambda & 1 & 0                                & 0                             & 0 & 1
+    \end{array}
+    \right) & r_3 = r_3 - \lambda r_2 \\
+&\left(
+    \begin{array}{cccc|cccc}
+        1 & \lambda & 0       & 0                                   & 1                                & 0                             & 0 & 0 \\
+        0 & 1       & 0       & 0                                   & -\frac{\lambda}{1 - \lambda^2}   & \frac{1}{1 - \lambda^2}       & 0 & 0 \\
+        0 & 0       & 1       & 0                                   & \frac{\lambda^2}{1 - \lambda^2} & -\frac{\lambda}{1 - \lambda^2} & 0 & 0 \\
+        0 & 0       & 0 & 1 & -\frac{\lambda^3}{1 - \lambda^2} & \frac{\lambda^2}{1 - \lambda^2}                             & 0 & 1
+    \end{array}
+    \right) & r_4 = r_4 - \lambda r_3 \\
+&\left(
+    \begin{array}{cccc|cccc}
+        1 & 0 & 0       & 0                                   & 1 + \frac{\lambda^2}{1 - \lambda^2}                               & -\frac{\lambda}{1 - \lambda^2}                             & 0 & 0 \\
+        0 & 1       & 0       & 0                                   & -\frac{\lambda}{1 - \lambda^2}   & \frac{1}{1 - \lambda^2}       & 0 & 0 \\
+        0 & 0       & 1       & 0                                   & \frac{\lambda^2}{1 - \lambda^2} & -\frac{\lambda}{1 - \lambda^2} & 0 & 0 \\
+        0 & 0       & 0 & 1 & -\frac{\lambda^3}{1 - \lambda^2} & \frac{\lambda^2}{1 - \lambda^2}                             & 0 & 1
+    \end{array}
+    \right) & r_1 = r_1 - \lambda r_2 \\
+\end{align*}
+
+So if $\lambda^2 \neq 1$, then we can write the inverse matrix as follows:
+\begin{align*}
+    A_\lambda^{-1} &= \left(
+    \begin{array}{cccc}
+        1 + \frac{\lambda^2}{1 - \lambda^2} & -\frac{\lambda}{1 - \lambda^2} & 0 & 0 \\
+        -\frac{\lambda}{1 - \lambda^2} & \frac{1}{1 - \lambda^2} & 0 & 0 \\
+        \frac{\lambda^2}{1 - \lambda^2} & -\frac{\lambda}{1 - \lambda^2} & 0 & 0 \\
+        -\frac{\lambda^3}{1 - \lambda^2} & \frac{\lambda^2}{1 - \lambda^2} & 0 & 1
+    \end{array}
+    \right)
+\end{align*}
+If $\lambda^2 = 1$, then we have two cases:
+\begin{itemize}
+    \item If $\lambda = 1$, then the matrix becomes:
+    \[
+        A_1 = \begin{pmatrix}
+            1 & 1 & 0 & 0 \\
+            1 & 1 & 0 & 0 \\
+            0 & 1 & 1 & 0 \\
+            0 & 0 & 1 & 1
+        \end{pmatrix}
+    \]
+    which is not invertible because the first row and the second row are the same.
+
+    \item If $\lambda = -1$, then the matrix becomes:
+    \[
+        A_{-1} = \begin{pmatrix}
+            1 & -1 & 0 & 0 \\
+            -1 & 1 & 0 & 0 \\
+            0 & -1 & 1 & 0 \\
+            0 & 0 & -1 & 1
+        \end{pmatrix}
+    \]
+    which is also not invertible because \(r_1 = -r_2\).
+\end{itemize}
 
 \end{document}
