@@ -13,6 +13,128 @@
    \textbf{Authors: Abdullah Oguz Topcuoglu \& Ahmed Waleed Ahmed Badawy Shora}
 \end{flushright}
 
+
+% 1. Construct a 4 × 4 real matrix D such that
+% ker D =
+% *
+% 
+% 
+% 0
+% 1
+% 0
+% 0
+% 
+%  ,
+% 
+% 
+% 0
+% 0
+% 1
+% 0
+% 
+% 
+% +
+% , Im D =
+% *
+% 
+% 
+% 1
+% 1
+% 1
+% 1
+% 
+%  ,
+% 
+% 
+% 0
+% 1
+% 1
+% 1
+% 
+% 
+% +
+% .
+% [Hint: D = (De1|De2|De3|De4) and Im D = ⟨De1, De2, De3, De4⟩.]
+% 2. Find all real nontrivial solutions of the equations
+% 2x1 − 3x2 − x3 + x4 = 0,
+% 3x1 + 4x2 − 4x3 − 3x4 = 0,
+% 17x2 − 5x3 − 9x4 = 0.
+% Show that one of these solutions satisfies the equations
+% x1 + x2 + x3 + x4 + 1 = 0,
+% x1 − x2 − x3 − x4 − 3 = 0
+% but none can be written as a linear combination of the vectors (0, 1, 2, 3) and (3, 2, 1, 0).
+% 3. Show that
+% det
+% 
+% 
+% a
+% 2 + 1 ab ac
+% ab b2 + 1 bc
+% ac bc c2 + 1
+% 
+%  = a
+% 2 + b
+% 2 + c
+% 2 + 1.
+% 4. Let K be a field.
+% (a) Two matrices A, B = Kn×n are called similar if there is a matrix P ∈ GL(n, K) such
+% that B = P
+% −1AP. Prove that
+% (i) similarity of matrices defines an equivalence relation ∼ on Kn×n
+% ,
+% (ii) A ∼ B if and only if there is a finite-dimensional vector space V over K with bases
+% B, B
+% ′ and a linear transformation T : V → V such that A = MB
+% B
+% (T), B = MB
+% ′
+% B′(T).
+% (b) Prove that two similar matrices have the same determinant.
+% (c) Let V be an n-dimensional vector space over K. How would you define the determinant
+% of a linear transformation T : V → V ?
+% 5. Which of the matrices
+% 
+% −3 4
+% −1 1
+% ,
+% 
+% −3 1
+% −2 −1
+% 
+% ,
+% 
+% −3 3
+% 2 −2
+% 
+% ,
+% 
+% 2 −1
+% −1 3 
+% are diagonalisable over Q, R or C?
+
+
 \section*{Problem 1}
+From the given hint i observe that the columns of the matrix is just the images of the standard basis vectors.
+And since \(e_2\) and \(e_3\) are in the kernel, second and third columns of \(D\) are all zeros.
+\begin{align*}
+D = \begin{pmatrix}
+x & 0 & 0 & x \\
+x & 0 & 0 & x \\
+x & 0 & 0 & x \\
+x & 0 & 0 & x
+\end{pmatrix}
+\end{align*}
+
+And also from the hint i observe that the image is just span of the column vectors of the matrix. So i will just plug the given vectors in the image of \(D\)
+into the columns of \(D\)
+\begin{align*}
+D = \begin{pmatrix}
+1 & 0 & 0 & 0 \\
+1 & 0 & 0 & 1 \\
+1 & 0 & 0 & 1 \\
+1 & 0 & 0 & 1
+\end{pmatrix}
+\end{align*}
+
 
 \end{document}
