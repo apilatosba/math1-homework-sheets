@@ -198,4 +198,32 @@ Thus, the general solution can be expressed as:
 \end{pmatrix} & \lambda, \mu \in \mathbb{R}
 \end{align*}
 
+\section*{Problem 3}
+\begin{align*}
+    & \det\begin{pmatrix}
+    a^2 + 1 & ab & ac \\
+    ab & b^2 + 1 & bc \\
+    ac & bc & c^2 + 1
+    \end{pmatrix} \\
+\end{align*}
+
+Expand along the first row:
+\begin{align*}
+    & = (a^2 + 1) \det\begin{pmatrix}
+    b^2 + 1 & bc \\
+    bc & c^2 + 1
+    \end{pmatrix} - ab \det\begin{pmatrix}
+    ab & ac \\
+    ac & c^2 + 1
+    \end{pmatrix} + ac \det\begin{pmatrix}
+    ab & b^2 + 1 \\
+    ac & bc
+    \end{pmatrix} \\
+    &= (a^2 + 1)((b^2 + 1)(c^2 + 1) - b^2c^2) - ab(ab(c^2 + 1) - a^2c^2) + ac(ab^2c - ac(b^2 + 1)) \\
+    &= (a^2 + 1)(b^2 + 1)(c^2 + 1) - (a^2 + 1)b^2c^2 - a^2b^2(c^2+1) + a^3bc^2 + a^2b^2c^2 - a^2c^2(b^2 + 1) \\
+    &= (a^2b^2+a^2+b^2+1)(c^2 + 1) - (a^2 + 1)b^2c^2 - a^2b^2(c^2+1) + a^3bc^2 + a^2b^2c^2 - a^2c^2(b^2 + 1) \\
+    &= a^2b^2c^2 +a^2b^2+a^2c^2+a^2+b^2c^2+b^2+c^2+1 - (a^2 + 1)b^2c^2 - a^2b^2(c^2+1) + a^3bc^2 + a^2b^2c^2 - a^2c^2(b^2 + 1) \\
+    &= a^2 + b^2 + c^2 + 1
+\end{align*}
+
 \end{document}
