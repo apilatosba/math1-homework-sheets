@@ -13,6 +13,224 @@
    \textbf{Authors: Abdullah Oguz Topcuoglu \& Ahmed Waleed Ahmed Badawy Shora}
 \end{flushright}
 
+% 1. Compute the eigenvalues and eigenspaces of the complex matrices
+% 
+% 
+% 1 0 −1
+% 1 2 1
+% 2 2 3
+% 
+%  ,
+% 
+% 
+% 2 i 1 + 2i
+% −i 0 −i
+% 1 − 2i i 0
+% 
+%  ,
+% 
+% 
+% 1 1 1 0
+% 1 1 0 1
+% 1 0 1 1
+% 0 1 1 1
+% 
+%  .
+% 2. Let
+% A =
+% 
+% −5 3
+% 6 −2
+% 
+% .
+% (a) Find a real, invertible matrix P such that P
+% −1AP is diagonal.
+% (b) Find a real, invertible matrix B such that B3 = A.
+% 3. Let K be a field. The trace of a matrix in Kn×n
+% is the sum of its diagonal entries.
+% (a) Prove that tr AB = tr BA for all A, B ∈ Kn×n
+% , and that two similar matrices in Kn×n
+% have the same trace. How would you define the trace of a linear transformation T : V → V
+% for an n-dimensional vector space V over K?
+% (b) Let A ∈ Kn×n and c be its characterisic polynomial. Show that
+% (i) the coefficient of λ
+% n
+% in c is (−1)n
+% ,
+% (ii) the coefficient of λ
+% n−1
+% in c is (−1)n−1
+% tr A,
+% (iii) the coefficient of λ
+% 0
+% in c is det A.
+% [Hint: Study the proof that c is a polynomial of degree n.]
+% 4. Let a0, . . . , an−1 be distinct real numbers. The matrix
+% V (a0, . . . , an−1) =
+% 
+% 
+% 1 a0 a
+% 2
+% 0
+% · · · a
+% n−1
+% 0
+% 1 a1 a
+% 2
+% 1
+% · · · a
+% n−1
+% 1
+% .
+% .
+% .
+% .
+% .
+% .
+% .
+% .
+% .
+% .
+% .
+% .
+% 1 an−2 a
+% 2
+% n−2
+% · · · a
+% n−1
+% n−2
+% 1 an−1 a
+% 2
+% n−1
+% · · · a
+% n−1
+% n−1
+% 
+% 
+% is called a Vandemonde matrix.
+% Show that
+% det V (a0, . . . , an−1) = (a1 − a0)(a2 − a0). . .(an−1 − a0) det V (a1, . . . , an−1)
+% and deduce that
+% det V (a0, . . . , an−1) = Y
+% 0≤i<j≤n−1
+% (aj − ai), n = 1, 2, . . . .
+% 5. (a) Define norms ∥ · ∥1, ∥ · ∥2 and ∥ · ∥∞ on R
+% 2 by the formulae
+% ∥x∥1 = |x1| + |x2|, ∥x∥2 = (|x1|
+% 2 + |x2|
+% 2
+% )
+% 1
+% 2 , ∥x∥∞ = max{|x1|, |x2|}.
+% Draw a diagram of the set {x : ∥x∥ < 1} in each of these cases.
+% (b) Let x and y be non-zero vectors in a normed space. Show that
+% ∥x + y∥
+% 2 + ∥x − y∥
+% 2
+% ∥x∥
+% 2 + ∥y∥
+% 2
+% ≤ 4
 
+\section*{Problem 1}
+
+Lets calculate the characteristic function of each matrix.
+\begin{align*}
+\text{For } A_1 = \begin{pmatrix}
+1 & 0 & -1 \\
+1 & 2 & 1 \\
+2 & 2 & 3
+\end{pmatrix}, \quad \text{the characteristic polynomial is } \\
+c(\lambda) = \det(A_1 - \lambda I) = \det\begin{pmatrix}
+1 - \lambda & 0 & -1 \\
+1 & 2 - \lambda & 1 \\
+2 & 2 & 3 - \lambda
+\end{pmatrix} \\
+= (1 - \lambda)\det\begin{pmatrix}
+2 - \lambda & 1 \\
+2 & 3 - \lambda
+\end{pmatrix} - 0 + (-1)\det\begin{pmatrix}
+1 & 2 - \lambda \\
+2 & 2
+\end{pmatrix} \\
+= (1 - \lambda)((2 - \lambda)(3 - \lambda) - 2) - (1(2) - 2(2 - \lambda)) \\
+= (1 - \lambda)(\lambda^2 - 5\lambda + 4) - (2 - 4 + 2\lambda) \\
+= (1 - \lambda)(\lambda^2 - 5\lambda + 4) - (2\lambda - 2) \\
+= (1 - \lambda)(\lambda - 4)(\lambda - 1) - 2(\lambda - 1) \\
+= (\lambda - 1)(-\lambda^2 + 5\lambda - 4 - 2) \\
+= (1 - \lambda)(\lambda^2 - 5\lambda + 6) \\
+= (1 - \lambda)(\lambda - 2)(\lambda - 3)
+\end{align*}
+
+The eigenvalues are $\lambda_1 = 1$, $\lambda_2 = 2$, and $\lambda_3 = 3$.
+The eigenspaces are:
+\begin{align*}
+E_1 &= \ker\begin{pmatrix}
+1 - 1 & 0 & -1 \\
+1 & 2 - 1 & 1 \\
+2 & 2 & 3 - 1
+\end{pmatrix} \\
+&= \ker\begin{pmatrix}
+0 & 0 & -1 \\
+1 & 1 & 1 \\
+2 & 2 & 2
+\end{pmatrix} \\
+&= \ker\begin{pmatrix}
+1 & 1 & 1 \\
+0 & 0 & -1 \\
+0 & 0 & 0
+\end{pmatrix} \\
+&= \text{span}\left\{\begin{pmatrix}
+1 \\
+-1 \\
+0
+\end{pmatrix}\right\}
+\end{align*}
+
+\begin{align*}
+E_2 &= \ker\begin{pmatrix}
+1 - 2 & 0 & -1 \\
+1 & 2 - 2 & 1 \\
+2 & 2 & 3 - 2
+\end{pmatrix} \\
+&= \ker\begin{pmatrix}
+-1 & 0 & -1 \\
+1 & 0 & 1 \\
+2 & 2 & 1
+\end{pmatrix} \\
+&= \ker\begin{pmatrix}
+1 & 0 & 1 \\
+0 & 2 & -1 \\
+0 & 0 & 0
+\end{pmatrix} \\
+&= \text{span}\left\{\begin{pmatrix}
+-1 \\
+1/2 \\
+1
+\end{pmatrix}\right\}
+\end{align*}
+
+\begin{align*}
+    E_3 &= \ker\begin{pmatrix}
+1 - 3 & 0 & -1 \\
+1 & 2 - 3 & 1 \\
+2 & 2 & 3 - 3
+\end{pmatrix} \\
+&= \ker\begin{pmatrix}
+-2 & 0 & -1 \\
+1 & -1 & 1 \\
+2 & 2 & 0
+\end{pmatrix} \\
+&= \ker\begin{pmatrix}
+1 & -1 & 1 \\
+0 & 2 & -1 \\
+0 & 0 & 0
+\end{pmatrix} \\
+&= \text{span}\left\{\begin{pmatrix}
+-1/2 \\
+1/2 \\
+1
+\end{pmatrix}\right\}
+\end{align*}
 
 \end{document}
