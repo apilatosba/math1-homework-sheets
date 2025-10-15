@@ -134,5 +134,42 @@ And at the top we assumed that \(\delta \leq 1\), so we can chose:
 
 So found a delta meaning that \(f\) is continuous at \(x^0\). Since \(x^0\) was arbitrary, \(f\) is continuous on \(\mathbb{R}^2\).
 
+\section*{Problem 2}
+We are given the function:
+\begin{align*}
+   f: \mathbb{R}^2 \to \mathbb{R} \quad f(x_1,x_2) = \begin{cases}
+      \frac{x_1^2 sin(x_1+x_2)}{\sqrt{x_1^4 + x_2^4}} & (x_1,x_2) \neq (0,0) \\
+      0 & (x_1,x_2) = (0,0)
+   \end{cases}
+\end{align*}
+
+We want to show that for every sequence \((x^N)_{N \in \mathbb{N}}\) that converges to \((0,0)\),
+the sequence \((f(x^N))_{N \in \mathbb{N}}\) also converges to \(f(0,0)=0\).\\
+
+Fix an arbitrary sequence \((x^N)_{N \in \mathbb{N}}\) that converges to \((0,0)\). \\
+If \((x_1, x_2) \neq (0, 0)\)
+\begin{align*}
+   \sqrt{x_1^4 + x_2^4} &\geq \sqrt{x_1^4} = x_1^2 \\
+   \intertext{Hence}
+   \frac{x_1^2}{\sqrt{x_1^4 + x_2^4}} &\leq 1 \\
+\end{align*}
+
+Also note that:
+\begin{align*}
+   |sin(x)| &\leq |x| \\
+\end{align*}
+
+\begin{align*}
+   |f(x^{(N)})| &= \frac{(x_1^{(N)})^2 |sin(x_1^{(N)}+x_2^{(N)})|}{\sqrt{(x_1^{(N)})^4 + (x_2^{(N)})^4}} \\
+   &\leq \frac{(x_1^{(N)})^2 |x_1^{(N)}+x_2^{(N)}|}{\sqrt{(x_1^{(N)})^4 + (x_2^{(N)})^4}} \\
+   &\leq |x_1^{(N)} + x_2^{(N)}| \\
+   &\leq |x_1^{(N)}| + |x_2^{(N)}| \\
+   &\leq |x^{(N)}| + |x^{(N)}| \\
+   &\leq 2|x^{(N)}| \\
+\end{align*}
+
+Since \(|f(x^{(N)})|\) is less than \(2|x^{(N)}|\) it must also converge to zero. \(|f(x^{(N)})|\) converging zero means that
+\(f(x^{(N)})\) converging to \((0, 0)\) which equals to \(f(0,0)\). \\
+And thats what we wanted to show.
 
 \end{document}
