@@ -1,0 +1,138 @@
+\documentclass{article}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{mathtools}
+
+\begin{document}
+\section*{\huge Homework Sheet 1}
+\begin{flushright}
+   \textbf{Author: Abdullah Oğuz Topçuoğlu}
+\end{flushright}
+
+% Exercise 1 (3 Points)
+% Let f : R2 → R be a function defined by
+% f(x) := x2
+% 1 + 2x2
+% 2.
+% Show that f is continuous by showing that the ε-δ criterion in Definition 1.3.1 is satisfied for every
+% point (x0
+% 1, x0
+% 2) ∈ R2.
+% Exercise 2 (4 Points)
+% Let f : R2 → R be a function defined by
+% f(x1, x2) :=
+% 󰀫 x2
+% 1 sin(x1+x2)
+% √x4
+% 1+x4
+% 2
+% , (x1, x2) ∕= (0, 0)
+% 0 , (x1, x2) = (0, 0) .
+% Show that f is continuous.
+% Exercise 3 (5 Points)
+% Let R+ := [0, ∞). Let f : R+ × R → R be a function defined by
+% f(x1, x2) :=
+% 󰀫 √x1 x2
+% 2+x1x2
+% 2
+% x1+2x2
+% 2
+% , (x1, x2) ∕= (0, 0)
+% 0 , (x1, x2) = (0, 0) .
+% (i) Let x0 = (x0
+% 1, x0
+% 2) ∈ R2 be arbitrary, but fixed. Let the functions fx0
+% 1 : R → R and fx0
+% 2 : R+ → R
+% be defined by fx0
+% 2
+% (x1) := f(x1, x0
+% 2) and fx0
+% 1
+% (x2) := f(x0
+% 1, x2). Show that both fx0
+% 1 and fx0
+% 2 are
+% continuous.
+% (ii) Show that f is not continuous at the point (0, 0).
+% Exercise 4∗ (4 Bonus Points)
+% Let f : R2 → R be a function defined by
+% f(x1, x2) :=
+% 󰀫 1
+% x2
+% 1+x2
+% 2
+% , (x1, x2) ∈ A
+% x1x2 , (x1, x2) ∈/ A ,
+% where A := 󰀋󰀃 1
+% x cos( 2π
+% x ), 1
+% x sin( 2π
+% x )
+% 󰀄
+% : x ∈ (0, ∞)
+% 󰀌 ⊆ R2.
+% (i) Plot (or sketch) the set A.
+% (ii) Show that f is not continuous at the point (0, 0).
+% (iii) Show that f(hN v) → f(0, 0) (as N → ∞) for every v ∈ R2 and every decreasing sequence
+% (hN )N∈N in R with hN → 0.
+% Hint for (iii): Consider how “often” the sequence (hN v)N∈N can hit the set A. To do this, look at
+% the plot (or sketch) of the set A.
+
+\section*{Problem 1}
+We are given the function:
+\[
+   f: \mathbb{R}^2 \to \mathbb{R} \quad f(x_1,x_2)=x_1^2+2x_2^2
+\]
+We want to show that \(f\) is continuous on \(\mathbb{R}^2\). We want to find a delta that satisfies:
+\[
+   \forall \varepsilon>0, \exists \delta>0: \forall x \in \mathbb{R}^2 \|x-x^0\| < \delta \implies |f(x)-f(x^0)|<\varepsilon
+\]
+for an arbitrary but fixed \(x^0\). \\
+Fix \(x^0=(x_1^0,x_2^0)\). Fix \(\varepsilon>0\). We want to find a delta that makes this inequality satisfied always:
+\begin{align*}
+   |f(x)-f(x^0)| &< \varepsilon \\
+\end{align*}
+
+We are gonna find a relation between delta and \(|f(x)-f(x^0)|\) and from there we are look for values of delta where it is
+less than epsilon.
+
+\begin{align*}
+   |f(x)-f(x^0)| &= |x_1^2 + 2x_2^2 - (x_1^0)^2 - 2(x_2^0)^2| \\
+   &= |(x_1^2 - (x_1^0)^2) + 2(x_2^2 - (x_2^0)^2)| \\
+   &\leq |x_1^2 - (x_1^0)^2| + 2|x_2^2 - (x_2^0)^2| \\
+   &= |(x_1 - x_1^0)(x_1 + x_1^0)| + 2|(x_2 - x_2^0)(x_2 + x_2^0)| \\
+   &\leq |x_1 - x_1^0||x_1 + x_1^0| + 2|x_2 - x_2^0||x_2 + x_2^0|  \quad \shortintertext{(replace invidual components of the vector with the vector itself. that makes the overall value larger)} \\
+   &\leq \|x - x^0\|\|x + x^0\| + 2\|x - x^0\|\|x + x^0\| \\
+   &= 3\|x - x^0\|\|x + x^0\|\\
+   &\leq 3 \delta \|x + x^0\| \\
+\end{align*}
+
+and now assume that \(\delta \leq 1\), then we can say that:
+\begin{align*}
+   \|x\| \leq \|x^0\| + 1
+\end{align*}
+
+\begin{align*}
+   |f(x)-f(x^0)| &\leq 3 \delta \|x + x^0\| \\
+   &\leq 3 \delta (\|x\| + \|x^0\|) \\
+   &\leq 3 \delta (\|x^0\| + 1 + \|x^0\|) \\
+   &= 3 \delta (2\|x^0\| + 1)
+\end{align*}
+
+We are almost done. Now if we chose a delta that satisfies:
+\begin{align*}
+   3 \delta (2\|x^0\| + 1) < \varepsilon \\
+   \delta < \frac{\varepsilon}{3(2\|x^0\| + 1)}
+\end{align*}
+
+And at the top we assumed that \(\delta \leq 1\), so we can chose:
+\[
+   \delta = \min\left(1, \frac{\varepsilon}{3(2\|x^0\| + 1)}\right)
+\]
+
+So found a delta meaning that \(f\) is continuous at \(x^0\). Since \(x^0\) was arbitrary, \(f\) is continuous on \(\mathbb{R}^2\).
+
+
+\end{document}
