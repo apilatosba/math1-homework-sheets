@@ -172,4 +172,74 @@ Since \(|f(x^{(N)})|\) is less than \(2|x^{(N)}|\) it must also converge to zero
 \(f(x^{(N)})\) converging to \((0, 0)\) which equals to \(f(0,0)\). \\
 And thats what we wanted to show.
 
+\section*{Problem 3}
+We are given the function:
+\begin{align*}
+   f: \mathbb{R}_+ \times \mathbb{R}  \to \mathbb{R} \quad f(x_1,x_2) = \begin{cases}
+      \frac{\sqrt{x_1 x_2^2} + x_1 x_2^2}{x_1 + 2x_2^2} &, (x_1,x_2) \neq (0,0) \\
+      0 &, (x_1,x_2) = (0,0)
+   \end{cases}
+\end{align*}
+
+\subsection*{(i)}
+\(f_{x_1^0}\): \\
+Fix a sequence \(x^{(N)} = (x_1^0, x_2^{(N)})\) that converges to \((x_1^0, x_2^0)\).
+We want to show that \(f_{x_1^0}(x_2^{(N)})\) converges to \(f_{x_1^0}(x_2^0)\).
+\begin{align*}
+   |f_{x_1^0}(x_2^{(N)}) - f_{x_1^0}(x_2^0)| &= \left|\frac{\sqrt{x_1^0 (x_2^{(N)})^2} + x_1^0 (x_2^{(N)})^2}{x_1^0 + 2(x_2^{(N)})^2} - \frac{\sqrt{x_1^0 (x_2^0)^2} + x_1^0 (x_2^0)^2}{x_1^0 + 2(x_2^0)^2}\right| \\
+   \shortintertext{take the squares out of the square roots} \\
+   &= \left|\frac{|x_2^{(N)}| \sqrt{x_1^0} + x_1^0 (x_2^{(N)})^2}{x_1^0 + 2(x_2^{(N)})^2} - \frac{|x_2^0| \sqrt{x_1^0} + x_1^0 (x_2^0)^2}{x_1^0 + 2(x_2^0)^2}\right| \\
+\end{align*}
+
+\(\sqrt{x_1}^2 = x_1\) since \(x_1\) is never negative.
+
+\begin{align*}
+   &= \left|\frac{|x_2^{(N)}| \sqrt{x_1^0} (1 + |x_2^{(N)}| \sqrt{x_1^0})}{x_1^0 + 2(x_2^{(N)})^2} - \frac{|x_2^0| \sqrt{x_1^0} (1 + |x_2^0| \sqrt{x_1^0})}{x_1^0 + 2(x_2^0)^2}\right| \\
+\end{align*}
+
+now lets take the limit as \(N\) goes to infinity:
+We know that \(x_2^{N}\) converges to \(x_2^0\)
+\begin{align*}
+   &= \left|\frac{|x_2^0| \sqrt{x_1^0} (1 + |x_2^0| \sqrt{x_1^0})}{x_1^0 + 2(x_2^0)^2} - \frac{|x_2^0| \sqrt{x_1^0} (1 + |x_2^0| \sqrt{x_1^0})}{x_1^0 + 2(x_2^0)^2}\right| \\
+   &= 0 \\
+\end{align*}
+
+So \(f_{x_1^0}(x_2^{(N)})\) converges to \(f_{x_1^0}(x_2^0)\). \\
+\\
+\\
+\(f_{x_2^0}\): \\
+Fix a sequence \(x^{(N)} = (x_1^{(N)}, x_2^0)\) that converges to \((x_1^0, x_2^0)\).
+We want to show that \(f_{x_2^0}(x_1^{(N)})\) converges to \(f_{x_2^0}(x_1^0)\).
+\begin{align*}
+   |f_{x_2^0}(x_1^{(N)}) - f_{x_2^0}(x_1^0)| &= \left|\frac{\sqrt{x_1^{(N)} (x_2^0)^2} + x_1^{(N)} (x_2^0)^2}{x_1^{(N)} + 2(x_2^0)^2} - \frac{\sqrt{x_1^0 (x_2^0)^2} + x_1^0 (x_2^0)^2}{x_1^0 + 2(x_2^0)^2}\right| \\
+   \shortintertext{take the squares out of the square roots} \\
+   &= \left|\frac{|x_2^0| \sqrt{x_1^{(N)}} + x_1^{(N)} (x_2^0)^2}{x_1^{(N)} + 2(x_2^0)^2} - \frac{|x_2^0| \sqrt{x_1^0} + x_1^0 (x_2^0)^2}{x_1^0 + 2(x_2^0)^2}\right| \\
+\end{align*}
+\(\sqrt{x_1}^2 = x_1\) since \(x_1\) is never negative.
+\begin{align*}
+   &= \left|\frac{|x_2^0| \sqrt{x_1^{(N)}} (1 + |x_2^0| \sqrt{x_1^{(N)}})}{x_1^{(N)} + 2(x_2^0)^2} - \frac{|x_2^0| \sqrt{x_1^0} (1 + |x_2^0| \sqrt{x_1^0})}{x_1^0 + 2(x_2^0)^2}\right| \\
+\end{align*}
+now lets take the limit as \(N\) goes to infinity:
+We know that \(x_1^{N}\) converges to \(x_1^0\)
+\begin{align*}
+   &= \left|\frac{|x_2^0| \sqrt{x_1^0} (1 + |x_2^0| \sqrt{x_1^0})}{x_1^0 + 2(x_2^0)^2} - \frac{|x_2^0| \sqrt{x_1^0} (1 + |x_2^0| \sqrt{x_1^0})}{x_1^0 + 2(x_2^0)^2}\right| \\
+   &= 0 \\
+\end{align*}
+So \(f_{x_2^0}(x_1^{(N)})\) converges to \(f_{x_2^0}(x_1^0)\). \\
+
+\subsection*{(ii)}
+We want to show that \(f\) is not continuous at \((0,0)\). \\
+We are gonna show that there exists a sequence \((x^{(N)})_{N \in \mathbb{N}}\) that converges to \((0,0)\) but \((f(x^{(N)}))_{N \in \mathbb{N}}\) does not converge to \(f(0,0)=0\). \\
+Fix the sequence:
+\[   x^{(N)} = \left(\frac{1}{N^2}, \frac{1}{N}\right) \]
+We can see that this sequence converges to \((0,0)\) as \(N\) goes to infinity.
+\begin{align*}
+   f(x^{(N)}) &= \frac{\sqrt{\frac{1}{N^2} \cdot \frac{1}{N^2}} + \frac{1}{N^2} \cdot \frac{1}{N^2}}{\frac{1}{N^2} + 2 \cdot \frac{1}{N^2}} \\
+   &= \frac{\frac{1}{N^2} + \frac{1}{N^4}}{\frac{3}{N^2}} \\
+   &= \frac{1 + \frac{1}{N^2}}{3} \\
+\end{align*}
+As \(N\) goes to infinity, \(f(x^{(N)})\) converges to \(\frac{1}{3}\) which is not equal to \(f(0,0)=0\). \\
+So we found a sequence that converges to \((0,0)\) but \(f\) of that sequence does not converge to \(f(0,0)\). \\
+Hence \(f\) is not continuous at \((0,0)\).
+
 \end{document}
