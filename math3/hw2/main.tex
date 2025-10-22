@@ -143,4 +143,33 @@ So if we pick a poitn in \(D\) we can get the distance to \(x_1\) axis and dista
 the smaller of both then every point in that open ball will be in \(D\) because we are guaranteed to not touch the \(x_1\) axis and the parabola. \\
 Thats why \(D\) is open.
 
+\subsection*{(ii)}
+We want to show that for any point in the set \(D\) the partial derivatives exist. \\
+Lets start with \(\frac{\partial f}{\partial x_1}\): \\
+Define \(f_{x_2}(x_1) = f(x_1, x_2)\). Now we want to show that \(\frac{df_{x_2}}{dx_1}\) exists. \\
+And yes it does because \(f_{x_2}(x_1)\) is a rational function where the numerator and denominator are polynomials in \(x_1\) (with \(x_2\) being constant)
+and demominator is never zero. \\
+\\
+Now we want to show that \(\frac{\partial f}{\partial x_2}\) exists: \\
+Define \(f_{x_1}(x_2) = f(x_1, x_2)\). Now we want to show that \(\frac{df_{x_1}}{dx_2}\) exists. \\
+And yes it does again because the numerator is differentiable and the denomainator is also differentiable and never zero. \\
+\\
+\textbf{Partial derivaties:}\\
+\begin{align*}
+   \frac{\partial f}{\partial x_1} &= \frac{df_{x_2}}{dx_1} \intertext{apply quotient rule}\\
+   &= \frac{ln(x_2)((x_1 - x_2^2) x_2) - x_1 ln(x_2) x_2}{(x_1 - x_2^2)^2 x_2^2}, \\
+   &= \frac{ln(x_2)x_2 (x_1 - x_2^2 - x_1)}{(x_1 - x_2^2)^2 x_2^2}, \\
+   &= \frac{ln(x_2)x_2 (-x_2^2)}{(x_1 - x_2^2)^2 x_2^2}, \\
+   &= \frac{-ln(x_2)x_2^3}{(x_1 - x_2^2)^2 x_2^2}, \\
+   &= \frac{-ln(x_2)x_2}{(x_1 - x_2^2)^2}, \\
+\end{align*}
+
+\begin{align*}
+   \frac{\partial f}{\partial x_2} &= \frac{df_{x_1}}{dx_2} \intertext{apply quotient rule}\\
+   &= \frac{x_1/x_2 ((x_1 - x_2^2) x_2) - (x_1 (ln(x_2) (x_1 - 3x_2^2)))}{(x_1 - x_2^2)^2 x_2^2}\\
+   &= \frac{x_1 (x_1 - x_2^2) - (x_1 ln(x_2) (x_1 - 3x_2^2))}{(x_1 - x_2^2)^2 x_2^2}\\
+   &= \frac{x_1 (x_1 - x_2^2 - ln(x_2) (x_1 - 3x_2^2))}{(x_1 - x_2^2)^2 x_2^2}\\
+\end{align*}
+This is the furthest i could simplify :)
+
 \end{document}
