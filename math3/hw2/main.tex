@@ -172,4 +172,19 @@ And yes it does again because the numerator is differentiable and the denomainat
 \end{align*}
 This is the furthest i could simplify :)
 
+\subsection*{(iii)}
+The fradient is simply the vector of partial derivatives which we just calculated in (ii):
+\begin{align*}
+   \nabla f(x_1, x_2) &= \begin{pmatrix}
+                           \frac{\partial f}{\partial x_1} \\
+                           \\
+                           \frac{\partial f}{\partial x_2}
+                        \end{pmatrix} \\
+    &= \begin{pmatrix}
+      \frac{-ln(x_2)x_2}{(x_1 - x_2^2)^2} \\
+      \\
+      \frac{x_1 (x_1 - x_2^2 - ln(x_2) (x_1 - 3x_2^2))}{(x_1 - x_2^2)^2 x_2^2}
+   \end{pmatrix}
+\end{align*}
+
 \end{document}
