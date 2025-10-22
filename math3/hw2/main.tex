@@ -230,4 +230,86 @@ Now we need to check the point \((0,0)\):
 
 So we have shown that \(f\) is partially differentiable everywhere.
 
+\section*{Problem 8}
+
+We are given the function
+\begin{align*}
+   f : \mathbb{R}^2 \to \mathbb{R}, \quad f(x_1, x_2) :=
+   \begin{cases}
+      \frac{x_1 x_2^3 - x_1^3 x_2}{x_1^2 + x_2^2}, & (x_1, x_2) \neq (0, 0) \\
+      0, & (x_1, x_2) = (0, 0)
+   \end{cases}
+\end{align*}
+
+\subsection*{(ii)}
+We need to show that the PD condition holds for \(f\). \(PD_{(0,0) (i,j)}\) for \(i,j \in \{1,2\}\). \\
+Lets start with \(PD_{(0,0) (1,1)}\):
+\begin{itemize}
+   \item f is partially differentiable at \((0,0)\) with respect to \(x_1\):\\
+   \begin{align*}
+      \frac{\partial f}{\partial x_1} &= \lim_{h \to 0} \frac{f(0 + h, 0) - f(0, 0)}{h} \\
+      &= \lim_{h \to 0} \frac{0 - 0}{h} = 0
+   \end{align*}
+
+   \item \(\frac{\partial f}{\partial x_1}\) is partially differentiable at \((0,0)\) with respect to \(x_1\):\\
+   \begin{align*}
+      \frac{\partial f}{\partial x_1} &= \frac{df_{x_2}}{dx_1} \shortintertext{apply quotient rule} \\
+      &= \frac{x_2^3 - 3x_1^2 x_2}{x_1^2 + x_2^2} - \frac{(x_1 x_2^3 - x_1^3 x_2) 2x_1}{(x_1^2 + x_2^2)^2} \\
+   \end{align*}
+   \begin{align*}
+      \frac{\partial^2 f}{\partial x_1^2} &= \lim_{h \to 0} \frac{\frac{\partial f}{\partial x_1}(0 + h, 0) - \frac{\partial f}{\partial x_1}(0, 0)}{h} \\
+      &= \lim_{h \to 0} \frac{0 - 0}{h} = 0
+   \end{align*}
+\end{itemize}
+Now lets do \(PD_{(0,0) (1,2)}\):
+\begin{itemize}
+   \item f is partially differentiable at \((0,0)\) with respect to \(x_1\):\\
+   (Already shown above)
+   \item \(\frac{\partial f}{\partial x_1}\) is partially differentiable at \((0,0)\) with respect to \(x_2\):\\
+   \begin{align*}
+      \frac{\partial^2 f}{\partial x_2 \partial x_1} &= \lim_{h \to 0} \frac{\frac{\partial f}{\partial x_1}(0, 0 + h) - \frac{\partial f}{\partial x_1}(0, 0)}{h} \\
+      &= \lim_{h \to 0} \frac{h - 0}{h} = 1
+   \end{align*}
+\end{itemize}
+Now lets do \(PD_{(0,0) (2,1)}\):
+\begin{itemize}
+   \item f is partially differentiable at \((0,0)\) with respect to \(x_2\):\\
+   \begin{align*}
+      \frac{\partial f}{\partial x_2} &= \lim_{h \to 0} \frac{f(0, 0 + h) - f(0, 0)}{h} \\
+      &= \lim_{h \to 0} \frac{0 - 0}{h} = 0
+   \end{align*}
+   \item \(\frac{\partial f}{\partial x_2}\) is partially differentiable at \((0,0)\) with respect to \(x_1\):\\
+   \begin{align*}
+      \frac{\partial f}{\partial x_2} &= \frac{df_{x_1}}{dx_2} \shortintertext{apply quotient rule} \\
+      &= \frac{3x_1 x_2^2 - x_1^3}{x_1^2 + x_2^2} - \frac{(x_1 x_2^3 - x_1^3 x_2) 2x_2}{(x_1^2 + x_2^2)^2} \\
+   \end{align*}
+   \begin{align*}
+      \frac{\partial^2 f}{\partial x_1 \partial x_2} &= \lim_{h \to 0} \frac{\frac{\partial f}{\partial x_2}(0 + h, 0) - \frac{\partial f}{\partial x_2}(0, 0)}{h} \\
+      &= \lim_{h \to 0} \frac{-h - 0}{h} = -1
+   \end{align*}
+\end{itemize}
+Now lets do \(PD_{(0,0) (2,2)}\):
+\begin{itemize}
+   \item f is partially differentiable at \((0,0)\) with respect to \(x_2\):\\
+   (Already shown above)
+   \item \(\frac{\partial f}{\partial x_2}\) is partially differentiable at \((0,0)\) with respect to \(x_2\):\\
+   \begin{align*}
+      \frac{\partial^2 f}{\partial x_2^2} &= \lim_{h \to 0} \frac{\frac{\partial f}{\partial x_2}(0, 0 + h) - \frac{\partial f}{\partial x_2}(0, 0)}{h} \\
+      &= \lim_{h \to 0} \frac{0 - 0}{h} = 0
+   \end{align*}
+\end{itemize}
+
+So we have shown that \(f\) is twice partially differentiable at point \((0,0)\) and the Hessian matrix at this point is:
+\begin{align*}
+   H_f(0,0) = \begin{pmatrix}
+      \frac{\partial^2 f}{\partial x_1^2} & \frac{\partial^2 f}{\partial x_2 \partial x_1} \\
+      \frac{\partial^2 f}{\partial x_1 \partial x_2} & \frac{\partial^2 f}{\partial x_2^2}
+   \end{pmatrix} = \begin{pmatrix}
+      0 & 1 \\
+      -1 & 0
+   \end{pmatrix}
+\end{align*}
+\\
+Schwarz theorem reqiures the function to be twice continuously partially differentiable at a point but our function \(f\) is only twice partially differentiable.
+
 \end{document}
