@@ -3,6 +3,7 @@
 \usepackage{tikz}
 \usepackage{array}
 \usepackage{mathtools}
+\usepackage{graphicx}
 
 \begin{document}
 \section*{\huge Homework Sheet 2}
@@ -117,5 +118,29 @@ So partial derivates exist for all points where \(x^0_1 \neq 0\). By symmetry, t
       -1, & x^0_2 < 0
    \end{cases}
 \end{align*}
+
+\section*{Problem 6}
+We are given the set
+\begin{align*}
+   D := \{(x_1, x_2) \in \mathbb{R}^2 : x_1 \neq x_2^2, x_2 > 0\}
+\end{align*}
+
+and the function
+\begin{align*}
+   f : D \to \mathbb{R}, \quad f(x_1, x_2) := \frac{x_1 \ln(x_2)}{(x_1 - x_2^2)x_2}.
+\end{align*}
+
+\subsection*{(i)}
+We need to show that for any point \(x \in D\) we can find an open ball around it. \\
+
+\begin{figure}[h!]
+  \centering
+  \includegraphics[width=\linewidth]{Screenshot From 2025-10-22 12-07-40.png}
+  \caption{The set D}
+\end{figure}
+
+So if we pick a poitn in \(D\) we can get the distance to \(x_1\) axis and distance to the parabola in the image and if we choose the radius of the open ball to be
+the smaller of both then every point in that open ball will be in \(D\) because we are guaranteed to not touch the \(x_1\) axis and the parabola. \\
+Thats why \(D\) is open.
 
 \end{document}
