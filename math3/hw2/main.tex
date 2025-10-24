@@ -269,6 +269,29 @@ Case: \((h_1, h_2) = (0,0)\)
 \end{align*}
 So the limit condition holds and \(f\) is totally differentiable at point \((0,0)\). Thats what we wanted to show.
 
+\subsection*{(iii)}
+We want to show that \(f\) is not continuously differentiable at point \((0,0)\). \\
+It suffices to find one entry in the jacobian matrix that is not continuous at point \((0,0)\). \\
+In order to to do that I am gonna find a sequence that converges to \((0,0)\) but the value of the partial derivative at that sequence does not converge to the value of the partial derivative at \((0,0)\). \\
+\\
+Lets consider \(\frac{\partial f}{\partial x_1}\):\\
+We first need to find a formula for the partial derivative:
+\begin{align*}
+   \frac{\partial f}{\partial x_1} &= \frac{df_{x_2}}{dx_1} \intertext{apply product rule}\\
+   &= 2x_1 \sin\left(\frac{1}{x_1^2 + x_2^2}\right) + (x_1^2 + x_2^2) \cos\left(\frac{1}{x_1^2 + x_2^2}\right) \left(-\frac{1}{(x_1^2 + x_2^2)^2} 2x_1\right) \\
+   &= 2x_1 \sin\left(\frac{1}{x_1^2 + x_2^2}\right) - \frac{2x_1}{x_1^2 + x_2^2} \cos\left(\frac{1}{x_1^2 + x_2^2}\right)
+\end{align*}
+Now we can consider the sequence \((x_1^{(n)}, x_2^{(n)}) = \left(\sqrt{\frac{1}{2\pi n}}, 0\right)\) which converges to \((0,0)\) as \(n\) approaches infinity. \\
+Now we can calculate the value of the partial derivative at that sequence:
+\begin{align*}
+   \frac{\partial f}{\partial x_1}(x_1^{(n)}, x_2^{(n)}) &= 2\sqrt{\frac{1}{2\pi n}} \sin(2\pi n) - \frac{2\sqrt{\frac{1}{2\pi n}}}{\frac{1}{2\pi n}} \cos(2\pi n) \\
+   &= 0 - 2\sqrt{2\pi n} \cdot 1 \\
+   &= -2\sqrt{2\pi n}
+\end{align*}
+As \(n\) approaches infinity this value approaches \(-\infty\) which is not equal to \(\frac{\partial f}{\partial x_1}(0,0) = 0\). \\
+So we have found a sequence that converges to \((0,0)\) but the value of the partial derivative at that sequence does not converge to the value of the partial derivative at \((0,0)\). \\
+Thus \(\frac{\partial f}{\partial x_1}\) is not continuous at point \((0,0)\) and therefore \(f\) is not continuously differentiable at point \((0,0)\).
+
 \section*{Problem 8}
 
 We are given the function
