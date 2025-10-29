@@ -233,4 +233,81 @@ Chain rule says that if \(f\) and \(g\) are totally differentiable then \(g \cir
 (all the partial derivaties are continous everywhere and as we showed in exercise 10 (ii) that implies total differentiability) \\
 This is why \(f_3 \circ f_2 \circ f_1\) is also totally differentiable.
 
+\subsection*{(ii)}
+To do that we need to compute the jacobian matrices of \(f_1, f_2, f_3\) first and then apply the chain rule. \\
+Calculating the Jacobian matrices:
+\begin{align*}
+   Jf_1(x) &= \begin{bmatrix}
+      2x \\
+      0
+   \end{bmatrix} \\
+   Jf_2(y_1, y_2) &= \begin{bmatrix}
+      \cos(y_1) & 0 \\
+      0 & -\sin(y_2) \\
+      \cos(y_1) & -\sin(y_2)
+   \end{bmatrix} \\
+   Jf_3(z_1, z_2, z_3) &= \begin{bmatrix}
+      e^{z_1 + z_2 + z_3} & e^{z_1 + z_2 + z_3} & e^{z_1 + z_2 + z_3}
+   \end{bmatrix}
+\end{align*}
+
+Now, applying the chain rule:
+\begin{align*}
+   J(f_3 \circ f_2 \circ f_1)(x) &= Jf_3(f_2(f_1(x))) \cdot Jf_2(f_1(x)) \cdot Jf_1(x)
+\end{align*}
+
+\begin{align*}
+   Jf_1(x) &= \begin{bmatrix}
+      2x \\
+      0
+   \end{bmatrix} \\
+   Jf_2(f_1(x)) &= Jf_2(x^2, 1) = \begin{bmatrix}
+      \cos(x^2) & 0 \\
+      0 & -\sin(1) \\
+      \cos(x^2) & -\sin(1)
+   \end{bmatrix} \\
+   f_2(f_1(x)) &= f_2(x^2, 1) = \begin{bmatrix}
+      \sin(x^2) \\
+      \cos(1) \\
+      \sin(x^2) + \cos(1)
+   \end{bmatrix} \\
+   Jf_3(f_2(f_1(x))) &= Jf_3(\sin(x^2), \cos(1), \sin(x^2) + \cos(1)) \\
+   &= \begin{bmatrix}
+      e^{\sin(x^2) + \cos(1) + \sin(x^2) + \cos(1)} & e^{\sin(x^2) + \cos(1) + \sin(x^2) + \cos(1)} & e^{\sin(x^2) + \cos(1) + \sin(x^2) + \cos(1)}
+   \end{bmatrix} \\
+   &= \begin{bmatrix}
+      e^{2\sin(x^2) + 2\cos(1)} & e^{2\sin(x^2) + 2\cos(1)} & e^{2\sin(x^2) + 2\cos(1)}
+   \end{bmatrix} \\
+   &= e^{2\sin(x^2) + 2\cos(1)} \begin{bmatrix}
+      1 & 1 & 1
+   \end{bmatrix}
+\end{align*}
+
+Now if we do the matrix multiplications we get
+\begin{align*}
+   J(f_3 \circ f_2 \circ f_1)(x) &= e^{2\sin(x^2) + 2\cos(1)} \begin{bmatrix}
+      1 & 1 & 1
+   \end{bmatrix} \cdot \begin{bmatrix}
+      \cos(x^2) & 0 \\
+      0 & -\sin(1) \\
+      \cos(x^2) & -\sin(1)
+   \end{bmatrix} \cdot \begin{bmatrix}
+      2x \\
+      0
+   \end{bmatrix} \\
+   &= e^{2\sin(x^2) + 2\cos(1)} \begin{bmatrix}
+      1 & 1 & 1
+   \end{bmatrix} \cdot \begin{bmatrix}
+      2x \cos(x^2) \\
+      0 \\
+      2x \cos(x^2)
+   \end{bmatrix} \\
+   &= e^{2\sin(x^2) + 2\cos(1)} \begin{bmatrix}
+      4x \cos(x^2)
+   \end{bmatrix} \\
+   &= 4x \cos(x^2) e^{2\sin(x^2) + 2\cos(1)}
+\end{align*}
+
+Thats what we wanted to calculate
+
 \end{document}
