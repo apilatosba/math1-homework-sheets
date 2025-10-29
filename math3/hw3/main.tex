@@ -215,4 +215,22 @@ Thats what we wanted to show.
 \subsection*{(ii)}
 Yes it is because we know that continuously partially differentiability implies total differentiability. In (i) we showed that \(f\) is continuously partially differentiable function.
 
+\section*{Exercise 11}
+We are given the functions:
+\begin{align*}
+   f_1(x) &:= \begin{bmatrix}
+      x^2 \\
+      1
+   \end{bmatrix}, \quad f_2(y_1, y_2) := \begin{bmatrix}
+      \sin(y_1) \\
+      \cos(y_2) \\
+      \sin(y_1) + \cos(y_2)
+   \end{bmatrix}, \quad f_3(z_1, z_2, z_3) := e^{z_1 + z_2 + z_3}
+\end{align*}
+
+\subsection*{(i)}
+Chain rule says that if \(f\) and \(g\) are totally differentiable then \(g \circ f\) is also totally differentiable. And it is obvious that \(f_1, f_2, f_3\) are totally differentiable since they are polynomials, sine, cosine and exponential functions.
+(all the partial derivaties are continous everywhere and as we showed in exercise 10 (ii) that implies total differentiability) \\
+This is why \(f_3 \circ f_2 \circ f_1\) is also totally differentiable.
+
 \end{document}
