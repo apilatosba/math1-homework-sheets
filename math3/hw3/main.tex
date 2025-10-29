@@ -310,4 +310,23 @@ Now if we do the matrix multiplications we get
 
 Thats what we wanted to calculate
 
+\section*{Exercise 12}
+We are given the function
+\begin{align*}
+   f(x_1, x_2) := (x_1^2 + 2x_2) \ln(1 + x_2^2)
+\end{align*}
+
+\subsection*{(i)}
+To show that \(f\) is a \(C^1\) function we need to verify that all partial derivatives of \(f\) exist and are continuous. \\
+Lets compute the partial derivatives of \(f\):
+\begin{align*}
+   \frac{\partial f}{\partial x_1} &= 2x_1 \ln(1 + x_2^2) \\
+   \frac{\partial f}{\partial x_2} &= 2 \ln(1 + x_2^2) + (x_1^2 + 2x_2) \cdot \frac{2x_2}{1 + x_2^2} \\
+   &= 2 \ln(1 + x_2^2) + \frac{2x_2 (x_1^2 + 2x_2)}{1 + x_2^2}
+\end{align*}
+
+All these partial derivatives are polynomials and logarithmic functions which are continuous everywhere in \( \mathbb{R}^2 \)
+Thus, all partial derivatives of \(f\) exist and are continuous. \\
+Thats what we wanted to show.
+
 \end{document}
