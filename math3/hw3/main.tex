@@ -329,4 +329,65 @@ All these partial derivatives are polynomials and logarithmic functions which ar
 Thus, all partial derivatives of \(f\) exist and are continuous. \\
 Thats what we wanted to show.
 
+\subsection*{(ii)}
+The directional derivative is equal to
+\begin{align*}
+   D_v f(x) = \nabla f(x) \cdot v
+\end{align*}
+So we are gonna calculate the gradient first and then substitute the vectors \(v_1, v_2, v_3\).
+We already have the partial derivatives from (i)
+\begin{align*}
+   \nabla f(x) = \begin{bmatrix}
+      \frac{\partial f}{\partial x_1} \\
+      \\
+      \frac{\partial f}{\partial x_2}
+   \end{bmatrix} = \begin{bmatrix}
+      2x_1 \ln(1 + x_2^2) \\
+      \\
+      2 \ln(1 + x_2^2) + \frac{2x_2 (x_1^2 + 2x_2)}{1 + x_2^2}
+   \end{bmatrix}
+\end{align*}
+
+Lets go one by one for each vector:
+\begin{align*}
+   D_{v_1} f(x) &= \nabla f(x) \cdot v_1 \\
+   &= \begin{bmatrix}
+      2x_1 \ln(1 + x_2^2) \\
+      \\
+      2 \ln(1 + x_2^2) + \frac{2x_2 (x_1^2 + 2x_2)}{1 + x_2^2}
+   \end{bmatrix} \cdot \begin{bmatrix}
+      0 \\
+      1
+   \end{bmatrix} \\
+   &= 2 \ln(1 + x_2^2) + \frac{2x_2 (x_1^2 + 2x_2)}{1 + x_2^2}
+\end{align*}
+
+\begin{align*}
+   D_{v_2} f(x) &= \nabla f(x) \cdot v_2 \\
+   &= \begin{bmatrix}
+      2x_1 \ln(1 + x_2^2) \\
+      \\
+      2 \ln(1 + x_2^2) + \frac{2x_2 (x_1^2 + 2x_2)}{1 + x_2^2}
+   \end{bmatrix} \cdot \begin{bmatrix}
+      -\cos(\alpha) \\
+      \sin(\alpha)
+   \end{bmatrix} \\
+   &= -2x_1 \ln(1 + x_2^2) \cos(\alpha) + \left( 2 \ln(1 + x_2^2) + \frac{2x_2 (x_1^2 + 2x_2)}{1 + x_2^2} \right) \sin(\alpha)
+\end{align*}
+
+\begin{align*}
+   D_{v_3} f(x) &= \nabla f(x) \cdot v_3 \\
+   &= \begin{bmatrix}
+      2x_1 \ln(1 + x_2^2) \\
+      \\
+      2 \ln(1 + x_2^2) + \frac{2x_2 (x_1^2 + 2x_2)}{1 + x_2^2}
+   \end{bmatrix} \cdot \frac{1}{\sqrt{e^2 + \pi^2}} \begin{bmatrix}
+      -e \\
+      \pi
+   \end{bmatrix} \\
+   &= \frac{1}{\sqrt{e^2 + \pi^2}} \left( -2x_1 e \ln(1 + x_2^2) + \pi \left( 2 \ln(1 + x_2^2) + \frac{2x_2 (x_1^2 + 2x_2)}{1 + x_2^2} \right) \right)
+\end{align*}
+
+Thats what we wanted to calculate
+
 \end{document}
