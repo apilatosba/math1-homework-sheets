@@ -176,4 +176,40 @@ Lets choose \( x = (x_1, x_1) \). Then we have:
 This limit doesnt even exist so it cant be equal to zero. \\
 Thats what we wanted to show.
 
+\section*{Exercise 10}
+We are given the function:
+\begin{align*}
+   f(x_1, x_2, x_3) :=
+   \begin{bmatrix}
+      x_1^4 \ln(3 + 2x_2^2) \\
+      x_1 \sin(x_2 x_3) e^{x_1}
+   \end{bmatrix}
+\end{align*}
+
+\subsection*{(i)}
+To show that \(f\) is a \(C^1\) function we need to verify that all partial derivatives of \(f\) exist and are continuous. \\
+Lets compute the partial derivatives of each component of \(f\) which corresponds to the entries of Jacobian matrix.
+\begin{align*}
+   Jf = \begin{bmatrix}
+      \frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} & \frac{\partial f_1}{\partial x_3} \\
+      \\
+      \frac{\partial f_2}{\partial x_1} & \frac{\partial f_2}{\partial x_2} & \frac{\partial f_2}{\partial x_3}
+   \end{bmatrix}
+\end{align*}
+
+Calculating the partial derivatives:
+\begin{align*}
+   \frac{\partial f_1}{\partial x_1} &= 4x_1^3 \ln(3 + 2x_2^2) \\
+   \frac{\partial f_1}{\partial x_2} &= x_1^4 \cdot \frac{4x_2}{3 + 2x_2^2} \\
+   \frac{\partial f_1}{\partial x_3} &= 0 \\
+   \frac{\partial f_2}{\partial x_1} &= \sin(x_2 x_3) e^{x_1} + x_1 \sin(x_2 x_3) e^{x_1} \\
+   \frac{\partial f_2}{\partial x_2} &= x_1 x_3 \cos(x_2 x_3) e^{x_1} \\
+   \frac{\partial f_2}{\partial x_3} &= x_1 x_2 \cos(x_2 x_3) e^{x_1}
+\end{align*}
+
+All these partial derivatives are polynomials, logarithmic, exponential, sine and cosine functions which are continuous everywhere in \( \mathbb{R}^3 \)
+Thus, all partial derivatives of \(f\) exist and are continuous. \\
+(we can explicitly use the remark 1.3.13 in lecture notes to prove continuity but thats trivial so i cut it short with one sentence. Can i cut it short like this in the exam?) \\
+Thats what we wanted to show.
+
 \end{document}
