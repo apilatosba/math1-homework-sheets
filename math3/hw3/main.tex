@@ -1,0 +1,137 @@
+\documentclass{article}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{mathtools}
+\usepackage{graphicx}
+
+\begin{document}
+\section*{\huge Homework Sheet 3}
+\begin{flushright}
+   \textbf{Author: Abdullah Oğuz Topçuoğlu}
+\end{flushright}
+
+% Exercise 9 (4 Points)
+% Let f : R
+% 2 → R be a function defined by
+% f(x1, x2) := ( x
+% 2
+% 1
+% x2
+% x
+% 2
+% 1+x
+% 2
+% 2
+% , (x1, x2) ̸= (0, 0)
+% 0 , (x1, x2) = (0, 0)
+% .
+% (i) Show that f is continuous at the point (0, 0).
+% (ii) Show that f is not totally differentiable at the point (0, 0). Hint: Use 1.7.2 and 1.7.3.
+% Exercise 10 (4 Points)
+% Let f : R
+% 3 → R
+% 2 be a function defined by
+% f(x1, x2, x3) := 
+% x
+% 4
+% 1
+% ln(3 + 2x
+% 2
+% 2
+% )
+% x1 sin(x2x3)e
+% x1
+% 
+% .
+% (i) Show that f is a C
+% 1
+% function.
+% (ii) Is f totally differentiable? Justify your answer.
+% Exercise 11 (4 Points)
+% Let f1 : R → R
+% 2
+% , f2 : R
+% 2 → R
+% 3
+% , f3 : R
+% 3 → R be functions defined by
+% f1(x) := [x
+% 2
+% , 1]⊤, f2(y1, y2) := [sin(y1), cos(y2),sin(y1) + cos(y2)]⊤, f3(z1, z2, z3) := e
+% z1+z2+z3
+% .
+% Solve the following two problems using the chain rule (in the form of Theorem 1.7.8):
+% (i) Explain why the map f3 ◦ f2 ◦ f1 is totally differentiable.
+% (ii) Determine the total derivative of f3 ◦ f2 ◦ f1 at any point x ∈ R.
+% Exercise 12 (4 Points)
+% Let f : R
+% 2 → R be a function defined by
+% f(x1, x2) := (x
+% 2
+% 1 + 2x2) ln(1 + x
+% 2
+% 2
+% )
+% (i) Show that f is a C
+% 1
+% function.
+% (ii) Determine the directional derivative of f at any point x = (x1, x2) ∈ R
+% 2
+% in direction v for
+% v = v1, v2, v3, where
+% v1 := 
+% 0
+% 1
+% 
+% , v2 := 
+% − cos(α)
+% sin(α)
+% 
+% , v3 :=
+% 1
+% √
+% e
+% 2 + π
+% 2
+% 
+% −e
+% π
+% 
+% for some fixed α ∈ (0, 2π).
+
+\section*{Exercise 9}
+We are given the function:
+\begin{align*}
+   f(x_1, x_2) :=
+   \begin{cases}
+      \frac{x_1^2 x_2}{x_1^2 + x_2^2}, & (x_1, x_2) \neq (0, 0) \\
+      0,                               & (x_1, x_2) = (0, 0)
+   \end{cases}
+\end{align*}
+
+\subsection*{(i)}
+To show that \( f \) is continuous at the point \( (0, 0) \), we need to verify that every sequence \( (x_1^{(n)}, x_2^{(n)}) \) converging to \( (0, 0) \), \(f(x_1^{(n)}, x_2^{(n)})\)
+also converges to \( f(0, 0) = (0, 0) \). \\
+Fix a sequence \( (x_1^{(n)}, x_2^{(n)}) \) such that \( (x_1^{(n)}, x_2^{(n)}) \rightarrow (0, 0) \). \\
+Then, we have: \\
+\textbf{If \( (x_1^{(n)}, x_2^{(n)}) \neq (0, 0)\)}
+\begin{align*}
+   |f(x_1^{(n)}, x_2^{(n)}) - f(0, 0)| &= \left| \frac{(x_1^{(n)})^2 x_2^{(n)}}{(x_1^{(n)})^2 + (x_2^{(n)})^2} - 0 \right| \\
+   &= \left| \frac{(x_1^{(n)})^2 x_2^{(n)}}{(x_1^{(n)})^2 + (x_2^{(n)})^2} \right| \\
+   &\leq \left| \frac{(x_1^{(n)})^2 x_2^{(n)}}{(x_1^{(n)})^2} \right| \quad \text{(since } (x_1^{(n)})^2 + (x_2^{(n)})^2 \geq (x_1^{(n)})^2 \text{)} \\
+   &= |x_2^{(n)}|
+\end{align*}
+\( |x_2^{(n)}| \to 0 \) since \( (x_1^{(n)}, x_2^{(n)}) \to (0, 0) \). Therefore \( f(x_1^{(n)}, x_2^{(n)}) \to (0, 0) \). \\
+\\
+\textbf{If \( (x_1^{(n)}, x_2^{(n)}) = (0, 0)\)}
+\begin{align*}
+   |f(x_1^{(n)}, x_2^{(n)}) - f(0, 0)| &= |0 - 0| = 0
+\end{align*}
+which also converges to \( 0 \). \\
+Thats what we wanted to show.
+
+\subsection*{(ii)}
+
+
+\end{document}
