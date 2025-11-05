@@ -147,4 +147,69 @@ We are given the points:
 No, we cant directly use the part (ii) here because simply the points \(\tilde{a}\) and \(\tilde{b}\) are not in \(G\) we chose. And actually there is no
 \(G\) that contains a point in the diagonal line (where \(x_1 = x_2\)) because \(f\) is not differentiable on that line.
 
+\section*{Exercise 14}
+We are given the function
+\begin{align*}
+   f : \mathbb{R}^2 \to \mathbb{R}, \quad f(x_1, x_2) := e^{1 + x_1} + x_1 \sin(\pi x_2)
+\end{align*}
+
+Taylor polynomial of order 1 and 2 is given by
+\begin{align*}
+   T_1^f(x^0; y) &= f(x^0) + \nabla f(x^0) \cdot (y - x^0) \\
+   T_2^f(x^0; y) &= T_1(x^0;y) + \frac{1}{2}(y - x^0)^T H_f(x^0)(y - x^0)
+\end{align*}
+
+First and second order ferivaties of \(f\) exist and given by
+\begin{align*}
+   \frac{\partial f}{\partial x_1} &= e^{1 + x_1} + \sin(\pi x_2) \\
+   \frac{\partial f}{\partial x_2} &= \pi x_1 \cos(\pi x_2) \\
+   \frac{\partial^2 f}{\partial x_1^2} &= e^{1 + x_1} \\
+   \frac{\partial^2 f}{\partial x_2^2} &= -\pi^2 x_1 \sin(\pi x_2) \\
+   \frac{\partial^2 f}{\partial x_2 \partial x_1} &= \frac{\partial^2 f}{\partial x_1 \partial x_2} = \pi \cos(\pi x_2) \\
+\end{align*}
+
+Since all the partial derivaites are addition and multiplication of other continuous functions, they are continous as well.
+\\
+\\
+\(T_1^f(x^0; y)\) at \((0, \frac{1}{2})\):
+\begin{align*}
+   f(0, \tfrac{1}{2}) &= e^{1 + 0} + 0 \cdot \sin(\pi \cdot \tfrac{1}{2}) = e \\
+   \nabla f(0, \tfrac{1}{2}) &= \begin{pmatrix}
+      e^{1 + 0} + \sin(\pi \cdot \tfrac{1}{2}) \\
+      \pi \cdot 0 \cdot \cos(\pi \cdot \tfrac{1}{2})
+   \end{pmatrix} = \begin{pmatrix}
+      e + 1 \\
+      0
+   \end{pmatrix} \\
+   T_1^f((0, \tfrac{1}{2}); (y_1, y_2)) &= e + \begin{pmatrix}
+      e + 1 \\
+      0
+   \end{pmatrix} \cdot \begin{pmatrix}
+      y_1 - 0 \\
+      y_2 - \tfrac{1}{2}
+   \end{pmatrix} = e + (e + 1)y_1
+\end{align*}
+\\
+\(T_2^f(x^0; y)\) at \((0, \frac{1}{2})\):
+\begin{align*}
+   H_f(0, \tfrac{1}{2}) &= \begin{pmatrix}
+      e^{1 + 0} & \pi \cos(\pi \cdot \tfrac{1}{2}) \\
+      \pi \cos(\pi \cdot \tfrac{1}{2}) & -\pi^2 \cdot 0 \cdot \sin(\pi \cdot \tfrac{1}{2})
+   \end{pmatrix} = \begin{pmatrix}
+      e & 0 \\
+      0 & 0
+   \end{pmatrix} \\
+   T_2^f((0, \tfrac{1}{2}); (y_1, y_2)) &= T_1^f((0, \tfrac{1}{2}); (y_1, y_2)) + \frac{1}{2} \begin{pmatrix}
+      y_1 - 0 & y_2 - \tfrac{1}{2}
+   \end{pmatrix} \begin{pmatrix}
+      e & 0 \\
+      0 & 0
+   \end{pmatrix} \begin{pmatrix}
+      y_1 - 0 \\
+      y_2 - \tfrac{1}{2}
+   \end{pmatrix} \\
+   &= e + (e + 1)y_1 + \frac{1}{2} e (y_1)^2
+\end{align*}
+
+
 \end{document}
