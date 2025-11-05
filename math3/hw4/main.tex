@@ -1,0 +1,150 @@
+\documentclass{article}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{mathtools}
+\usepackage{graphicx}
+
+\begin{document}
+\section*{\huge Homework Sheet 4}
+\begin{flushright}
+   \textbf{Author: Abdullah Oğuz Topçuoğlu}
+\end{flushright}
+
+% Exercise 13 (3 Points)
+% Let f : R
+% 2 → R be a function defined by
+% f(x1, x2) := |x1 − x2| ,
+% and consider the two points a := (0, 1) and b := (1, 2) in R
+% 2
+% .
+% (i) Verify that f, a and b satisfy the assumptions of the mean value theorem (1.9.1) for a suitable
+% choice of G.
+% (ii) Determine θ ∈ (0, 1) such that, for ξ := a + θ(b − a), we have
+% f(b) − f(a) = ⟨∇f(ξ), b − a⟩.
+% (iii) Is it possible to find a θ as in part (ii) for the two points ea := (−1, −1) and eb := (1, 1)? Justify
+% your answer.
+% Exercise 14 (4 Points)
+% Let f : R
+% 2 → R be a function defined by
+% f(x1, x2) := e
+% 1+x1 + x1 sin(πx2).
+% Determine the Taylor polynomial of order 1, and order 2 of f at x
+% 0 = (x
+% 0
+% 1
+% , x0
+% 2
+% ) := (0,
+% 1
+% 2
+% ).
+% Exercise 15 (5 Points)
+% Let fi
+% : R
+% 2 → R, i = 1, 2, 3, be functions defined by
+% f1(x1, x2) := −x
+% 4
+% 1 + x
+% 2
+% 2
+% , f2(x1, x2) := −x
+% 2
+% 2 + cos(x1) and f3(x1, x2) := 1 − x
+% 2
+% 1
+% .
+% (i) Check whether (0, 0) is a local extremum point of f1.
+% (ii) Show that (0, 0) is an isolated maximum point of f2.
+% (iii) Show that (0, 0) is a maximum point of f3, but not an isolated maximum point.
+% Exercise 16 (4 Points)
+% Let f : R
+% 2 → R be a function defined by
+% f(x1, x2) := x
+% 2
+% 1 + 4x2
+% e
+% x
+% 2
+% 1+x
+% 2
+% 2
+% .
+% Assume that it has already been shown that f is a C
+% 2
+% function. Specify and classify all the stationary
+% points of f, i.e. check for each such point whether it is a local (isolated) minimum point, a local
+% (isolated) maximum point or a saddle point. Also check for each local extremum point of f whether
+% it is a (“global”) extremum point.
+
+\section*{Exercise 13}
+We are given the function:
+\begin{align*}
+   f : \mathbb{R}^2 \to \mathbb{R}, \quad f(x_1, x_2) := |x_1 - x_2|
+\end{align*}
+
+and the points:
+\begin{align*}
+   a := (0, 1), \quad b := (1, 2)
+\end{align*}
+
+\subsection*{(i)}
+Choose the \(G\):
+\begin{align*}
+   G := \{(x_1, x_2) \in \mathbb{R}^2 \mid x_1 - x_2 < 0\}
+\end{align*}
+
+It is obvious that \(a, b \in G\).\\
+Now we need to show that the line segment connecting \(a\) and \(b\) lies in \(G\).\\
+\begin{align*}
+   \text{line segment} &= \{a + t(b - a) \mid t \in [0, 1]\} \\
+   &= \{(0, 1) + t(1 - 0, 2 - 1) \mid t \in [0, 1]\} \\
+   &= \{(t, 1 + t) \mid t \in [0, 1]\}
+\end{align*}
+which obviously is in \(G\).
+
+\subsection*{(ii)}
+When we consider the function \(f\) in the domain \(G\), \(f\) is equal to
+\begin{align*}
+   f(x_1, x_2) = x_2 - x_1
+\end{align*}
+Lets calculate the gradient of \(f\)
+\begin{align*}
+   \nabla f(x_1, x_2) = \begin{pmatrix}
+      -1 \\
+      1
+   \end{pmatrix}
+\end{align*}
+Now we need to find \(\theta \in (0, 1)\) such that
+\begin{align*}
+   f(b) - f(a) = \langle \nabla f(\xi), b - a \rangle
+\end{align*}
+where \(\xi := a + \theta(b - a)\).\\
+Calculating the left hand side:
+\begin{align*}
+   f(b) - f(a) &= f(1, 2) - f(0, 1) \\
+   &= 1 - 1 = 0
+\end{align*}
+Calculating the right hand side:
+\begin{align*}
+   \langle \nabla f(\xi), b - a \rangle &= \langle \nabla f(a + \theta(b - a)), b - a \rangle \\
+   &= \langle \nabla f((0, 1) + \theta(1, 1)), (1, 1) \rangle \\
+      &= \langle \nabla f(\theta, 1 + \theta), (1, 1) \rangle \\
+   &= \langle \begin{pmatrix}
+      -1 \\
+      1
+   \end{pmatrix}, (1, 1) \rangle \\
+   &= 0
+\end{align*}
+We get \(0 = 0\) which is true always and doesnt depend on what \(\theta\) is. So any \(\theta \in (0, 1)\) satisfies the equation.
+
+\subsection*{(iii)}
+We are given the points:
+\begin{align*}
+   \tilde{a} := (-1, -1), \quad \tilde{b} := (1, 1)
+\end{align*}
+
+No, we cant directly use the part (ii) here because simply the points \(\tilde{a}\) and \(\tilde{b}\) are not in \(G\) we chose. And actually there is no
+\(G\) that contains a point in the diagonal line (where \(x_1 = x_2\)) because \(f\) is not differentiable on that line.
+
+\end{document}
