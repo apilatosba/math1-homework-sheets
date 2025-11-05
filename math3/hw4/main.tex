@@ -211,5 +211,112 @@ Since all the partial derivaites are addition and multiplication of other contin
    &= e + (e + 1)y_1 + \frac{1}{2} e (y_1)^2
 \end{align*}
 
+\section*{Exercise 15}
+We are given the functions
+\begin{align*}
+   f_1(x_1, x_2) &:= -x_1^4 + x_2^2 \\
+   f_2(x_1, x_2) &:= -x_2^2 + \cos(x_1) \\
+   f_3(x_1, x_2) &:= 1 - x_1^2
+\end{align*}
+
+\subsection*{(i)}
+To check whether or not a point is local extremum point we are first gonna check if it is a stationary point. If it is then we are gonna check whether or not
+the hessian matrix is positive definite or negative definite. \\
+First things first \(f_1\) is at least two times continuously differentiable since all the partial derivatives exist and are continuous because they are addition and multiplication of other continuous functions (polynomial functions in this case).\\
+\textbf{The gradient of \(f_1\)}
+\begin{align*}
+   \nabla f_1(x_1, x_2) = \begin{pmatrix}
+      \frac{\partial f_1}{\partial x_1} \\
+      \\
+      \frac{\partial f_1}{\partial x_2}
+   \end{pmatrix} = \begin{pmatrix}
+      -4x_1^3 \\
+      2x_2
+   \end{pmatrix}
+\end{align*}
+
+Setting the gradient to zero to find stationary points
+\begin{align*}
+   \nabla f_1(x_1, x_2) = 0 &\implies \begin{pmatrix}
+      -4x_1^3 \\
+      2x_2
+   \end{pmatrix} = \begin{pmatrix}
+      0 \\
+      0
+   \end{pmatrix} \\
+   &\implies (x_1, x_2) = (0, 0)
+\end{align*}
+There is only one stationary point which is \((0, 0)\).\\
+Now we need to check if it is a local extremum. \\
+\textbf{The hessian matrix of \(f_1\)}
+\begin{align*}
+   H_{f_1}(x_1, x_2) = \begin{pmatrix}
+      \frac{\partial^2 f_1}{\partial x_1^2} & \frac{\partial^2 f_1}{\partial x_1 \partial x_2} \\
+      \\
+      \frac{\partial^2 f_1}{\partial x_2 \partial x_1} & \frac{\partial^2 f_1}{\partial x_2^2}
+   \end{pmatrix} = \begin{pmatrix}
+      -12x_1^2 & 0 \\
+      0 & 2
+   \end{pmatrix}
+\end{align*}
+at point zero
+\begin{align*}
+   H_{f_1}(0, 0) = \begin{pmatrix}
+      0 & 0 \\
+      0 & 2
+   \end{pmatrix}
+\end{align*}
+The hessian matrix is not positive definite nor negative definite since the leading principal minor of order 1 is zero. So it is neither local minimum or local maximum point.\\
+
+\subsection*{(ii)}
+\(f_2\) is at least two times continuously differentiable since all the partial derivatives exist and are continuous because they are addition and multiplication of other continuous functions (polynomial and trigonometric functions in this case).\\
+\textbf{The gradient of \(f_2\)}
+\begin{align*}
+   \nabla f_2(x_1, x_2) = \begin{pmatrix}
+      \frac{\partial f_2}{\partial x_1} \\
+      \\
+      \frac{\partial f_2}{\partial x_2}
+   \end{pmatrix} = \begin{pmatrix}
+      -\sin(x_1) \\
+      -2x_2
+   \end{pmatrix}
+\end{align*}
+Setting the gradient to zero to find stationary points
+\begin{align*}
+   \nabla f_2(x_1, x_2) = 0 &\implies \begin{pmatrix}
+      -\sin(x_1) \\
+      -2x_2
+   \end{pmatrix} = \begin{pmatrix}
+      0 \\
+      0
+   \end{pmatrix} \\
+   &\implies (x_1, x_2) = (k\pi, 0), \quad k \in \mathbb{Z}
+\end{align*}
+There are infinitely many stationary points which are \((k\pi, 0)\) where \(k \in \mathbb{Z}\).\\
+\((0, 0)\) is one of the stationary points. To show that it is an isolated maximum point we need to show that the hessian matrix at that point is negative definite.\\
+\textbf{The hessian matrix of \(f_2\)}
+\begin{align*}
+   H_{f_2}(x_1, x_2) = \begin{pmatrix}
+      \frac{\partial^2 f_2}{\partial x_1^2} & \frac{\partial^2 f_2}{\partial x_1 \partial x_2} \\
+      \\
+      \frac{\partial^2 f_2}{\partial x_2 \partial x_1} & \frac{\partial^2 f_2}{\partial x_2^2}
+   \end{pmatrix} = \begin{pmatrix}
+      -\cos(x_1) & 0 \\
+      0 & -2
+   \end{pmatrix}
+\end{align*}
+at point zero
+\begin{align*}
+   H_{f_2}(0, 0) = \begin{pmatrix}
+      -1 & 0 \\
+      0 & -2
+   \end{pmatrix}
+\end{align*}
+The leading principal minors are \(-1 < 0\) and \(2 > 0\). They alternate in sign starting with a negative. So the hessian matrix is negative definite. Thus \((0, 0)\) is an isolated maximum point.\\
+
+\subsection*{(iii)}
+We know that for any \(r \in \mathbb{R} \quad r^2 \geq 0\) which implies \(1 - r^2 \leq 1\) for any real number \(r\).\\
+Meaning that \(f_3(x_1, x_2) = 1 - x_1^2 \leq 1\) and when \(x_1 = 0\) we have \(f_3(0, x_2) = 1\). So if we choose any point in the form of \((0, x_2)\) where \(x_2 \in \mathbb{R}\) we get the maximum value of the function which is \(1\).\\
+This makes \((0, 0)\) a maximum point but not an isolated maximum point since there are infinitely many points in the form of \((0, x_2)\) where \(x_2 \in \mathbb{R}\) that gives the same maximum value of \(1\).
 
 \end{document}
