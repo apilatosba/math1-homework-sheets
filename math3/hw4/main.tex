@@ -319,4 +319,168 @@ We know that for any \(r \in \mathbb{R} \quad r^2 \geq 0\) which implies \(1 - r
 Meaning that \(f_3(x_1, x_2) = 1 - x_1^2 \leq 1\) and when \(x_1 = 0\) we have \(f_3(0, x_2) = 1\). So if we choose any point in the form of \((0, x_2)\) where \(x_2 \in \mathbb{R}\) we get the maximum value of the function which is \(1\).\\
 This makes \((0, 0)\) a maximum point but not an isolated maximum point since there are infinitely many points in the form of \((0, x_2)\) where \(x_2 \in \mathbb{R}\) that gives the same maximum value of \(1\).
 
+\section*{Exercise 16}
+We are given the function
+\begin{align*}
+   f : \mathbb{R}^2 \to \mathbb{R}, \quad f(x_1, x_2) := \frac{x_1^2 + 4x_2}{e^{x_1^2 + x_2^2}}
+\end{align*}
+Assuming it is already shown that \(f\) is a \(C^2\) function. \\
+Lets find where the gradient is zero.\\
+\textbf{The gradient of \(f\)}
+\begin{align*}
+   \nabla f(x_1, x_2) = \begin{pmatrix}
+      \frac{\partial f}{\partial x_1} \\
+      \\
+      \frac{\partial f}{\partial x_2}
+   \end{pmatrix} = \begin{pmatrix}
+      \frac{2x_1 e^{x_1^2 + x_2^2} - (x_1^2 + 4x_2) \cdot 2x_1 e^{x_1^2 + x_2^2}}{(e^{x_1^2 + x_2^2})^2} \\
+      \\
+      \frac{4 e^{x_1^2 + x_2^2} - (x_1^2 + 4x_2) \cdot 2x_2 e^{x_1^2 + x_2^2}}{(e^{x_1^2 + x_2^2})^2}
+   \end{pmatrix}
+\end{align*}
+Setting the gradient to zero to find stationary points
+\begin{align*}
+   \nabla f(x_1, x_2) = 0 &\implies \begin{pmatrix}
+      \frac{2x_1 e^{x_1^2 + x_2^2} - (x_1^2 + 4x_2) \cdot 2x_1 e^{x_1^2 + x_2^2}}{(e^{x_1^2 + x_2^2})^2} \\
+      \\
+      \frac{4 e^{x_1^2 + x_2^2} - (x_1^2 + 4x_2) \cdot 2x_2 e^{x_1^2 + x_2^2}}{(e^{x_1^2 + x_2^2})^2}
+   \end{pmatrix} = \begin{pmatrix}
+      0 \\
+      0
+   \end{pmatrix} \shortintertext{since \((e^{x_1^2 + x_2^2})^2\) always positive} \\
+   &\implies \begin{pmatrix}
+      2x_1 e^{x_1^2 + x_2^2} - (x_1^2 + 4x_2) \cdot 2x_1 e^{x_1^2 + x_2^2} \\
+      \\
+      4 e^{x_1^2 + x_2^2} - (x_1^2 + 4x_2) \cdot 2x_2 e^{x_1^2 + x_2^2}
+   \end{pmatrix} = \begin{pmatrix}
+      0 \\
+      0
+   \end{pmatrix} \\
+   &\implies \begin{pmatrix}
+      2x_1 - (x_1^2 + 4x_2) \cdot 2x_1 \\
+      \\
+      4 - (x_1^2 + 4x_2) \cdot 2x_2
+   \end{pmatrix} = \begin{pmatrix}
+      0 \\
+      0
+   \end{pmatrix} \\
+   &\implies \begin{pmatrix}
+      2x_1(1 - x_1^2 - 4x_2) \\
+      \\
+      4 - 2x_2(x_1^2 + 4x_2)
+   \end{pmatrix} = \begin{pmatrix}
+      0 \\
+      0
+   \end{pmatrix}
+\end{align*}
+
+From the first equation we have two cases:
+\begin{itemize}
+   \item Case 1: \(x_1 = 0\)
+   \item Case 2: \(1 - x_1^2 - 4x_2 = 0 \implies x_1^2 + 4x_2 = 1\)
+\end{itemize}
+
+\textbf{Case 1: \(x_1 = 0\)}
+\begin{align*}
+   4 - 2x_2(0^2 + 4x_2) &= 0 \\
+   4 - 8x_2^2 &= 0 \\
+   x_2^2 &= \frac{1}{2} \\
+   x_2 &= \pm \frac{1}{\sqrt{2}}
+\end{align*}
+So we have two stationary points from case 1:
+\begin{align*}
+   (0, \tfrac{1}{\sqrt{2}}), \quad (0, -\tfrac{1}{\sqrt{2}})
+\end{align*}
+\textbf{Case 2: \(x_1^2 + 4x_2 = 1\)}
+\begin{align*}
+   4 - 2x_2(1) &= 0 \\
+   4 - 2x_2 &= 0 \\
+   x_2 &= 2
+\end{align*}
+Substituting \(x_2\) back to the equation of case 2:
+\begin{align*}
+   x_1^2 + 4(2) &= 1 \\
+   x_1^2 + 8 &= 1 \\
+   x_1^2 &= -7
+\end{align*}
+which has no real solution.\\
+So the only stationary points are:
+\begin{align*}
+   (0, \tfrac{1}{\sqrt{2}}), \quad (0, -\tfrac{1}{\sqrt{2}})
+\end{align*}
+\textbf{Classification of the stationary points} \\
+THe hessian matrix of \(f\)
+\begin{align*}
+   H_f(x_1, x_2) = \begin{pmatrix}
+      \frac{\partial^2 f}{\partial x_1^2} & \frac{\partial^2 f}{\partial x_1 \partial x_2} \\
+      \\
+      \frac{\partial^2 f}{\partial x_2 \partial x_1} & \frac{\partial^2 f}{\partial x_2^2}
+   \end{pmatrix}
+\end{align*}
+Okay this is too computationally heavy :). Lets rewrite \(f\) as
+\begin{align*}
+   f = uw \shortintertext{where} \\
+   u(x_1, x_2) = x_1^2 + 4x_2 \\
+   w(x_1, x_2) = e^{-(x_1^2 + x_2^2)}
+\end{align*}
+
+Partial derivates:
+\begin{align*}
+   \frac{\partial f}{\partial x_1} &= 2x_1 w + u \cdot (-2x_1 w) = 2x_1 w (1 - u) \\
+   \frac{\partial f}{\partial x_2} &= 4 w + u \cdot (-2x_2 w) = 2w(2 - x_2 u) \\
+   \frac{\partial^2 f}{\partial x_1^2} &= 2w(1 - u) + 2x_1 \cdot (-2x_1 w)(1 - u) + 2x_1 w \cdot (-2x_1)\\
+   &= 2w(1 - u) - 4x_1^2 w(1 - u) - 4x_1^2 w \\
+   &= 2w(1 - u - 2x_1^2(1 - u) + 2x_1^2) \\
+   &= 2w(1 - u - 2x_1^2 + 2x_1^2 u + 2x_1^2) \\
+   &= 2w(1 - u + 2x_1^2 u) \\
+   \frac{\partial^2 f}{\partial x_2^2} &= -2x_2 \cdot 2w(2 - x_2 u) + 2w(-u) \\
+   &= -4x_2 w(2 - x_2 u) - 2u w \\
+   &= -4x_2 w(2 - x_2 u) - 2u w \\
+   &= -4x_2 w + 4x_2^2 u w - 2u w \\
+   &= w(-4x_2 + 4x_2^2 u - 2u) \\
+   \frac{\partial^2 f}{\partial x_1 \partial x_2} &= -2x_1 \cdot 2w(2 - x_2 u) + 2x_1 w(-u) \\
+   &= -4x_1 w(2 - x_2 u) - 2x_1 u w \\
+   &= -8x_1 w + 4x_1 x_2 u w - 2x_1 u w \\
+   &= -8x_1 w + 2x_1 u w (2x_2 - 1)
+\end{align*}
+
+At the stationary points:
+\begin{align*}
+   H_f(0, y) &= \begin{pmatrix}
+      -8e^{-y^2}y & 0 \\
+      \\
+      0 & e^{-y^2}(16y^3 - 12y)
+   \end{pmatrix} \\
+   H_f(0, \tfrac{1}{\sqrt{2}}) &= \begin{pmatrix}
+      -8e^{-\frac{1}{2}} \cdot \frac{1}{\sqrt{2}} & 0 \\
+      \\
+      0 & e^{-\frac{1}{2}}(16 \cdot \frac{1}{2\sqrt{2}} - 12 \cdot \frac{1}{\sqrt{2}})
+   \end{pmatrix} = \begin{pmatrix}
+      -8e^{-\frac{1}{2}} \cdot \frac{1}{\sqrt{2}} & 0 \\
+      \\
+      0 & -4e^{-\frac{1}{2}} \cdot \frac{1}{\sqrt{2}}
+   \end{pmatrix} \\
+   H_f(0, -\tfrac{1}{\sqrt{2}}) &= \begin{pmatrix}
+      8e^{-\frac{1}{2}} \cdot \frac{1}{\sqrt{2}} & 0 \\
+      \\
+      0 & e^{-\frac{1}{2}}(-16 \cdot \frac{1}{2\sqrt{2}} + 12 \cdot \frac{1}{\sqrt{2}})
+   \end{pmatrix} = \begin{pmatrix}
+      8e^{-\frac{1}{2}} \cdot \frac{1}{\sqrt{2}} & 0 \\
+      \\
+      0 & 4e^{-\frac{1}{2}} \cdot \frac{1}{\sqrt{2}}
+   \end{pmatrix}
+\end{align*}
+
+Lets take a look at \(H_f(0, \tfrac{1}{\sqrt{2}})\). If we consider the leading principal minors then the the first one is negative and the second one is positive which means that
+the hessian matrix is negative definite. So the point \((0, \tfrac{1}{\sqrt{2}})\) is a local isolated maximum point.\\
+\\
+Now looking at \(H_f(0, -\tfrac{1}{\sqrt{2}})\). If we consider the leading principal minors then the the first one is positive and the second one is also positive which means that
+the hessian matrix is positive definite. So the point \((0, -\tfrac{1}{\sqrt{2}})\) is a local isolated minimum point.\\
+\\
+\textbf{Are they global extremum points?} \\
+The thing is if \(f\) is bounded then the local maximum point is also a global maximum point and the local minimum point is also a global minimum point because there is only one
+local minimum and one local maximum point.\\
+\(f\) is bounded becuse as \(\|(x_1, x_2)\| \to \infty\) the denominator \(e^{x_1^2 + x_2^2}\) grows much faster than the numerator \(x_1^2 + 4x_2\) which makes \(f(x_1, x_2) \to 0\). \\
+Thus both local extremum points are also global extremum points.\\
+
 \end{document}
