@@ -232,4 +232,119 @@ Now we can use the second derivatie test to classify these points
    Thus one local maximum point is \((-2, 4)\).
 \end{itemize}
 
+\section*{Exercise 20}
+We are given the function
+\begin{align*}
+   f(x_1, x_2, x_3) := x_1 - 2x_2 + x_3^2
+\end{align*}
+
+and the set
+\begin{align*}
+   M := \{\mathbf{x} = (x_1, x_2, x_3) \in \mathbb{R}^3 : \|\mathbf{x}\|^2 = 1\}
+\end{align*}
+
+\subsection*{(i)}
+The set \(M\) is closed and bounded in \(\mathbb{R}^3\). So by the extreme value theorem the continuous function \(f|_M : M \to \mathbb{R}\)
+also has a maximum and a minimum on \(M\). \\
+\\
+Why \(f\) is continous is obvious because its a polynomial function. \\
+\\
+Why \(M\) is closed: intuitively the set \(M\) is just points on the surface of the unit sphere. And if you think about a random point in the complement space
+then we can find a ball around that point that doesnt touch the surface of the sphere. And since complement of \(M\) is open that makes the \(M\) closed. \\
+\\
+Why \(M\) is bounded: again intuitively the set \(M\) is just points on the surface of the unit sphere and thats obviously bounded.
+
+\subsection*{(ii)}
+Let \(g(x_1, x_2, x_3) = \|\mathbf{x}\| - 1\). so that we have a name for the constraint of \(M\). But notice here that i dropped the square
+because norm is always positive so its ok to do that.
+
+The lagrange function is
+\begin{align*}
+   L: \mathbb{R}^4 \rightarrow \mathbb{R}, \qquad L(x_1, x_2, x_3, \lambda) = f(x_1, x_2, x_3) + \lambda g(x_1, x_2, x_3)
+\end{align*}
+
+\begin{align*}
+   L(x_1, x_2, x_3, \lambda) &= x_1 - 2x_2 + x_3^2 + \lambda (\sqrt{x_1^2 + x_2^2 + x_3^2} - 1) \\
+\end{align*}
+
+The gradient of \(L\)
+\begin{align*}
+   \nabla L(x_1, x_2, x_3, \lambda) =
+   \begin{pmatrix}
+      1 + \lambda \frac{x_1}{\sqrt{x_1^2 + x_2^2 + x_3^2}} \\
+      -2 + \lambda \frac{x_2}{\sqrt{x_1^2 + x_2^2 + x_3^2}} \\
+      2x_3 + \lambda \frac{x_3}{\sqrt{x_1^2 + x_2^2 + x_3^2}} \\
+      \sqrt{x_1^2 + x_2^2 + x_3^2} - 1
+   \end{pmatrix}
+\end{align*}
+
+Setting the gradient to zero
+\begin{align*}
+   \nabla L(x_1, x_2, x_3, \lambda) = 0 &\implies
+   \begin{pmatrix}
+      1 + \lambda \frac{x_1}{\sqrt{x_1^2 + x_2^2 + x_3^2}} \\
+      -2 + \lambda \frac{x_2}{\sqrt{x_1^2 + x_2^2 + x_3^2}} \\
+      2x_3 + \lambda \frac{x_3}{\sqrt{x_1^2 + x_2^2 + x_3^2}} \\
+      \sqrt{x_1^2 + x_2^2 + x_3^2} - 1
+   \end{pmatrix} = 0 \\
+   &\implies
+   \begin{cases}
+      1 + \lambda \frac{x_1}{\sqrt{x_1^2 + x_2^2 + x_3^2}} = 0 \\
+      -2 + \lambda \frac{x_2}{\sqrt{x_1^2 + x_2^2 + x_3^2}} = 0 \\
+      2x_3 + \lambda \frac{x_3}{\sqrt{x_1^2 + x_2^2 + x_3^2}} = 0 \\
+      \sqrt{x_1^2 + x_2^2 + x_3^2} - 1 = 0
+   \end{cases} \\
+   \intertext{Subsitute the last equationinto first three}
+   &\implies
+   \begin{cases}
+      1 + \lambda x_1 = 0 \\
+      -2 + \lambda x_2 = 0 \\
+      2x_3 + \lambda x_3 = 0 \\
+      x_1^2 + x_2^2 + x_3^2 = 1
+   \end{cases} \\
+   &\implies
+   \begin{cases}
+      x_1 = -\frac{1}{\lambda} \\
+      x_2 = \frac{2}{\lambda} \\
+      x_3 (2 + \lambda) = 0 \\
+      x_1^2 + x_2^2 + x_3^2 = 1
+   \end{cases}
+\end{align*}
+
+From the third equation we have two cases:
+\begin{itemize}
+   \item If \(x_3 = 0\):
+   \begin{align*}
+      x_1^2 + x_2^2 + x_3^2 = 1 &\implies \left(-\frac{1}{\lambda}\right)^2 + \left(\frac{2}{\lambda}\right)^2 + 0^2 = 1 \\
+      &\implies \frac{1}{\lambda^2} + \frac{4}{\lambda^2} = 1 \\
+      &\implies \frac{5}{\lambda^2} = 1 \\
+      &\implies \lambda^2 = 5 \\
+      &\implies \lambda = \sqrt{5} \quad \text{or} \quad \lambda = -\sqrt{5}
+   \end{align*}
+   For \(\lambda = \sqrt{5}\):
+   \begin{align*}
+      x_1 = -\frac{1}{\sqrt{5}}, \quad x_2 = \frac{2}{\sqrt{5}}, \quad x_3 = 0
+   \end{align*}
+   For \(\lambda = -\sqrt{5}\):
+   \begin{align*}
+      x_1 = \frac{1}{\sqrt{5}}, \quad x_2 = -\frac{2}{\sqrt{5}}, \quad x_3 = 0
+   \end{align*}
+   \item If \(\lambda = -2\):
+   \begin{align*}
+      x_1 = -\frac{1}{-2} = \frac{1}{2}, \quad x_2 = \frac{2}{-2} = -1, \quad x_3 \text{ is free}
+   \end{align*}
+   Using the constraint equation:
+   \begin{align*}
+      x_1^2 + x_2^2 + x_3^2 = 1 &\implies \left(\frac{1}{2}\right)^2 + (-1)^2 + x_3^2 = 1 \\
+      &\implies \frac{1}{4} + 1 + x_3^2 = 1 \\
+      &\implies x_3^2 = 1 - \frac{5}{4} = -\frac{1}{4}
+   \end{align*}
+   which has no real solution.
+\end{itemize}
+
+Long story short the extremum points are
+\begin{align*}
+   \left(-\frac{1}{\sqrt{5}}, \frac{2}{\sqrt{5}}, 0\right) \quad \text{and} \quad \left(\frac{1}{\sqrt{5}}, -\frac{2}{\sqrt{5}}, 0\right)
+\end{align*}
+
 \end{document}
