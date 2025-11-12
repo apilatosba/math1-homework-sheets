@@ -1,0 +1,131 @@
+\documentclass{article}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\begin{document}
+\section*{\huge Homework Sheet 5}
+\begin{flushright}
+   \textbf{Author: Abdullah Oğuz Topçuoğlu}
+\end{flushright}
+
+% Exercise 17 (4 Points)
+% Let f : R → R be a function defined by
+% f(x) := −ex + 2x + 1.
+% Solve the equation f(x) = 0 approximately by using two iterations of the Newton method with the
+% initial value
+% (i) x0 := −1.
+% (ii) x0 := 1.
+% Exercise 18 (4 Points)
+% Let f : R2 → R2 be a function defined by
+% f(x1, x2) :=
+% 󰀗 x3
+% 1 + x2 − 2
+% x1 + x3
+% 2 − 2
+% 󰀘
+% .
+% Solve the equation f(x1, x2) = (0, 0) approximately by using two iterations of the Newton method
+% with the initial value x0 := (1, 1).
+% Exercise 19 (4 Points)
+% Let the functions f : R2 → R and g : R2 → R be defined by
+% f(x1, x2) := 1
+% 3
+% x3
+% 1 +
+% 1
+% 4
+% x2
+% 2 + x1 +
+% 1
+% 2
+% x2 + 2 ,
+% g(x1, x2) := x1 +
+% 1
+% 2
+% x2.
+% Use the substitution method to determine the local extremum points of f under the constraint
+% g(x1, x2) = 0, i.e. to find all local extremum points of the restriction f|M : M → R of f to the set
+% M := {(x1, x2) ∈ R2 : g(x1, x2) = 0}.
+% Exercise 20 (4 Points)
+% Let f : R3 → R be a function defined by
+% f(x1, x2, x3) := x1 − 2x2 + x2
+% 3 ,
+% and consider the set M := {x = (x1, x2, x3) ∈ R3 : 󰀂x󰀂2 = 1}. Let f|M : M → R be the restriction
+% of f to M.
+% (i) Why does f|M : M → R have at least one minimum point and at least one maximum point?
+% (ii) Use the method of Lagrange multipliers to determine the extremum points of f|M : M → R.
+
+\section*{Exercise 17}
+We are given the function
+\begin{align*}
+   f(x) := -e^x + 2x + 1.
+\end{align*}
+
+We calculte the newtons method using this formula
+\begin{align*}
+   x_{n} = x_{n-1} - \frac{f(x_{n-1})}{f'(x_{n-1})}
+\end{align*}
+
+\subsection*{(i)}
+We want to find \(x_2\) when \(x_0 = -1\) \\
+
+Lets start by finding \(f' (x)\)
+\begin{align*}
+   f'(x) = -e^x + 2
+\end{align*}
+
+Now we can calculate \(x_1\) and \(x_2\)
+\begin{align*}
+   x_1 &= x_0 - \frac{f(x_0)}{f'(x_0)} \\
+       &= -1 - \frac{-e^{-1} + 2(-1) + 1}{-e^{-1} + 2} \\
+         &= -1 - \frac{-\frac{1}{e} - 2 + 1}{-\frac{1}{e} + 2} \\
+         &= -1 - \frac{-\frac{1}{e} - 1}{-\frac{1}{e} + 2} \\
+         &= -1 + \frac{\frac{1}{e} + 1}{-\frac{1}{e} + 2} \\
+         &= -1 + \frac{e + 1}{-1 + 2e} \\
+         &= \frac{-2e + e + 1 + 1}{-1 + 2e} \\
+         &= \frac{-e + 2}{-1 + 2e} \\
+         &\approx -0.16190048965915385 \quad \text{(via using a calculator)} \\
+         \\
+   x_2 &= x_1 - \frac{f(x_1)}{f'(x_1)} \\
+      &\approx -0.16190048965915385 - \frac{f(-0.16190048965915385)}{f'(-0.16190048965915385)} \\
+      &\approx -0.16190048965915385 - \frac{-0.174326815763479123074}{f'(-0.16190048965915385)} \quad \text{again using a calculator} \\
+      &\approx -0.16190048965915385 - \frac{-0.174326815763479123074}{1.149474163554828576926} \quad \text{again using a calculator} \\
+      &\approx -0.16190048965915385 - -0.1516578808734259448068901476583655229970567382438862903207901761438327331 \quad \text{again using a calculator} \\
+      &\approx -0.0102426087857279051931098523416344770029432617561137096792098238561672669 \quad \text{again using a calculator} \\
+\end{align*}
+\\
+Links to the calculator: \\
+   \url{https://www.wolframalpha.com/input?i=f%28x%29+%3D+-e%5Ex+%2B2x+%2B1+at+x%3D%E2%88%920.16190048965915385&assumption=%7B%22C%22%2C+%22at%22%7D+-%3E+%7B%22EnglishWord%22%7D} \\
+   \url{https://www.wolframalpha.com/input?i=g%28x%29+%3D+-e%5Ex+%2B2+where+x+%3D+%E2%88%920.16190048965915385}
+
+\subsection*{(ii)}
+We want to find \(x_2\) when \(x_0 = 1\) \\
+The derivatie
+\begin{align*}
+   f'(x) = -e^x + 2
+\end{align*}
+
+Now we can calculate \(x_1\) and \(x_2\)
+\begin{align*}
+   x_1 &= x_0 - \frac{f(x_0)}{f'(x_0)} \\
+       &= 1 - \frac{-e^{1} + 2(1) + 1}{-e^{1} + 2} \\
+         &= 1 - \frac{-e + 2 + 1}{-e + 2} \\
+         &= 1 - \frac{-e + 3}{-e + 2} \\
+         &= 1 + \frac{e - 3}{-e + 2} \\
+         &= \frac{-e + 2 + e - 3}{-e + 2} \\
+         &= \frac{-1}{-e + 2} \\
+         &\approx 1.3922111911 \quad \text{(via using a calculator)} \\
+         \\
+   x_2 &= x_1 - \frac{f(x_1)}{f'(x_1)} \\
+      &= 1.3922111911 - \frac{f(1.3922111911)}{f'(1.3922111911)} \\
+      &\approx 1.3922111911 - \frac{-0.23931509377336}{f'(1.3922111911)} \quad \text{again using a calculator} \\
+      &\approx 1.3922111911 - \frac{-0.23931509377336}{-2.02373747597336} \quad \text{again using a calculator} \\
+      &\approx 1.3922111911 - 0.1182540208967846811355339766932549 \quad \text{again using a calculator} \\
+      &\approx 1.2739571702032153188644660233067451 \quad \text{again using a calculator} \\
+\end{align*}
+
+\end{document}
