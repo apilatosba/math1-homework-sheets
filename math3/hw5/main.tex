@@ -128,4 +128,58 @@ Now we can calculate \(x_1\) and \(x_2\)
       &\approx 1.2739571702032153188644660233067451 \quad \text{again using a calculator} \\
 \end{align*}
 
+\section*{Exercise 18}
+We are given the function
+\begin{align*}
+   f(x_1, x_2) :=
+   \begin{pmatrix}
+      x_1^3 + x_2 - 2 \\
+      x_1 + x_2^3 - 2
+   \end{pmatrix}
+\end{align*}
+
+The newtons method for multivariable functions is given by
+\begin{align*}
+   \mathbf{x_n} = \mathbf{x_{n-1}} - J_f(\mathbf{x_{n-1}})^{-1} f(\mathbf{x_{n-1}})
+\end{align*}
+
+The Jacobian matrix \(J_f\) is
+\begin{align*}
+   J_f(x_1, x_2) &=
+   \begin{pmatrix}
+      \frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} \\
+      \\
+      \frac{\partial f_2}{\partial x_1} & \frac{\partial f_2}{\partial x_2}
+   \end{pmatrix} \\
+   &= \begin{pmatrix}
+      3x_1^2 & 1 \\
+      1 & 3x_2^2
+   \end{pmatrix}
+\end{align*}
+
+We start with \(\mathbf{x_0} = (1, 1)\)
+\begin{align*}
+   \mathbf{x_1} &= \mathbf{x_0} - J_f(\mathbf{x_0})^{-1} f(\mathbf{x_0}) \\
+   &= \begin{pmatrix}1 \\ 1\end{pmatrix} - \begin{pmatrix}
+      3(1)^2 & 1 \\
+      1 & 3(1)^2
+   \end{pmatrix}^{-1} \begin{pmatrix}
+      (1)^3 + (1) - 2 \\
+      (1) + (1)^3 - 2
+   \end{pmatrix} \\
+   &= \begin{pmatrix}1 \\ 1\end{pmatrix} - \begin{pmatrix}
+      3 & 1 \\
+      1 & 3
+   \end{pmatrix}^{-1} \begin{pmatrix}
+      0 \\ 0
+   \end{pmatrix} \\
+   &= \begin{pmatrix}1 \\ 1\end{pmatrix} - \begin{pmatrix}
+      0 \\ 0
+   \end{pmatrix} \\
+   &= \begin{pmatrix}1 \\ 1\end{pmatrix}
+\end{align*}
+
+Doing the same calculation \(\mathbf{x_2}\) will also be \(\begin{pmatrix}1 \\ 1\end{pmatrix}\). It turns out that i didnt even need to calculate the jacobian
+matrix :)
+
 \end{document}
