@@ -244,4 +244,40 @@ Using the transformation theorem we have
    &= \pi \left( \frac{b^3 - a^3}{3} \right).
 \end{align*}
 
+\section*{Exercise 24}
+We are given the set
+\begin{align*}
+   A_{(c_1, c_2), g} := \{(x_1, x_2) \in \mathbb{R}^2 : (x_1 - c_1)^2 + (x_2 - c_2)^2 \leq g\}.
+\end{align*}
+and the integral
+\begin{align*}
+   \int_{A_{(c_1, c_2), g}} h \, d(x_1, x_2).
+\end{align*}
+where \(g, h \in \mathbb{R}^+\). \\
+
+The set \(A\) is just a circle with center \((c_1, c_2)\) and radius \(\sqrt{g}\). \\
+The integral exists because the integrand \(h\) is continuous on the set \(A_{(c_1, c_2), g}\) which implies integrability. \\
+We can use the transformation theorem with the polar coordinates transformation
+\begin{align*}
+   g(r, \varphi) = (r \cos(\varphi) + c_1, r \sin(\varphi) + c_2)
+\end{align*}
+where \(r \in [0, \sqrt{g}]\) and \(\varphi \in [0, 2\pi]\) to cover the area of the circle and shifted to the center \((c_1, c_2)\). \\
+The general formula is
+\begin{align*}
+   \int_{g(A)} f(x) \, d(x) = \int_{A} f(g(y)) |\det(J_g(y))| \, d(y)
+\end{align*}
+
+The jacobian determinant of the transformation is
+\begin{align*}
+   \det(J_g(r, \varphi)) = r.
+\end{align*}
+Using the transformation theorem we have
+\begin{align*}
+   \int_{A_{(c_1, c_2), g}} h \, d(x_1, x_2) &= \int_{0}^{\sqrt{g}} \int_{0}^{2\pi} h \cdot r \, d\varphi \, dr \\
+   &= \int_{0}^{\sqrt{g}} h r \left( \varphi \Big|_{0}^{2\pi} \right) dr \\
+   &= \int_{0}^{\sqrt{g}} h r (2\pi) \, dr \\
+   &= 2\pi h \left( \frac{r^2}{2} \Big|_{0}^{\sqrt{g}} \right) \\
+   &= 2\pi h \left( \frac{g}{2} - 0 \right) = \pi h g.
+\end{align*}
+
 \end{document}
