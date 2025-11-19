@@ -213,4 +213,35 @@ Since it is integrable we can use the Fubini theorem
    &= \int_{-\frac{\sqrt{\pi}}{2}}^{\frac{\sqrt{\pi}}{2}} \cos(x_1) \cdot 0 \, dx_1 = 0.
 \end{align*}
 
+\section*{Exercise 23}
+We are given the set
+\begin{align*}
+   A_{a,b} := \{(x_1, x_2) \in \mathbb{R}^2 : x_2 \leq 0, a^2 \leq x_1^2 + x_2^2 \leq b^2\}.
+\end{align*}
+and the integral
+\begin{align*}
+   \int_{A_{a,b}} \sqrt{x_1^2 + x_2^2} \, d(x_1, x_2).
+\end{align*}
+
+The set \(A\) is intuitively the area between two circles with radius \(a\) and \(b\) and we only take the half where \(x_2 \leq 0\). \\
+The integral exists because the integrand \(\sqrt{x_1^2 + x_2^2}\) is continuous on the set \(A_{a,b}\) which implies integrability. \\
+We can use the transformation theorem with the polar coordinates transformation
+\begin{align*}
+   g(r, \varphi) = (r \cos(\varphi), r \sin(\varphi))
+\end{align*}
+where \(r \in [a, b]\) and \(\varphi \in [\pi, 2\pi]\) to cover the area where \(x_2 \leq 0\). \\
+The jacobian determinant of the transformation is
+\begin{align*}
+   \det(J_g(r, \varphi)) = r.
+\end{align*}
+Using the transformation theorem we have
+\begin{align*}
+   \int_{A_{a,b}} \sqrt{x_1^2 + x_2^2} \, d(x_1, x_2) &= \int_{a}^{b} \int_{\pi}^{2\pi} \sqrt{r^2} \cdot r \, d\varphi \, dr \\
+   &= \int_{a}^{b} \int_{\pi}^{2\pi} r^2 \, d\varphi \, dr \\
+   &= \int_{a}^{b} r^2 \left( \varphi \Big|_{\pi}^{2\pi} \right) dr \\
+   &= \int_{a}^{b} r^2 (\pi) \, dr \\
+   &= \pi \left( \frac{r^3}{3} \Big|_{a}^{b} \right) \\
+   &= \pi \left( \frac{b^3 - a^3}{3} \right).
+\end{align*}
+
 \end{document}
