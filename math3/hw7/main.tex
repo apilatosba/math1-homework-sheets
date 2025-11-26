@@ -155,4 +155,41 @@ Calculating the probabilities:
    P(A_2) &= \frac{7 \cdot 12 \cdot 11 \cdot 6}{|\Omega|} = \frac{7 \cdot 12 \cdot 11 \cdot 6}{30 \cdot 29 \cdot 28} = \frac{5544}{24360} = \frac{231}{1015}.
 \end{align*}
 
+\section*{Exercise 27}
+Lets create a set for the tickets
+\begin{align*}
+   T := B \uplus NCP \uplus TP \\
+   B := \{ b \in \mathbb{N} \; | \; b < 160 \} \\
+   NCP := \{ n \in \mathbb{N} \; | \; 160 \leq n < 198 \} \\
+   TP := \{ t \in \mathbb{N} \; | \; 198 \leq t < 200 \}
+\end{align*}
+\(B\) is the set of blank tickets, \(NCP\) is the set of noncash prizes and \(TP\) is the set of top prizes and they are disjoint. \\
+
+We choose the probability space
+\begin{align*}
+   \Omega &= \{ X \subseteq T \; | \; |X| = 10 \}, \\
+   \mathcal{F} &= \text{Power set of } \Omega, \\
+   P(A) &= U_\Omega
+\end{align*}
+
+We can choose uniform distribution because each ticket has equal chance of being selected. \\
+The events are:
+\begin{align*}
+   A_1 &= \{ X \in \Omega \; | \; |X \cap TP| = 1 \text{ and } |X \cap NCP| \geq 2 \}, \\
+   A_2 &= \{ X \in \Omega \; | \; |X \cap B| < 6 \}
+\end{align*}
+
+Here note that \(|\Omega| = \binom{200}{10}\) \\
+Calculating the probabilities:
+\begin{align*}
+   \intertext{choose 1 top prize, choose 2 noncash prize, choose 7 either blank or noncash prizes to make it to 10 total}
+   P(A_1) &= \frac{\binom{2}{1} \cdot \binom{38}{2} \cdot \binom{196}{7}}{|\Omega|} \\
+   &= \frac{\binom{2}{1} \cdot \binom{38}{2} \cdot \binom{196}{7}}{\binom{200}{10}}, \\
+   &= 53428/431233 \quad \text{link to the calculator: \url{https://www.wolframalpha.com/input?i=choose\%282\%2C1\%29+*+choose\%2838\%2C2\%29+*+choose\%28196\%2C7\%29+\%2F+choose\%28200\%2C10\%29}} \\
+   \intertext{we separetely count when there is k blank tickets where k = 0, 1, 2, 3, 4, 5 and sum them up}
+   P(A_2) &= \frac{\sum_{k=0}^{5} \binom{160}{k} \cdot \binom{40}{10 - k}}{|\Omega|} \\
+   &= \frac{1}{\binom{200}{10}} \sum_{k=0}^{5} \binom{160}{k} \cdot \binom{40}{10 - k}.
+\end{align*}
+
+
 \end{document}
