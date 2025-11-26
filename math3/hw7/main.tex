@@ -1,0 +1,125 @@
+\documentclass{article}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\begin{document}
+\section*{\huge Homework Sheet 7}
+\begin{flushright}
+   \textbf{Author: Abdullah Oğuz Topçuoğlu}
+\end{flushright}
+
+% Exercise 25 (4 Points)
+% A fair dice (with six faces) is rolled three times. Choose a suitable probability space (Ω, F, P) to
+% model this random experiment. Describe the events A1, A2, A1 ∩ A3 and (A1 ∪ A2) \ A3 as subsets
+% of Ω and determine their probabilities, where A1, A2, A3 are described verbally as follows:
+% A1 : “The sum of the number of pips of the first and the second throw is smaller than five.”
+% A2 : “The product of the number of pips of the second and third throw is six.”
+% A3 : “The number of pips of the second throw is two.”
+% Exercise 26 (4 Points)
+% Tutorials A, B, and C of a computer science course are attended by 7, 12, and 11 students, respectively. All 30 students work independently and hand in their solutions to the teaching assistant. The
+% submitted solutions are gathered in random order on a desk. The teaching assistant draws three
+% of these solutions at random. Choose a suitable probability space (Ω, F, P) to model this random
+% experiment, describe the following events as subsets of Ω and determine their probabilities:
+% A1 : The first solution drawn is from tutorial group B.
+% A2 : All solutions drawn are from different tutorial groups.
+% Exercise 27 (4 Points)
+% In a raffle, 200 tickets are sold, of which 160 are blank, 38 are non-cash prizes, and two are top
+% prizes. Alice buys the first 10 tickets and draws them randomly from the raffle drum. Choose a
+% suitable probability space (Ω, F, P) to model this random experiment, describe the following events
+% as subsets of Ω and determine their probabilities:
+% A1 : Among the 10 tickets, there are one top prize, and at least two non-cash prizes.
+% A2 : Less than 6 of the 10 tickets are blank tickets.
+% Hint: In this setting, it is not necessary to take care of the order in which the tickets are drawn.
+% Exercise 28 (4 Points)
+% Let N := {1, 2, . . .}. Let p1, p2 : {1, . . . , 6} → R and pq : N → R, q ∈ (0, 1), be defined as follows:
+% p1(k) :=
+% 
+% 
+% 
+% −
+% 1
+% 3
+% , k ∈ {1, 3}
+% −
+% 1
+% 6
+% , k ∈ {2, 5}
+% 1, k ∈ {4, 6}
+% , p2(k) :=
+% 
+% 
+% 
+% 1
+% 3
+% , k ∈ {1, 3}
+% 1
+% 6
+% , k ∈ {2, 5}
+% 1
+% 2
+% , k ∈ {4, 6}
+% , pq(k) := q
+% k
+% .
+% (i) Are p1, p2 probability counting densities? Justify your answer.
+% (ii) Find a linear combination of p1 and p2, by determining α, β ∈ R, such that αp1 + βp2 is a
+% probability counting density.
+% (iii) For which q ∈ (0, 1) is pq a probability counting density?
+
+\section*{Exercise 25}
+We choose the probability space
+\begin{align*}
+   \Omega &= \{1, 2, 3, 4, 5, 6\}^3, \\
+   \mathcal{F} &= \text{Power set of } \Omega, \\
+   P(A) &= U_\Omega
+\end{align*}
+
+The events are
+\begin{align*}
+   A_1 &= \{(a,b,c) \in \Omega \mid a + b < 5\}, \\
+   A_2 &= \{(a,b,c) \in \Omega \mid b \cdot c = 6\}, \\
+   A_3 &= \{(a,b,c) \in \Omega \mid b = 2\} \\
+   A_1 \cap A_3 &= \{(a,2,c) \in \Omega \mid a < 3\}, \\
+   (A_1 \cup A_2) \setminus A_3 &= \{(a,b,c) \in \Omega \mid (a + b < 5) \text{ or } (b \cdot c = 6) \text{ and } b \neq 2\}
+\end{align*}
+
+Since \(P\) is uniform we count the number of elements in each event.
+
+Calculating the probabilities:
+\begin{align*}
+   \intertext{6 many (a,b) pairs times 6 choices for c}
+   P(A_1) &= \frac{6 \cdot 6}{216} = \frac{36}{216} = \frac{1}{6}, \\
+   \intertext{4 many (b,c) pairs times 6 choices for a}
+   P(A_2) &= \frac{6 \cdot 4}{216} = \frac{24}{216} = \frac{1}{9}, \\
+   \intertext{6 choices for a times 1 choice for b times 6 choices for c}
+   P(A_3) &= \frac{36}{216} = \frac{1}{6}, \\
+   \intertext{2 choices for a times 1 choice for b times 6 choices for c}
+   P(A_1 \cap A_3) &= \frac{2 \cdot 6}{216} = \frac{1}{18}, \\
+\end{align*}
+
+For the last one we need to calculate \(|A_1 \cup A_2|\) first:
+\begin{align*}
+   |A_1 \cup A_2| &= |A_1| + |A_2| - |A_1 \cap A_2|, \\
+   |A_1| &= 36, \\
+   |A_2| &= 24, \\
+\end{align*}
+
+Calculating \(|A_1 \cap A_2|\):
+\begin{align*}
+  &\text{if } b = 1,\ c = 6:\ a + 1 < 5 \Rightarrow a < 4 \Rightarrow 3 \text{ choices} \\
+  &\text{if } b = 2,\ c = 3:\ a + 2 < 5 \Rightarrow a < 3 \Rightarrow 2 \text{ choices} \\
+  &\text{if } b = 3,\ c = 2:\ a + 3 < 5 \Rightarrow a < 2 \Rightarrow 1 \text{ choice} \\
+  &\text{if } b = 6,\ c = 1:\ a + 6 < 5 \Rightarrow \text{no choices}.
+\end{align*}
+So \(|A_1 \cap A_2| = 3 + 2 + 1 + 0 = 6\).
+\begin{align*}
+   |A_1 \cup A_2| &= 36 + 24 - 6 = 54, \\
+   P(A_1 \cup A_2) &= \frac{54}{216} = \frac{1}{4}, \\
+   P((A_1 \cup A_2) \setminus A_3) &= P(A_1 \cup A_2) - P(A_3) + P(A_1 \cap A_3) = \frac{1}{4} - \frac{1}{6} + \frac{1}{18} = \frac{5}{36}.
+\end{align*}
+
+\end{document}
