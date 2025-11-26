@@ -122,4 +122,37 @@ So \(|A_1 \cap A_2| = 3 + 2 + 1 + 0 = 6\).
    P((A_1 \cup A_2) \setminus A_3) &= P(A_1 \cup A_2) - P(A_3) + P(A_1 \cap A_3) = \frac{1}{4} - \frac{1}{6} + \frac{1}{18} = \frac{5}{36}.
 \end{align*}
 
+\section*{Exercise 26}
+Lets define a set for students
+\begin{align*}
+   S := \{ s \in \mathbb{N} \; | \; s < 30 \}
+\end{align*}
+
+Each number represents a student. And note that \(|S| = 30\). And the first 7 students belong to tutorial A
+following 12 students belong to tutorial B and the last 11 students belong to tutorial C. \\
+We choose the probability space
+\begin{align*}
+   \Omega &= \{ (a,b,c) \; | \; a,b,c \in S \text{ and } a \neq b \neq c \}, \\
+   \mathcal{F} &= \text{Power set of } \Omega, \\
+   P(A) &= U_\Omega
+\end{align*}
+We can choose uniform distribution because each student has equal chance of being selected. \\
+The events are:
+\begin{align*}
+   A_1 &= \{ (a,b,c) \in \Omega \; | \; a \in \{7,\ldots,18\} \}, \\
+   A_2 &= \{ (a,b,c) \in \Omega \; | \; \big|\{ p \in \{a,b,c\} \; | \; p \in \{ 0, \ldots,6 \} \}\big| = 1 \quad \land \\
+   &\big|\{ p \in \{a,b,c\} \; | \; p \in \{ 7, \ldots,18 \} \}\big| = 1 \quad \land \\
+   &\big|\{ p \in \{a,b,c\} \; | \; p \in \{ 19, \ldots,29 \} \}\big| = 1  \}
+\end{align*}
+
+Here note that \(|\Omega| = 30 \cdot 29 \cdot 28\)
+
+Calculating the probabilities:
+\begin{align*}
+   \intertext{12 choices for the first paper, 29 choices for the second paper and 28 choices for the third paper}
+   P(A_1) &= \frac{12 \cdot 29 \cdot 28}{|\Omega|} = \frac{12 \cdot 29 \cdot 28}{30 \cdot 29 \cdot 28} = \frac{12}{30} = \frac{2}{5}, \\
+   \intertext{choose a student from tutorial A (7 choices), tutorial B (12 choices) and tutorial C (11 choices). Then permute them (3! = 6) since order doesnt matter}
+   P(A_2) &= \frac{7 \cdot 12 \cdot 11 \cdot 6}{|\Omega|} = \frac{7 \cdot 12 \cdot 11 \cdot 6}{30 \cdot 29 \cdot 28} = \frac{5544}{24360} = \frac{231}{1015}.
+\end{align*}
+
 \end{document}
