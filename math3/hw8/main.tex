@@ -1,0 +1,119 @@
+\documentclass{article}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{tikz}
+\usepackage{array}
+\usepackage{mathtools}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\begin{document}
+\section*{\huge Homework Sheet 8}
+\begin{flushright}
+   \textbf{Author: Abdullah Oğuz Topçuoğlu}
+\end{flushright}
+
+% Exercise 29 (6 Points)
+% A fair dice (with six faces) and a fair decahedron are rolled. The decahedron has ten (congruent)
+% faces, which are numbered from 1 to 10. Let the random variable X specify the maximum of the
+% number of pips (on the top face) of the dice and the number (on the top face) of the decahedron
+% (after they have been rolled).
+% (i) Find a suitable probability space (Ω, F, P) with which to model the underlying random experiment, define X as a mapping from Ω to N, and determine the range of X.
+% (ii) Determine the distribution of X.
+% (iii) Determine the probability that X realises a value between two and five, i.e. 2 ≤ X ≤ 5.
+% Exercise 30 (4 Points)
+% Given two urns, one with seven marbles numbered 1, . . . , 7, and another with four marbles numbered
+% 1, . . . , 4. Two marbles are pulled, one from each urn. Let the random variables D7 and D4 specify
+% the number written on the marbles, and let the random variables X and Y be defined as follows:
+% X := max{|D7 − D4|, 0}, Y := min{|D7 − D4|, 5}.
+% (i) Find a suitable probability space (Ω, F, P) with which to model the underlying random experiments, define D7 and D4 as mappings from Ω to N, and determine their ranges.
+% (ii) Determine the ranges and the distributions of X and Y .
+% Exercise 31 (2 Points)
+% A wholesaler buys light bulbs from three manufacturers. It is known that 30% of the bulbs purchased are from manufacturer 1 and 50% of the bulbs purchased are from manufacturer 2. Despite
+% the manufacturers’ quality controls, 5% of the bulbs from manufacturer 1, 2% of the bulbs from
+% manufacturer 2 and 8% of the bulbs from manufacturer 3 are defective. What is the probability
+% that a randomly selected bulb from the wholesaler is defective?
+% Exercise 32 (4 Points)
+% According to an expert from TU¨V Saarland, 8% of all inspected cars are not roadworthy due to
+% serious defects and therefore do not receive a TU¨V sticker. It is also known that 70% of all inspected
+% cars, that do not receive a TU¨V sticker, are older than ten years. Furthermore, 25% of all inspected
+% cars are older than ten years and receive a TU¨V sticker. What is the probability that
+% (i) an inspected car is older than ten years?
+% (ii) an inspected car, that is older than ten years, does not receive a TU¨V sticker?
+% (iii) an inspected car, that has received a TU¨V sticker, is older than ten years?
+
+\section*{Exercise 29}
+
+Let \(N_k\) denote the set of natural numbers from 1 to k.
+\begin{align*}
+   N_k = \{i \in \mathbb{N} \; \big| \; 0 < i \leq k\}
+\end{align*}
+So that \(N_k\) has k elements.
+
+\subsection*{(i)}
+The probability space would be
+\begin{align*}
+   \Omega &= N_6 \times N_{10} \\
+   \mathcal{F} &= \text{Power set of } \Omega \\
+   P &= U_\Omega
+\end{align*}
+I chose the uniform distribution because each outcome is equally likely when rolling fair dice. \\
+The random variable \(X\) would be
+\begin{align*}
+   X: \Omega &\to \mathbb{N} \\
+   (d, h) &\mapsto \max(d, h)
+\end{align*}
+The range of \(X\)
+\begin{align*}
+   X(\Omega) &= \{\max(d, h) \; | \; d \in N_6, h \in N_{10}\} \\
+   &= N_{10}
+\end{align*}
+
+\subsection*{(ii)}
+We want to calculate \(P[\{X = k\}]\) for \(k \in N_{10}\). \\
+The random variable \(X\) takes the value \(k\) only in one of the following three cases:
+\begin{itemize}
+   \item The decahedron shows \(k\) and the dice shows a number less than \(k\).
+   \item The dice shows \(k\) and the decahedron shows a number less than \(k\).
+   \item Both the dice and the decahedron show \(k\).
+\end{itemize}
+Here note that the cases are disjoint. Lets count the number of possibilities for each case and add them up.
+We need to consider those cases when k is less than or equal to 6 and when k is greater than 6 separately.
+\begin{itemize}
+   \item For \(k \in N_6\):
+   \begin{itemize}
+      \item Case 1: There are \(k - 1\) choices for the dice (1 to \(k - 1\)) and 1 choice for the decahedron (\(k\)). So there are \(k - 1\) possibilities.
+      \item Case 2: There are \(k - 1\) choices for the decahedron (1 to \(k - 1\)) and 1 choice for the dice (\(k\)). So there are \(k - 1\) possibilities.
+      \item Case 3: There is only 1 possibility where both show \(k\).
+   \end{itemize}
+   So in total there are \(2(k - 1) + 1 = 2k - 1\) possibilities.
+   \item For \(k \in \{7, 8, 9, 10\}\):
+   \begin{itemize}
+      \item Case 1: There are 6 choices for the dice (1 to 6) and 1 choice for the decahedron (\(k\)). So there are 6 possibilities.
+      \item Case 2: Cant happen since the dice only goes up to 6.
+      \item Case 3: Cant happen since the dice only goes up to 6.
+   \end{itemize}
+   So in total there are \(6 + 0 + 0 = 6\) possibilities.
+\end{itemize}
+
+\begin{align*}
+   P[\{X = k\}] &=
+   \begin{cases}
+      \frac{2k - 1}{60}, & k \in N_6 \\
+      \frac{6}{60}, & k \in \{7, 8, 9, 10\}
+   \end{cases}
+   \\
+   60 &= |\Omega| = |N_6| \times |N_{10}| = 6 \times 10
+\end{align*}
+
+\subsection*{(iii)}
+We want to calculate \(P[\{2 \leq X \leq 5\}]\).
+\begin{align*}
+   P[\{2 \leq X \leq 5\}] &= \sum_{k=2}^{5} P[\{X = k\}] \\
+   &= \sum_{k=2}^{5} \frac{2k - 1}{60} \\
+   &= \frac{1}{60} \sum_{k=2}^{5} (2k - 1) \\
+   &= \frac{1}{60} (3 + 5 + 7 + 9) \\
+   &= \frac{24}{60} \\
+   &= \frac{2}{5}
+\end{align*}
+
+\end{document}
