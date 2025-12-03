@@ -197,4 +197,62 @@ Using the law of total probability:
    &= 0.041
 \end{align*}
 
+\section*{Exercise 32}
+Lets first create the probability space.
+\begin{align*}
+   \Omega &= \text{set of all inspected cars } = A \uplus A^c \\
+   \mathcal{F} &= \text{Power set of } \Omega \\
+   P &= U_\Omega
+\end{align*}
+where \(A\) is the set of all inspected cars that receive a TÜV sticker and \(A^c\) is the set of all inspected cars that do not receive a TÜV sticker. \\
+Let \(B\) be the set of cars older than ten years. \\
+We are given that
+\begin{align*}
+   P[A^c] &= 0.08 \\
+   P[B | A^c] &= 0.7 \\
+   P[B^c \cap A] &= 0.25
+\end{align*}
+
+\subsection*{(i)}
+We want to find \(P[B]\). \\
+Using the law of total probability:
+\begin{align*}
+   P[B] &= P[B | A] P[A] + P[B | A^c] P[A^c] \\
+   &= P[B | A] (1 - P[A^c]) + P[B | A^c] P[A^c] \\
+   &= P[B | A] (1 - 0.08) + 0.7 \cdot 0.08
+\end{align*}
+
+To find \(P[B | A]\), we can use the complement of the event \(B^c \cap A\):
+\begin{align*}
+   P[B | A] &= 1 - P[B^c | A] \\
+   &= 1 - \frac{P[B^c \cap A]}{P[A]} \\
+   &= 1 - \frac{0.25}{1 - 0.08} \\
+   &= 1 - \frac{0.25}{0.92} \\
+   &= 1 - \frac{25}{92} \\
+   &= \frac{67}{92}
+\end{align*}
+Substituting back:
+\begin{align*}
+   P[B] &= \frac{67}{92} \cdot 0.92 + 0.7 \cdot 0.08 \\
+   &= 0.67 + 0.056 \\
+   &= 0.726
+\end{align*}
+
+\subsection*{(ii)}
+We want to find \(P[A^c | B]\). \\
+Using Bayes theorem:
+\begin{align*}
+   P[A^c | B] &= \frac{P[B | A^c] P[A^c]}{P[B]} \\
+   &= \frac{0.7 \cdot 0.08}{0.726} \\
+   &= \frac{0.056}{0.726} \\
+   &= 0.07713498622589532
+\end{align*}
+
+\subsection*{(iii)}
+We want to find \(P[B | A]\). \\
+We have already calculated this in part (i):
+\begin{align*}
+   P[B | A] &= \frac{67}{92}
+\end{align*}
+
 \end{document}
